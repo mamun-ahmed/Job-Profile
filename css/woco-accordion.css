@@ -1,0 +1,60 @@
+.drawer {
+	width: 100%;
+}
+.accordion-item {
+}
+.accordion-item-active .accordion-header {
+	transition: .25s;
+}
+.accordion-item-active .accordion-header-icon {
+}
+.accordion-item-active .accordion-header h4 {
+}
+.accordion-header {
+	cursor: pointer;
+	min-height: 20px;
+	transition: .25s;
+	padding: 20px 30px 20px 0;
+	float: left; position:relative;
+	width: 100%;
+}
+.accordion-header h4 {
+	float: left;
+	margin: 0;
+}
+.accordion-header h4:hover {
+	text-decoration: underline;
+}
+.accordion-content {
+	display: none;
+	float: left;
+	padding: 10px 0;
+	width: 100%;
+}
+.accordion-content p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 18px;
+	color: #989898;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 3px;
+}
+.accordion-header-icon {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	float: right;
+	vertical-align: middle;
+}
+.accordion-header-icon:before {
+	content: '';
+	width: 22px;
+	height: 15px;
+	display: inline-block; position:absolute; right:0; top:50%;
+	margin: -11px 0 0;
+	background: url(../images/down_arrow.png) no-repeat center right;
+}
+.accordion-item-active .accordion-header-icon:before {
+	content: '';
+	background: url(../images/up_arrow.png) no-repeat center right;
+}
+.accordion-header-icon.accordion-header-icon-active {
+}

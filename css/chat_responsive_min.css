@@ -1,0 +1,289 @@
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 1199px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 1199px){
+  .roomnavsearch{width: 70%;}
+
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width :990px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 990px){
+
+    .room-leftnav-header{display: none;}
+    .roomnavsearch{width: 60%;}
+    .hidden-xs.navSearch-filter{padding-top: 20px;}
+    .room-list.proper{padding-right: 5px;}
+    .mb_chatroom_wrapper{padding-left: 0px;padding-right: 0px;}
+    .roomlisthd.col-xs-9{padding-left: 10px;padding-right: 5px;}
+    .latest-story-date.col-xs-3.text-center{padding-right: 0px;padding-left: 0px;}
+    span.Datetime{margin-left: 0px;}
+    .ms-last-story{font-size: 13px;}
+
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width :768px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px){
+  .Chat-page {
+    overflow: hidden;
+  }
+  .Chat-page .main-column{
+    width: calc(100% - 640px);
+  }
+  /*.searchPilot-page .allWrapper {*/
+    /*height: 100%;*/
+  /*}*/
+/*  .searchPilot-page .sr-main-bodyleft,
+  .searchPilot-page .main-bodyleft {
+    width: 410px !important;
+  }
+  .searchPilot-page .RGoogleMaps {
+    width: calc(100% - 410px);
+  }*/
+
+  .room-leftnav-header{display: none;}
+  .roomnavsearch{width: 60%;}
+  .hidden-xs.navSearch-filter{padding-top: 20px;}
+  .room-list.proper{padding-right: 5px;}
+  .mb_chatroom_wrapper{padding-left: 0px;padding-right: 0px;}
+  .roomlisthd.col-xs-9{padding-left: 10px;padding-right: 5px;}
+  .latest-story-date.col-xs-3.text-center{padding-right: 0px;padding-left: 0px;}
+  span.Datetime{margin-left: 0px;}
+  .ms-last-story{font-size: 13px;}
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width :767px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+  .mb_rmchat{
+    overflow: hidden;
+  }
+  .Chat-page .LeftBgwhite{
+    max-width: none;
+  }
+  .Chat-page .main-column{width: 100%;}
+
+  .attach-emojibtn-re-mes {
+    top: 33px;
+  }
+  .conversation{
+    padding: 0px;
+    padding-right: 15px;
+  }
+  .conversation-wrap {
+    height: 240px !important;
+    background-color:#fff;
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+  .mb_chatroom_wrapper{
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    display: none;
+    border-bottom: 2px solid #5bbb2d;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #989898;
+    width: 26px;
+    height: 4px;
+  }
+  .room-fillbody {
+    border: 0;
+  }
+
+  .room-msg-wrap {
+    padding: 0;
+  }
+  .rm-ms-wrapperbd.you,
+  .room-story-wrapper.you {
+    background-color: #5bbb2d;
+  }
+
+  .room-story-wrapper {
+    padding-bottom: 30px;
+  }
+
+  .you .room-story-message {
+    color: white;
+  }
+
+  .you .user-presence-photo {
+    float: right;
+  }
+
+  .user-presence-photo img {
+    width: 38px;
+    margin-top: -8px;
+  }
+
+  .you .blchatheadtxt h5 {
+    text-align: right;
+    color: white;
+  }
+
+  .rm-ms-wrapperbd .JobTitleuser h5 {
+    text-align: center;
+  }
+  .rm-ms-wrapperbd.to-you .ms-userIcon {
+    text-align: left;
+  }
+  .rm-ms-wrapperbd.you .rm-ms-authorname,
+  .rm-ms-wrapperbd.you .room-story-message p,
+  .rm-ms-wrapperbd.you .rm-ms-Date{
+    color: #fff;
+  }
+  .Chat-page .send-message {
+    height: 45px;
+    max-height: 45px;
+    min-height: 45px;
+  }
+  .Chat-page .rm-ms-send-message {
+    height: 80px;
+    max-height: 80px;
+    min-height: 80px;
+  }
+  .Chat-page #msActionbtn {
+    padding: 0 20px 20px;
+  }
+
+  .roomchatselect {
+    padding: 15px 20px 10px;
+  }
+
+  .rmchathdtxt h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .room-list-item.selected {
+    background-color: #eeecf2;
+  }
+  ul.room-list.proper li.room-list-item {
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    width: 100%;
+  }
+  ul.room-list.proper .room-list-item-div {
+    overflow: hidden;
+  }
+  .visible-xs.roomFilter span {
+    float: left;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    color: #565656;
+  }
+  .mbFiltering i{
+    font-size: 20px;
+    margin: 0px 15px;
+    position: relative;
+    top: 3px;
+  }
+  .mb_filterSec{
+    padding-top: 5px;
+  }
+  .visible-xs.roomFilter ul {
+    float: left;
+  }
+  .mb_Wrapperbody{
+    padding: 0px 20px;
+  }
+
+  .visible-xs.roomnavsearch {
+    padding: 8px 13px;
+    background-color: #eeecf2;
+    border-radius: 2px;
+    position: relative;
+    top: 10px;
+    right: 15px;
+    margin: 0 auto -10px;
+  }
+  .rm-story-author {
+    padding: 0 60px;
+  }
+  .rm-action-btngreen{
+    float: right;
+    padding-top: 20px;
+  }
+  .attach-emojibtn{
+    top: 28px;
+  }
+
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 480px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+  .mb_Wrapperbody {
+    padding: 0px;
+  }
+  .mb_filterSec {
+    padding-top: 3px;
+  }
+  .visible-xs.roomFilter span{
+    font-size: 13px;
+  }
+  .mbFiltering i{
+    font-size: 18px;
+  }
+  .visible-xs.roomFilter li{
+    font-size: 13px;
+    margin: 0 12px;
+  }
+  .rmchathdtxt h3 {
+    font-size: 22px;
+  }
+  .roomchatselect{
+    padding-bottom: 0px;
+  }
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 375px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 375px) {
+
+  .visible-xs.roomFilter span{
+    font-size: 13px;
+  }
+
+  .rmchathdtxt h3 {
+    font-size: 20px;
+  }
+
+
+}

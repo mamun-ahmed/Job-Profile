@@ -1,0 +1,1082 @@
+section#chatRoom {clear: both;}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.room-fillbody{
+    background-color: #ffffff;
+    border: 2px solid #e8e8e8;
+}
+.conversation-wrap{
+    padding:0;
+    /*max-height: 400px;*/
+    overflow: auto;
+    margin-right: -13px;
+}
+.conversation{
+    padding:5px;
+    margin:0;
+}
+.user-presence-photo i{
+    font-size: 30px;
+    color: #5bbb2d;
+    text-align: center;
+    margin-left: 20px;
+}
+.room-msg-wrap{
+    padding:10px;
+    /*max-height: 400px;*/
+    overflow: auto;
+    background-color: #ffffff;
+    /*margin-bottom: 20px;*/
+    margin-right: 2px;
+}
+.time{
+    color:#bfbfbf;
+}
+
+.send-wrap{
+    border-bottom: 1px solid #eee;
+    padding:10px;
+    /*background: #f8f8f8;*/
+}
+.send-message{
+    resize: none;
+}
+.highlight{
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+.send-message-btn{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.room-msg-date{
+    background: none;
+    text-align: start;
+    color:#989898;
+    border:none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background:#c1c1c1; 
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #c1c1c1; 
+}
+
+.LeftBgwhite{
+    background-color: #fff;
+    -webkit-box-shadow: 10px 7px 13px -8px rgba(35,31,32,0.41);
+     -moz-box-shadow: 10px 7px 13px -8px rgba(35,31,32,0.41);
+      box-shadow: 10px 7px 13px -8px rgba(35,31,32,0.41);
+}
+.roomnavsearch {
+    width: 78%;
+    margin-bottom: 15px;
+}
+.LeftNavBg .col-sm-12{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.room-leftnav-header{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+ul.room-list-nav {
+    background-color: #dedde1;
+}
+ul.room-list-nav li{
+  display: inline-flex;
+}
+ul.room-list-nav li a{
+    border:2px solid #dedde1;
+    font-size: 20px;
+    color: #989898;
+    padding: 12px 14px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+ul.room-list-nav li.active a{
+    background-color: #5bbb2d;
+    color: #ffffff;
+}
+ul.room-list-nav li:first-child a{
+    margin-right: -3px;
+    border-right: 0px;
+}
+.chatbtn-green{
+    background-color: #5bbb2d;
+    color: #ffffff;
+    border-radius: 0px;
+    border: 1px solid #5bbb2d;
+}
+.chatbtn-green:hover, .chatbtn-green:focus, .chatbtn-green:active{
+  background-color: #ffffff;
+  color:#5bbb2d;
+}
+.input-group .srroomperson{
+    color: #c1c1c1;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+/*-- Search end --*/
+
+.roomFilter .btn-grayborder{min-height: 34px;}
+
+/*-- Left Head Nav end --*/
+span.Datetime{
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    line-height: 20px;
+    color: #989898;
+    margin-left: 10px;
+}
+span.chatIcon.green{
+    font-size: 30px;
+    color: #5bbb2d;
+}
+.latest-story-date {margin-top: 10px;}
+ul.room-list.proper li.room-list-item{
+    border: 2px solid #e8e8e8;
+    padding-top: 13px;
+    float: left;
+    padding-bottom: 15px;
+}
+ul.room-list.proper li.room-list-item:hover{
+    border-color: #5bbb2d;
+    cursor: pointer;
+}
+.room-list-name-span h5{
+    color: #37bc39;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.un-readmesage .room-list-name-span h5{color: #989898;}
+.un-readmesage span.chatIcon.green {color: #989898;}
+.ms-last-story{
+    color: #565656;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height:18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/*-- Left SideBar end --*/
+
+.roomchatselect{
+    padding: 20px 0px;
+}
+.rmchathdtxt h3{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #565656;
+    line-height: 30px;
+}
+.rmchathdtxt h3 span{
+    color: #5bbb2d;
+}
+
+/*-- Room Body end --*/
+
+.whbgrm-chat{background-color: #ffffff;}
+.room-story-wrapper{
+    padding-top: 20px;
+    clear: both;
+}
+.user-presence-photo{
+    display: inline-block;
+    float: left;
+    width: 8%;
+    max-width: 100px;
+    min-width: 60px;
+    min-height: 60px;
+}
+.user-presence-photo img{
+    border: 4px solid #5bbb2d;
+}
+.blchatheadtxt h5{
+    font-size: 14px;
+    color:#494949;
+    font-weight: 600;
+}
+.room-story-message{
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    line-height:20px;
+    color: #494949;
+}
+.room-story-message p{
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    line-height:20px;
+    color: #494949;
+    margin-bottom: 20px;    
+
+}
+.rm-composer-sec{
+    display: table;
+    width: 100%;
+    border-top: 1px solid #f4f4f4;
+}
+.rm-ComposerSectin{position: relative;}
+.rm-msg-composer-section{
+    display: table-cell;
+    width: 100%;
+    vertical-align: bottom;
+}
+textarea.form-control.send-message{
+    height: 45px;
+    min-height: 45px;
+    border: 2px solid #c1c1c1;
+    border-radius: 0px;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    color: #494949;
+    padding-right: 80px;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+.form-control:focus{
+    box-shadow: none!important;
+}
+.attach-emojibtn {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    z-index: 99;
+}
+.rm-actions-comoser{
+    font-size: 22px;
+    color: #989898;
+}
+.rm-actionComoser i{
+    font-size: 22px;
+    color: #989898;
+    cursor: pointer;
+}
+.rm-actions-comoser:hover{outline: none;text-decoration: none;}
+.btn-acgreen{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    border-radius: 0px;
+    padding: 12px 16px;    
+}
+.btn-acgreen:hover, .btn-acgreen:focus, .btn-acgreen.focus{
+    background-color: #ffffff;
+    color: #5bbb2d;
+    border: 1px solid #5bbb2d;
+}
+.rm-action-btngreen{
+    margin-left:5px;
+    padding-left:5px;
+}
+/*-- Composer end --*/
+
+.Enter-subject-Message{padding: 25px 20px;}
+.to-author-ms{
+    font-size: 14px;
+    color: #565656;
+    font-family: 'Montserrat', sans-serif;
+}
+.to-author-ms strong{
+    color: #5bbb2d;
+}
+.to-author-subject{
+    font-size: 14px;
+    color: #565656;
+    font-family: 'Montserrat', sans-serif;
+}
+.grnauthornametxt span {
+    display: inline-block;
+    padding-right: 15px;
+}
+.JobTitleuser {padding-top: 12px;}
+.grnauthornametxt {text-align: right;}
+.rm-sm-user-icon i{
+    color: #5bbb2d;
+    font-size:30px;
+    position: relative;
+    top: 5px;
+}
+.rm-ms-authorname{
+    color: #5bbb2d;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.rm-ms-Date {
+    font-size: 14px;
+    color: #989898;
+    line-height: 20px;
+    font-family: 'Lato', sans-serif;
+}
+.userchathead{
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.rm-sm-storypadd p:last-child{padding-bottom: 60px;}
+.rm-ms-wrapperbd {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+span.rm-sm-user-photo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+}
+.rm-sm-user-photo img{
+    border:4px solid #5bbb2d;
+}
+.ms-userPhoto {
+    margin-top: -10px;
+}
+/*-- message body end  --*/
+.ms-rm-conversation-wrap{
+    padding: 0;
+    max-height: 800px;
+    overflow: auto;
+}
+.rm-ms-composer-sec{
+    background-color: #ffffff;
+    padding: 0px;
+    border-bottom: 2px solid #ccc;
+}
+.rm-ms-composer-panel{
+    margin-top: 5px;
+    border:2px solid #e8e8e8;
+    /*margin-bottom: 30px;*/
+}
+.rm-ms-send-message {
+    border: 0px;
+    box-shadow: none;
+    padding: 10px 23px;
+    color: #989898;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+}
+.rm-ms-send-message:focus, .rm-ms-send-message:focus{color:#989898; }
+.rm-ms-send-message ::-webkit-input-placeholder {
+  color:#989898!important; 
+}
+.rm-ms-send-message ::-moz-placeholder {
+  color:#989898!important; 
+} /* firefox 19+ */
+.rm-ms-send-message :-ms-input-placeholder {
+  color:#989898!important; 
+} /* ie */
+.rm-ms-send-message input:-moz-placeholder {
+  color:#989898!important;
+}
+div#msActionbtn{
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+.attach-emojibtn-re{
+  position: relative;
+  top: 13px;
+}
+li.room-list-item.un-readmesage{
+    background-color: #eeecf2;
+}
+
+/*===========================
+    Chat Page End
+=============================*/
+
+
+.room-body{
+  height: 600px;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  padding-left: 15px;
+}
+.room-body-scrollable{
+  display: block;
+  height: 100%;
+  padding-right: 10px;
+}
+.VPilotImg{padding-right: 8px;}
+.DNjPilotInfoBody{
+  padding-top:5px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c1c1c1;
+}
+.Vpilotinfohead h3 a{
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  color: #5bbe2c;
+  display: inline-block;
+}
+.Vpilotinfohead h3{display: inline-block;}
+.Vpilotinfohead h3 a:hover{text-decoration: underline;}
+span.Identity img{
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 2px;
+}
+span.Identity small{
+  font-size: 13px;
+  color: #989898;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30px;
+  font-style: italic;
+}
+.VPilotRating span.RatingCount{
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  color: #898989;
+}
+.green-icon i{color: #5bbb2d;}
+
+/*-- Rating end --*/
+
+hr.graydp-border{
+  border: 1px solid #e8e8e8;
+  height: 0px;
+  background: transparent;
+  clear: both;
+}
+.VPilotLocation{
+  font-size: 13px;
+  color: #555555;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.equhdtext p{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  color: #555555;
+  font-weight: 400;
+}
+button.btn-graybg{
+  font-family: 'Montserrat', sans-serif;
+  color: #565656;
+  font-size: 11px;
+  background-color: #e1e1e1;
+  border-radius: 4px;
+  padding: 1px 10px;
+}
+.equipmenttype{padding-top: 6px;clear: both;}
+.sm-equipment{padding-top:6px; }
+ul.dropdown-menu.drpequip{
+  background-color: #e1e1e1;
+  border-radius: 0px;
+}
+ul.drpequip li a{
+  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
+  color: #565656;
+  font-weight: lighter;
+}
+button.btn-graybg:hover{color: #5bbb2d;}
+button.btn-graybg:focus{color: #5bbb2d;}
+ul.drpequip li a:hover{background: transparent;color: #5bbe2c;}
+.ftroomsrcresult li a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #989898;
+  line-height: 22px;
+  background: transparent;
+  border: 0px;
+  padding: 5px;
+  font-weight: 400;
+}
+span.NotLink {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+.ftroomsrcresult li span{
+  background-color: transparent;
+  color: #989898;
+  font-size: 12px;
+  border: 0px;
+}
+.ftroomsrcresult li a:hover{
+  background-color: transparent;
+  color: #5bbe2c;
+}
+.ftroomsrcresult li span:hover{
+  background-color: transparent;
+  color: #5bbe2c;
+}
+.ftroomsrcresult > li > a:hover, .ftroomsrcresult > li > span:hover, .ftroomsrcresult > li > a:focus, .pagination > li > span:focus{
+  background-color: transparent;
+  color: #5bbe2c;
+}
+
+/*-- FtRoom Result end --*/
+
+.showResult p{
+  margin: 20px 0px;
+  font-size: 12px;
+  color: #989898;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/*-- VPilot Rating Location end --*/
+
+span.VPLocation small{color: #898989;font-weight: lighter;}
+.VPilotImg img{
+  border: 4px solid #cecece;
+}
+
+/*-- Vpilot img end --*/
+
+button.btn-white{
+  background-color: #ffffff;
+  color: #5cbb2d;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #d6d6d6;
+  border-radius: 0px;
+}
+button.btn-white:hover{
+  background-color: #5bbe2c;
+  color: #ffffff;
+}
+.RGoogleMaps{position: relative;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.LokkingPilot {
+  position: absolute;
+  top: -2px;
+  right: 15px;
+  z-index: 99;
+}
+.filterurresult{position: relative;}
+.main-bodyleft{
+  padding-right: 2px;
+  background-color: #ffffff;
+  padding-left: 0px;
+}
+.contact-map{
+  height:100%;
+  min-height: 200px;
+  background-color:#f0f0f0;
+}
+/*.searchPilot-page{overflow-y: hidden;}
+*/
+/*=============================
+     Search Page end 
+===============================*/
+
+
+.bgwhite{background-color: #ffffff;}
+.topnavRefine{
+  padding: 10px 0px;
+  clear: both;
+  border-bottom: 2px solid #c1c1c1;
+}
+.reFineSrc{position: relative;}
+.RFSintext input[type="text"]{
+  width: 100%;
+  color: #c1c1c1;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  border: 2px solid #c1c1c1;
+  height: 45px;
+}
+.RFSintext textarea{
+  width: 100%;
+  color: #c1c1c1;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  border: 2px solid #c1c1c1;
+ }
+.reFineSrc i{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  color: #989898;
+  padding: 12px;
+}
+.FRtag span{
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #565656;
+  font-weight: 700;
+}
+.FRtag{
+  padding: 8px 0px;
+  padding-left: 15px;
+}
+/*-- Refine Search and location end --*/
+
+.btn-greenbor{
+  background-color: #ffffff;
+  border: 2px solid #37bc39;
+  color: #37bc39;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  min-width: 100%;
+  height: 45px;
+  border-radius: 0px;
+  box-shadow: none!important;
+  font-weight:400;
+}
+.RFspecialties.open .btn-greenbor{
+  box-shadow: none;
+  min-width: 100%;
+}
+.RFspecialties .btn-greenbor span{
+  text-align: left;
+  float: left;
+}
+.RFspecialties .btn-greenbor i{
+  text-align: right;
+  float: right;
+  padding-top: 5px;
+}
+.RFspecialties .btn-greenbor:focus{background-color: #37bc39;color: #ffffff}
+.RFspecialties .btn-greenbor:hover{background-color: #37bc39;color: #ffffff}
+.btn-group.RFspecialties{width: 100%;}
+.RFspecialties .btn:hover i{color: #ffffff;}
+.RFspecialties .btn:focus i{color: #ffffff;}
+.RFspecialties i{
+  color: #c1c1c1;
+  font-size: 20px;
+  vertical-align: middle;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+.RFspecialties ul.dropdown-menu {
+  min-width: 100%;
+  border: 2px solid #dddddd;
+  border-radius: 0px;
+  padding: 5px 15px;
+  margin-top: 8px;
+}
+.RFspecialties ul.dropdown-menu li label{
+  color: #565656;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  line-height:1;
+  font-weight: 400;
+  width: 100%;
+}
+/*-- Specialities end --*/
+
+.btnactionRefine button.btn-green{
+  min-width: 100%;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-radius: 0px;
+  min-height: 45px;
+  background-color: #37bc39;
+}
+.btnactionRefine button.btn-green:hover{
+  background-color: #ffffff;
+  color: #37bc39;
+  border: 2px solid #37bc39;
+}
+
+/*-- TopNav Refine Search end --*/
+
+.topsecFilter{
+  padding-bottom: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+}
+
+.btn-grayborder{
+  border: 2px solid #c1c1c1;
+  min-height: 30px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 1;
+  background-color: #ffffff;
+  color: #37bc39;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 100%;
+  border-radius: 0px;
+  box-shadow:none;
+}
+.btn-grayborder:hover{
+  border: 2px solid #5bbb2d;
+  color: #5bbb2d;
+  box-shadow: none!important;
+}
+.btn-grayborder:focus{color: #5bbe2c;box-shadow: none!important;}
+.drpmenubtn{
+  border: 2px solid #c1c1c1;
+  border-radius: 0px;
+  margin-top: 8px;
+}
+.drn-shtext{
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+.drpmenubtn li a{
+  color: #555555;
+  font-size: 14px;
+  border-bottom: 1px solid #dcdcdc;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.drpmenubtn li:last-child a{border-bottom: 0px;}
+.drpmenubtn li a:hover{
+  background-color: transparent;
+  color: #5bbe2c;
+}
+.LeftSidebar{padding-top: 10px;}
+.showCheckbox, .checkbox [type=checkbox]+.showCheckbox{
+  background-color: #eeecf2!important;
+}
+.drpmenubtn > li > a:hover, .drpmenubtn > li > a:focus{
+  box-shadow: none;
+}
+.sr-specialtiespadd{padding-left: 0px;padding-right: 0px;}
+
+/*-- Show Only Verify Pilot end --*/
+
+.SrTopgreenGb{
+  background-color: #5bbb2d;
+  clear: both;
+  padding-bottom: 50px;
+  padding-right: 10px;
+}
+.LeftsideBarVP{
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y:auto;
+  height: 100%;
+}
+.sr-main-bodyleft{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.TopBtnsectoin{
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 20px;
+}
+.btn-drpmenu{
+  box-shadow:none!important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+button.sm-btn-gray{
+  background-color: #eeecf2;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #5bbb2d;
+}
+button.sm-btn-gray:hover{
+  background-color: #ffffff;
+  color: #5bbb2d;
+}
+button.sm-btn-white{
+  background-color: #ffffff;
+  color: #5bbb2d;
+  font-size: 13px;
+}
+.sm-btn-white:hover, .sm-btn-white:focus, .sm-btn-white.focus{
+  color: #565656;
+}
+
+/*-- sm white btn end --*/
+
+.sr-drp-btn{
+  min-width: auto;
+  padding: 0px;
+}
+.sr-drp-btn li a{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #565656;
+  font-weight: 600;
+  border: 1px solid #c1c1c1;
+}
+.sr-drp-btn li a:hover{
+  background-color: transparent;
+  border: 1px solid #5bbb2d;
+  color: #5bbb2d;
+}
+/*-- Dropdonw Btn SEction end --*/
+
+.dnjsr-profilelftside{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.srratinglocation{padding-top:5px;}
+.sr-sm-pilotinfobg{background-color: #eeecf2;padding-bottom: 10px;}
+.VsrWhPilotImg img{border: 4px solid #ffffff;}
+.whtext-srpilot h3{color: #ffffff;}
+.sr-PliotInfoBody{margin-top: -35px;}
+.sr-locationtphead{padding-top: 5px;}
+.VsrWhPilotImg{margin-top: -35px;}
+.sr-sm-pilotinfobg .col-sm-9{padding-right: 0px;}
+.sr-sm-pilotinfobg .col-sm-3{padding-left: 0px;}
+
+.ViewProfile{
+  margin-right: -15px;
+  padding-top: 10px;
+  margin-top: -10px;
+}
+button.btn.sm-green-btn {
+  color: #fff;
+  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+.SrIdentity span.Identity small{font-size: 15px;}
+.SrIdentity span.Identity img{width: 25%;}
+
+/*-- Rating Location Identity end --*/
+
+ul.btnsplist{padding-left: 20px;}
+ul.btnsplist li{
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.btn-lgdronejobs{
+  font-family:'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+button.btn.btn-graysp{
+  font-size: 11px;
+  background-color: #e1e1e1;
+  color: #565656;
+  font-weight: 400;
+}
+button.btn.btn-graysp:hover{color: #5bbb2d;}
+
+/*-- specialty Sec end --*/
+
+.srPhotoGallery {position: relative;}
+.PilotCountGallery h4 a{color: rgba(255,255,255,0.9);}
+.PilotCountGallery h4 a:hover{color: #ffffff;}
+.PilotCountGallery h4{
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  margin-left: 15px;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  left: 10px;
+}
+ul.srBestPhotoG{width: 485px;padding-top: 20px;}
+ul.srBestPhotoG li{
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+}
+ul.srBestPhotoG li:last-child{margin: 0px;}
+
+/*-- PHoto Gallery end --*/
+
+.srovrviewpad{padding: 40px 0px;}
+.srovervhdtext h3{
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #565656;
+  font-weight: 600;
+}
+.srovervhdtext p{
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #565656;
+}
+
+/*-- SR OverView end --*/
+
+.RatingHdTextBl h3{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #565656;
+}
+.SrRatignFt .col-sm-3{padding-right: 0px;}
+.ProgressRating .progress{
+  border: 2px solid #c1c1c1;
+  background-color: #e2eaef;
+  height: 15px;
+  border-radius: 0px;
+  margin-bottom: 5px;
+}
+.ProgressRating .progress-bar-success{
+  background-color: #5bbb2d;
+}
+.ratingtexticon{
+  font-size: 14px;
+  font-family: 'Lato',sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: #989898;
+  vertical-align: middle;
+}
+.ratingtexticon i{color: #cccccc;}
+
+.sr-ratingtxt h2{
+  font-size: 48px;
+  color: #5bbb2d;
+  line-height: 30px;
+}
+.sr-ratingtxt h2 small{
+  color: #898989;
+  font-size: 24px;
+  line-height: 30px;
+}
+.sr-count h5 {
+  font-size: 12px;
+  font-family: 'Lato',sans-serif;
+  color: #555553;
+}
+/*-- Rating Count End --*/
+
+.clientReview h5{
+  font-size: 14px;
+  color: #555555;
+}
+.authorPJTitle h6{
+  text-align: right;
+  font-size: 14px;
+  color:#555555;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+}
+span.projecTitle{font-weight: normal;}
+.srTestimonial{padding-top: 20px;}
+.searchPilot-page{overflow-y: auto;}
+
+/*=================================
+     Search pilot Single Page end 
+===================================*/
+
+
+/*section{
+  height: 100%;
+  width: 100%;
+  
+}*/
+
+
+
+
+/*This will work for firefox*/
+@-moz-document url-prefix() { 
+
+    span.Datetime {
+        vertical-align: middle;
+    }
+
+    span.chatIcon.green {
+        vertical-align: middle;
+        position: relative;
+        top: 0px;
+    }
+
+
+}
+
+/*=======================================
+    CSS Hack page end 
+========================================*/
+
+.Chat-page,
+.Chat-page .allWrapper ,
+.Chat-page .ChatRoomBody > .container-fluid,
+.Chat-page .ChatRoomBody > .container-fluid > .row, 
+.Chat-page .ChatRoomBody > .container-fluid > .row, 
+.Chat-page .ChatRoomBody > .container-fluid > .row > div, 
+.Chat-page .LeftNavBg {
+  height: 100%;
+}
+.Chat-page .room-fillbody {
+  /*min-height: 200px;*/
+}
+.Chat-page .room-msg-wrap-body {
+  height: 100%;
+  min-height: 200px;
+  overflow: auto;
+}
+.Chat-page .LeftBgwhite {
+  max-width: 640px;
+}
+.Chat-page .main-column{
+  min-width: 66.66666667%;
+}
+
+.searchPilot-page,
+.searchPilot-page .allWrapper,
+.searchPilot-page .FilterPilot > div,
+.searchPilot-page .FilterPilot > div > .row,
+.searchPilot-page .sr-resultbody > div,
+.searchPilot-page .FilterPilot > div > .row > div,
+.searchPilot-page .contactpagemap{
+  height: 100%;
+}
+.searchPilot-page .TopPilotSearch {
+  clear: both;
+}
+.searchPilot-page .FilterPilot {
+  min-height: 400px;
+}
+
+.searchPilot-page .sr-main-bodyleft,
+.searchPilot-page .main-bodyleft {
+  width: 410px !important;
+}
+.searchPilot-page .RGoogleMaps {
+  width: calc(100% - 410px);
+}

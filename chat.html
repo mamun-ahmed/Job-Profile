@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+  <html class="no-js IE lt-ie9 lt-ie8 lt-ie7"></html>
+<![endif]-->
+<!--[if IE 7]>
+  <html class="no-js IE lt-ie9 lt-ie8"></html>
+<![endif]-->
+<!--[if IE 8]>
+  <html class="no-js IE lt-ie9"></html>
+<![endif]-->
+<!--[if gt IE 8]>
+  <html class="no-js IE gt-ie8"></html>
+<![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js mb_rmchat">
+  <!--<![endif]-->
+  <head>
+    <!-- title -->
+    <title>Messages</title>
+    
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+    <meta content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" name="generator">
+    <meta content="" name="author">
+    <meta name="robots" content="noindex">
+    <meta content="Here is the whole descrption of the website" name="description">
+    
+    <!-- fav icon -->
+    <link href="images/favicon.ico" rel="shortcut icon">
+
+    <!-- css => style sheet -->
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- assets=> css => chat sheet -->
+    <link href="css/chat.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- css => chat responsive sheet -->
+    <link href="css/chat_responsive_min.css" media="screen" rel="stylesheet" type="text/css">
+
+
+    
+    <!-- assets => css => easy responsive tab sheet -->
+    <link href="css/easy-responsive-tabs.css" rel="stylesheet" type="text/css">
+    
+    <!-- assets => css => jqtrasform sheet -->
+    <link href="css/jqtransform.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]><!-->
+    <!-- css for ie -->
+    <link href="css/ie.css" media="screen" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    
+  </head>
+  
+  <body id="top" class="Chat-page">
+    
+    <!--[if lt IE 9]>
+      <p class="browsehappy">
+        You are using an
+        <strong>outdated</strong>
+        browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+      </p>
+    <![endif]-->
+    
+    
+    <div class="allWrapper depgraybg">
+
+      <!-- Header -->
+      <header class="header dronejobsheader" id="header">
+        <div class="sticky scrollHeaderWrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="logoWrapper">
+                  <div class="logo">
+                    <a class="clearfix" href="/" title="DRONEJOBS">
+                      <img src="images/logo.png" alt="DRONEJOBS LOGO">
+                    </a>
+                  </div><!-- end of logo -->
+                </div><!-- end of logoWrapper -->
+              </div><!-- end of col3 -->
+              
+              <div class="mobile_header">
+                <a id="menu"><img src="images/menu.png" alt=""></a>
+                <div class="toggle_logout">
+                  <div class="row">
+                    <a href="#" class="button">
+                      <img src="images/user/user-pic.png" alt="" class="user_pic">
+                      <span>LOGOUT</span>
+                    </a>
+                    <a id="close"><img src="images/cross.png" alt=""></a>
+                  </div><!-- end of row -->
+
+                  <ul>
+                    <li class="availability_buttons">
+                      <a href="#" class="active">Available</a>
+                      <a href="#">Away</a>
+                    </li><!-- end of li -->
+                    <li><a href="#">HOW IT WORKS <img src="images/icons/how-it-work.png" alt=""></a></li>
+                    <li><a href="#">MESSAGES</a></li>
+                    <li><a href="#">SETTINGS</a></li>
+                  </ul><!-- end of ul-->
+                </div><!-- end of toggle logout -->
+              </div><!-- end of mobile header -->
+              
+              <div class="right_settings">
+                <div class="search_main">
+                  <a id="search_trigger"><img src="images/search_icon.png" alt=""></a>
+                  <div class="find_jobs">
+                    <ul>
+                      <li class="white_bg">
+                        <strong>
+                          <select>
+                            <option>Find a Job</option>
+                            <option>Find a Pilot</option>
+                          </select>
+                        </strong><!-- end of strong -->
+                      </li><!-- end of li -->
+                    </ul><!-- end of ul -->
+
+                    <ul>
+                      <li class="white_bg">
+                        <input type="text" value="WHERE: city, state or zip">
+                      </li><!-- end of li -->
+                    </ul><!-- end of ul -->
+                  </div><!-- end of find job -->
+                </div><!-- end of search main -->
+
+                <a href="/how-it-works.html" id="help"><img src="images/icons/how-it-work.png" alt=""></a>
+
+                <div class="chat_notification">
+                  <span class="active">&nbsp;</span>
+                  <a href="/chat.html"><img src="images/chat_icon.png" alt=""></a>
+                </div><!-- end of chat notification  -->
+
+                <div class="user_profile">
+                  <a id="user_trigger"><img src="images/user/user-pic.png" alt=""><span>&nbsp;</span></a>
+                  <div class="settings">
+                    <div class="row">
+                      <div class="availability_buttons left">
+                        <a href="#" class="active">Available</a>
+                        <a href="#">Away</a>
+                      </div><!-- end of availability -->
+                      <a href="#" class="settings_icon">SETTINGS</a>
+                    </div><!-- end of settings -->
+
+                    <div class="row logout_row">
+                      <div class="left">
+                        <p>
+                          <img src="images/user/user-pic.png" alt="">
+                          <strong>John EveryUser</strong><br>
+                          <em>Certified Drone Pilot</em>
+                        </p>
+                      </div><!-- end of left -->
+                      <a href="#" class="logout">LOGOUT</a>
+                    </div><!-- end of logout row -->
+
+                  </div><!-- end of settings -->
+                </div><!-- end of user profile -->
+              </div><!-- end of right settings -->
+
+            </div><!-- end of row -->
+          </div><!-- end of container -->
+        </div><!-- end of sticky -->
+      </header><!-- end of header -->
+      
+      <div class="clearfix"></div>
+      
+      <section class="ChatRoomBody clearfix" id="chatRoom">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4 LeftBgwhite">
+              <div class="LeftNavBg">
+                <div class="visible-xs roomnavsearch">
+                  <div class="input-group custom-search-form">
+                    <input type="text" class="form-control srroomperson" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default chatbtn-green" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+                  </div><!-- /input-group -->
+                </div><!-- end of search -->
+                <button type="button" class="search-arrow-wrapper navbar-toggle">
+                </button>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="hidden-xs room-leftnav-header text-center clearfix">
+                      <ul class="room-list-nav">
+                        <li class="active"><a href=""><i class="fa fa-comment-o"></i></a></li>
+                        <li><a href="message.html"><i class="fa fa-envelope-o"></i></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="hidden-xs navSearch-filter clearfix">
+                      <div class="roomnavsearch pull-left">
+                        <div class="input-group custom-search-form">
+                          <input type="text" class="form-control srroomperson" placeholder="Search">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default chatbtn-green" type="button">
+                              <i class="fa fa-search"></i>
+                            </button>
+                         </span>
+                        </div><!-- /input-group -->
+                      </div><!-- end of search -->
+
+                      <div class="roomFilter pull-right">
+                        <div class="btn-group sm-RFfilterBy">
+                          <button type="button" class="btn btn-grayborder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Filter by</span> <i class="fa fa-angle-down "></i>
+                          </button>
+                          <ul class="dropdown-menu drpmenubtn">
+                            <li>
+                              <a data-filter="newly" href="#">New</a>
+                            </li><!-- end of li -->
+                            <li>
+                              <a data-filter="read" href="#">Read</a>
+                            </li><!-- end of li -->
+                            <li>
+                              <a data-filter="unread" href="#">Unread</a>
+                            </li><!-- end of li -->
+
+                          </ul><!-- end of ul -->
+
+                        </div><!-- end of Filterby-->
+
+                      </div><!-- end of filter -->
+
+                    </div><!-- end of room nav search -->
+                  </div><!-- end of col12 -->
+                </div><!-- end of row -->
+
+                <div class="mb_chatroom_wrapper">
+                  <div class="mb_Wrapperbody">
+                    <div class="visible-xs roomFilter">
+                      <div class="btn-group sm-RFfilterBy">
+                        <span class="mbFiltering">
+                          Filter by <i class="fa fa-angle-right"></i>
+                        </span>
+                        <i class="fa fa-angle-down hidden-xs"></i>
+                        <ul class="mb_filterSec">
+                          <li>
+                            <a data-filter="newly" href="#">New</a>
+                          </li><!-- end of li -->
+                          <li>
+                            <a data-filter="read" href="#">Read</a>
+                          </li><!-- end of li -->
+                          <li>
+                            <a data-filter="unread" href="#">Unread</a>
+                          </li><!-- end of li -->
+
+                        </ul><!-- end of ul -->
+
+                      </div><!-- end of Filterby-->
+                    </div><!-- end of filter -->
+
+                    <div class="row conversation-wrap">
+                      <div class="media conversation">
+                        <ul class="room-list proper">
+                          
+                          <li class="room-list-item room-list-item-expanded" data-date="10/21/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    Mark Username
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  Friday
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+                          
+                          <li class="room-list-item room-list-item-expanded" data-date="10/20/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    Arnold Anon
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/20/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/22/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    Jessica Generic
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  Yesterday
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+                          
+                          <li class="room-list-item room-list-item-expanded" data-date="10/11/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    Jake Everyman
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/11/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+                           
+                          <li class="room-list-item room-list-item-expanded" data-date="10/11/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    Jake Everyman
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong>Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/11/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+                           
+                          <li class="room-list-item room-list-item-expanded" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+
+                          </li><!-- end of li -->
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+                          </li><!-- end of li -->
+
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+                          </li><!-- end of li -->
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+                          </li><!-- end of li -->
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+                          </li><!-- end of li -->
+
+                          <li class="room-list-item room-list-item-expanded selected" data-date="10/01/15">
+                            <div class="room-list-item-div">
+                              <div class="roomlisthd col-xs-9">
+                                <div class="room-list-name-span">
+                                  <h5 class="media-heading">
+                                    John Doe
+                                  </h5>
+                                </div><!-- end of room list name -->
+
+                                <div class="lastStroypra">
+                                  <span class="ms-last-story"> <strong>You:</strong> Nam velit est, congue id consequat ut, feugiat at sapien. Vestibulum sodales metus orci.</span>
+                                </div><!-- end of -->
+
+                              </div><!-- end of room list hd -->
+
+                              <div class="latest-story-date col-xs-3 text-center">
+                                <span class="Datetime green">
+                                  10/01/15
+                                </span><br>
+                                <span class="chatIcon green">
+                                  <i class="fa fa-comments-o"></i>
+                                </span>
+                              </div><!-- end of latest story -->
+
+                            </div><!-- end of room list item div -->
+                          </li><!-- end of li -->
+
+                        </ul><!-- end of ul -->
+
+                      </div><!-- end of conversion -->
+                    </div><!-- end of row -->
+                  </div><!-- end of nav_wapper -->
+                </div><!-- end of wapper -->
+
+              </div><!-- end of Left SideBg -->
+            </div><!-- end of lg4 -->
+
+            <div class="col-sm-8 main-column">
+              <div class="roomchatselect rmchathdtxt">
+                <h3>Chat with <span>Jessica Generic</span></h3>
+              </div><!-- end of heading -->
+
+              <div class="room-fillbody">
+                <div class="room-msg-wrap">
+
+                  <div class="alert room-msg-date">
+                    <strong>Yesterday</strong>
+                  </div><!-- end of alert date -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                        <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales lectus pulvinar consectetur malesuada. Duis sed felis ac velit porttitor molestie vitae sit amet nisi. </span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                        <img class="img-circle" src="images/user/user-pic.png" alt="Thumb Profile">
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">You</h5>
+                        <span class="room-story-message">Ut at massa non tellus posuere consequat. Maecenas eget laoreet ante. Ut ligula libero, molestie eu rhoncus vel, faucibus eu justo. Nulla facilisi. Fusce quis odio iaculis, vehicula odio a, pulvinar mauris. Quisque vitae augue dignissim, porta quam sit amet, pharetra libero.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus. </span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Praesent elit mi, scelerisque id turpis at, placerat pellentesque mi. Duis id ultrices arcu, a venenatis elit.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                        <img class="img-circle" src="images/user/user-pic.png" alt="Thumb Profile">
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">You</h5>
+                        <span class="room-story-message">Suspendisse sodales ipsum dolor, tincidunt pellentesque tortor molestie quis. Cras ullamcorper, sapien quis pharetra eleifend, mauris ligula placerat tellus, nec consequat tortor arcu et quam. </span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="to-you rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="to-you rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="to-you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                         <i class="fa fa-comments-o"></i>
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">Jessica</h5>
+                        <span class="room-story-message">Nunc sit amet augue at velit fermentum sagittis condimentum id purus. Cras ac augue commodo, feugiat dui luctus, egestas lacus. Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.  Etiam mattis aliquam orci tristique porta. Nam posuere facilisis sem vel pellentesque. Mauris quis leo in nulla dapibus finibus.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                  <div class="you room-story-wrapper clearfix">
+                    <div class="useRphoto msg">
+                      <div class="user-presence-photo">
+                        <img class="img-circle" src="images/user/user-pic.png" alt="Thumb Profile">
+                      </div><!-- end of user photo -->
+
+                      <div class="rm-story-author blchatheadtxt col-sm-10">
+                        <h5 class="media-heading">You</h5>
+                        <span class="room-story-message">Nullam vitae finibus urna, et tempor nisi. Integer ac neque at purus sollicitudin placerat at a augue.</span>
+                      </div><!-- end of rm sotry author -->
+
+                    </div><!-- end of userRphoto -->
+                  </div><!-- end of Room Story -->
+
+                </div><!-- end of message warp -->
+
+                <div class="rm-composer-panel">
+                  <form> 
+                    <div class="panel-body rm-composer-sec">
+
+                      <div class="rm-msg-composer-section rm-ComposerSectin">
+                          <textarea class="form-control send-message" rows="1"></textarea>
+                          <div class="attach-emojibtn">
+                          <span class="drn-emoticon-smile">
+                            <a class="rm-emoji-button rm-actions-comoser" href="#">
+                                <i class="fa fa-smile-o"></i>
+                            </a>
+                          </span><!-- end of -->
+
+                          <span class="rm-composer-attach rm-actions-comoser">
+                            <label id="import-manual-trigger" class="rm-actionComoser"><i class="fa fa-paperclip"></i><input type="file" id="import-file-select" class="hidden"></label>
+                          </span><!-- end of rm actios com-->
+
+                        </div><!-- end of Attach -->
+
+                      </div><!-- end of composer -->
+
+                      <span class="msg-composer-section rm-action-btngreen">
+                        <button title="Please enter a message." class="btn btn-acgreen" type="submit">Send</button>
+                      </span><!-- end of -->
+                    </div><!-- end of textarea -->
+
+                  </form><!-- end of form -->
+                </div><!-- end of composer panel -->
+
+              </div><!-- end of room fill body -->
+
+            </div><!-- end of col8 -->
+          </div><!-- end of row -->
+        </div><!-- end of container -->
+      </section><!-- end of section -->
+
+    </div><!-- end of all wrapper -->
+
+
+    <!-- JavaScript Files ============================================= -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+
+    <!-- Jquery Ui js -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <!-- scripts js -->
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+    <script type="text/javascript">
+      $(function(){
+        $('strong').jqTransform({imgPath:'jqtransformplugin/img/'});
+      });
+    </script>
+
+  </body>
+</html>

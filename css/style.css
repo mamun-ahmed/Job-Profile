@@ -1,0 +1,7711 @@
+@import url('bootstrap.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext');
+@import url('header.css');
+@import url('footer.css');
+@import url('font-awesome.css');
+@import url('woco-accordion.css');
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Bold.eot');
+	src: url('../fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat Hairline';
+	src: url('../fonts/Montserrat/Montserrat-Hairline.eot');
+	src: url('../fonts/Montserrat/Montserrat-Hairline.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat/Montserrat-Hairline.woff') format('woff'), url('../fonts/Montserrat/Montserrat-Hairline.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat Semi';
+	src: url('../fonts/Montserrat/Montserrat-SemiBold.eot');
+	src: url('../fonts/Montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Regular.eot');
+	src: url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Light.eot');
+	src: url('../fonts/Montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+/* --- general resets --------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, embed, object {
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	outline: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	font-variant: normal;
+	text-transform: none;
+	speak: none;
+}
+/* --- HTML5 display-role reset for older browsers --------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+}
+/* --- typography --------------------- */
+/*headings*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 15px;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 25px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 14px;
+}
+/* paragraphs */
+p {
+	font-size: 17px;
+	line-height: 24px;
+	font-family: 'Open Sans', sans-serif;
+	color: #494949;
+	font-weight: lighter;
+}
+p:last-child {
+	margin-bottom: 0px;
+}
+p:before {
+	width: 30px;
+	display: inline-block;
+}
+/* small */
+code, pre {
+	display: block;
+	white-space: pre;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+cite, em, dfn {
+	font-style: italic;
+}
+i {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size: 16px;
+	display: inline-block;
+}
+/* Fontello */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	width: auto;
+	margin-right: 0px;
+	margin-left: 0px;
+	line-height: 1;
+}
+/*strong*/
+strong {
+	font-weight: bold;
+}
+/* Lists */
+ol, ul {
+	list-style: none;
+}
+/* Code */
+
+/* --- Forms --------------------- */
+form {
+	outline: none;
+}
+input, textarea, button, input[type="button"], .generalBtn {
+	outline: none !important;
+	box-shadow: none;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input, textarea {
+	font-size: 12px;
+	color: #5d5d5d;
+	font-family: 'Open Sans', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
+}
+input:focus, textarea:focus {
+	color: #333;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], textarea, select {
+	border: 1px solid #e0e0e0;
+	padding: 8px 9px;
+	outline: none;
+	color: #21242e;
+	margin: 0;
+	max-width: 100%;
+	background: #ffffff;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+	font-size: 15px;
+	font-weight: 700;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	width: 100%;
+	max-width: 100%;
+	min-height: 132px;
+	position: relative;
+}
+textarea::before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+button, input[type="button"], input[type="submit"] {
+	border: 0px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 13px 20px;
+	background-color: #5bbb2d;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+
+/* placeholder */
+*::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999999;
+ font-weight: lighter;
+}
+*:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999999;
+ opacity: 1;
+ font-weight: lighter;
+}
+*::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999999;
+ opacity: 1;
+ font-weight: lighter;
+}
+*:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999999;
+ font-weight: lighter;
+}
+/* --- images --------------------- */
+img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+/* --- links --------------------- */
+a, a:link, a:visited, a:active, a:focus {
+	text-decoration: none!important;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+a, a:visited {
+	outline: 0px;
+}
+a:hover {
+	color: inherit;
+}
+/* break */
+.br {
+	display: block;
+	height: 30px;
+}
+/* hr */
+hr, .container hr {
+	margin: 0px;
+	height: 1px;
+	background: #ffffff;
+	border: 0px;
+}
+.none {
+	display: none!important;
+}
+
+/* --- clearing --------------------- */
+
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: " ";
+}
+.clearfix:after {
+	clear: both;
+}
+/* --- Svg --------------------- */
+.svg {
+	width: 100%;
+	height: 100%;
+}
+/* col */
+[class*="col"] {
+ -webkit-transition: all 0.4s ease-in-out;
+ -moz-transition: all 0.4s ease-in-out;
+ -o-transition: all 0.4s ease-in-out;
+ -ms-transition: all 0.4s ease-in-out;
+ -khtml-transition: all 0.4s ease-in-out;
+ transition: all 0.4s ease-in-out;
+}
+/* --- selection --------------------- */
+::-moz-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-webkit-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-o-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-khtml-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-ms-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::selection {
+	background-color: #5bbb2d;
+	color: #ffffff;
+}
+/*=============================================================================
+	Globally pages Applied Styles
+=============================================================================*/
+/* --- all wrapper --------------------- */
+.allWrapper {
+	margin: auto;
+	height: auto;
+	position: relative;
+	/*-webkit-transition: all 1s ease-in-out;*/
+	/*-moz-transition: all 1s ease-in-out;*/
+	/*-o-transition: all 1s ease-in-out;*/
+	/*-ms-transition: all 1s ease-in-out;*/
+	/*-khtml-transition: all 1s ease-in-out;*/
+	/*transition: all 1s ease-in-out;*/
+}
+/* --- contents --------------------- */
+.section {
+	position: relative;
+}
+.section .sectionWrapper {
+	padding: 80px 0px 80px 0px;
+	position: relative;
+}
+/* bgcolorSection */
+.greenSection {
+	background-color: #68d835;
+}
+.graylightbg {
+	background-color: #f9f9f9;
+}
+.graydeepbg {
+	background-color: #cfcfcf;
+}
+/* Social Nav */
+.socialNav {
+	text-align: center;
+}
+.socialNav > li {
+	font-size: 12px;
+	margin: 0px 2.5px;
+	white-space: nowrap;
+	text-align: center;
+	position: relative;
+	margin-right: 17px;
+}
+.socialNav > li:first-child {
+	margin-left: 0px;
+}
+.socialNav > li:last-child {
+	margin-right: 0px;
+}
+.socialNav > li a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 17px;
+	position: relative;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+	overflow: hidden;
+}
+.socialNav > li a:hover {
+	background-color: #ff6b6b;
+}
+
+/*=======================================
+ Home page Styles start here
+========================================*/
+
+.home-page,
+.home-page .allWrapper,
+#full-height-header {
+	height: 100%;
+	width: 100%;
+}
+.home-page .find-job-bg-img,
+.home-page .find-job-bg-img > .container,
+.home-page .find-job-bg-img > .container > .row,
+#full-height-header{
+	height: 100%;
+}
+.home-page .col-sm-12 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+	
+
+.home-page .header {
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	background: rgba(255,255,255,0.85);
+}
+.home-page .find-job {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.home-page .findsearch {
+	padding-top: 10vmin;
+	padding-bottom: 10vmin;
+}
+.home-page .category-list {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+.home-page .video-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+.bckgd-video {
+	min-width: 100%;
+	min-height: 100%;
+}
+.slick-arrow {
+	top: calc(50% - 13px);
+	position: absolute;
+	z-index: 1;
+	right: -20px;
+}
+.slick-arrow i {
+	color: #fff;
+	font-size: 26px;
+	cursor: pointer;
+}
+.slick-arrow.arrow-left {
+	right: auto;
+	left: -20px;
+}
+.slick-gallery .slick-arrow {
+	top: calc(50% - 13px);
+	position: absolute;
+	z-index: 1;
+	right: 0;
+}
+.slick-gallery .slick-arrow i {
+	color: #000;
+	font-size: 26px;
+	cursor: pointer;
+}
+.slick-gallery .slick-arrow.arrow-left {
+	right: auto;
+	left: 0;
+}
+.slick-gallery .img-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.new_wrapper .logo {
+	max-width: 185px;
+	padding: 12px 0 0;
+}
+.find_pilot {
+	background: #5bbb2d;
+	padding: 70px 0;
+	text-align: center;
+}
+.find_pilot h1 {
+	color: #ffffff;
+	font-size: 48px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	margin: 0 0 40px;
+}
+.find_pilot button {
+	height: 80px;
+	width: 298px;
+	border: 2px solid #99de9c;
+	background: transparent;
+	font-size: 35px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+.find_pilot button:hover {
+	background-color: #ffffff;
+	color: #5cba47!important;
+}
+.gray_icons li {
+	float: left;
+	width: 45px;
+	text-align: center;
+	margin: 0 0 0 0;
+	font-weight: 600;
+	color: #565656;
+	font-size: 9px;
+	line-height: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+.gray_icons li a {
+	color: #565656;
+	background: #565656;
+	position: relative;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	float: left;
+	padding: 5px 0 8px;
+	width: 40px;
+	opacity: 0.35;
+	filter: alpha(opacity =35);
+}
+.gray_icons li a img {
+	height: 24px;
+}
+.gray_icons li a:hover, .gray_icons li.active a {
+	opacity: 1;
+	filter: alpha(opacity =100);
+}
+.gray_icons li span {
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	bottom: -15px;
+}
+.gray_icons li.two_lines span {
+	bottom: -27px;
+}
+.drones_main {
+	background: #eeecf2;
+	padding: 35px 0 50px;
+}
+.drones_main #Grid {
+	border: 1px solid #dddddd;
+	float: left;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	margin: 0 0 -1px;
+}
+.drones_main .mix {
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.drones_main .mix:nth-child(3n) {
+/*border-right: 0;*/
+}
+.drones_main .mix .gray_icons {
+	float: right;
+}
+.drones_main .mix .gray_icons li a {
+	width: 35px;
+	padding: 3px 0 5px;
+	opacity: 0.50;
+	filter: alpha(opacity =50);
+}
+.drones_main .mix .gray_icons li a img {
+	height: 25px;
+	margin: 0;
+}
+.drones_main .mix .gray_icons li {
+	width: 40px;
+}
+.drones_main .mix img {
+	margin: 15px 0;
+}
+.drones_main .mix h2 {
+	font-size: 18px;
+	line-height: 20px;
+	color: #5bbb2d;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 15px;
+}
+.drones_main .mix p {
+	color: #565656;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	margin: 0 0 15px;
+	padding: 0 5% 0 0;
+}
+.drones_main .mix h3 {
+	font-size: 14px;
+	line-height: 18px;
+	color: #565656;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	margin: 0 0 0;
+}
+.drones_main .PG_progress {
+	width: 175px;
+	background: url(../images/progress_bg.png) no-repeat left top / 100%;
+	height: 22px;
+	float: left;
+	position: relative;
+	margin: 25px 0 0;
+}
+.drones_main .PG_progress img {
+	position: absolute;
+	top: -20px;
+	margin: 0 0 0 -10px;
+	width: 20px;
+}
+.drones_main .PG_bar {
+	background: url(../images/fill_color.png) no-repeat left bottom;
+	background-size: auto 100%;
+	height: 20px;
+	position: absolute;
+	left: 0px;
+	bottom: 2px;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.max_width {
+	width: 175px;
+	float: left;
+	clear: both;
+}
+.drones_main .mix .btn {
+	width: auto;
+	background: #5bbb2d;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 5px 15px;
+	margin: 60px 0 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	position: absolute;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.types_banner {
+	background: #ffffff url(../images/home_banner.jpg) no-repeat center bottom / cover;
+	border-bottom: 1px solid #dddddd;
+	padding: 55px 0 100px;
+}
+.types_banner h1 {
+	font-size: 54px;
+	line-height: 44px;
+	color: #5bbb2d;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 30px;
+}
+.white_box {
+	background: rgba(255,255,255,0.60);
+	padding: 15px 15px 35px;
+	-webkit-box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	display: inline-block;
+	max-width: 693px;
+	width: 100%;
+}
+.types_banner h3 {
+	font-size: 24px;
+	line-height: 24px;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	background: #5bbb2d;
+	margin: 0 15px 20px 0;
+}
+/*#Grid .mix {
+	display: none;
+}*/
+#Grid .gap {
+	display: inline-block;
+}
+.sort {
+	float: right;
+}
+.sort select {
+	border: 2px solid #37bc39 !important;  /*Removes border*/
+	-webkit-appearance: none;  /*Removes default chrome and safari style*/
+	-moz-appearance: none; /* Removes Default Firefox style*/
+	appearance: none;
+	background: #fff url(images/small_gray_arrow.png) no-repeat 90% center;
+	width: 95px; /*Width of select dropdown to give space for arrow image*/
+	text-indent: 0.01px; /* Removes default arrow from firefox*/
+	text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+	color: #37bc39;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 8px 5px;
+}
+.sort ul.list_ul {
+	min-width: 75px;
+	color: #37bc39;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	background: #fff url(../images/small_gray_arrow.png) no-repeat 90% center;
+	border: 2px solid #37bc39;
+	position: relative;
+}
+.sort ul.list_ul li {
+	padding: 7px 30px 8px 10px;
+	z-index: 2;
+}
+.sort ul.list_ul li:not(.init) {
+	float: left;
+	width: 185px;
+	display: none;
+	background: #fff;
+	position: absolute;
+	right: -2px;
+	top: 45px;
+	border: 1px solid #dddddd;
+	color: #565656;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	box-shadow: rgba(0,0,0,0.4) 0 2px 2px;
+	cursor: pointer;
+}
+.sort ul.list_ul li:not(.init):nth-child(2) {
+	top: 40px;
+}
+.sort ul.list_ul li:not(.init):nth-child(3) {
+	top: 77px;
+}
+.sort ul.list_ul li:not(.init):nth-child(4) {
+	top: 114px;
+}
+.sort ul.list_ul li:not(.init):nth-child(5) {
+	top: 151px;
+}
+.sort ul.list_ul li:not(.init):hover, ul.list_ul li.selected:not(.init) {
+}
+.sort li.init {
+	cursor: pointer;
+}
+.only_mob {
+	display: none;
+}
+.fail-message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2%;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	width: 100%;
+}
+.fail .fail-message {
+	opacity: 1;
+	pointer-events: all;
+}
+.fail-message:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.fail-message span {
+	display: inline-block;
+	font-weight: 500;
+	color: red;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+/* ===================================================
+			style.css start
+ ===================================================== */
+
+.find-job .find-job-bg-img{
+  /*background-image: url(../images/bg-img/find-bg-img.jpg);*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  background: transparent;
+}
+.find-job .findpadd{
+  /*padding-top: 130px;*/
+  clear: both;
+  background: RGBA(0, 0, 0, 0.45);
+}
+.findheadtitle h1{
+  font-size: 66px;
+  font-size: 8vmin;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.findheadtitle h3{
+  font-size: 37px;
+  font-size: 5vmin;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+button.btn.btn-large.green-btn {
+  padding: 8px 30px 8px 35px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  border-radius: 2px;
+  margin-left: 15px;
+  background:transparent;
+  border: 1px solid #5bbb2d;
+  vertical-align: middle;
+  margin-top: -7px;
+  text-transform: uppercase;
+}
+button.btn.btn-large.green-btn:hover{
+  background-color: #ffffff;
+  border: 1px solid #5bbb2d;
+  color: #5bbb2d;
+}
+.tp_textgr{text-transform: uppercase;font-weight: 600;}
+span.fstitle{padding-right: 12px;}
+span.fsloctitle{padding: 0px 12px;}
+.findjob{position: relative;top: -9px;}
+.findjob.findlocation .ui.fluid.dropdown{
+  width: 195px;
+  height: 40px;
+  padding: 5px 8px;
+  line-height: 32px;
+}
+.findlocation .ui.search.selection.dropdown > input.search{
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 20px;
+  color: #cfcfcf;
+  font-weight: lighter;
+  padding-left: 25px;
+}
+.srcpilotjob .ui.selection.dropdown{
+  width: 185px;
+  height: 40px;
+  padding: 5px 8px;
+  line-height: 32px;
+}
+.findjob .ui.selection.dropdown i{
+  padding: 0px 3px;
+}
+.srcpilotjob .ui.selection.dropdown i.fa.fa-sort-desc {
+  position: relative;
+  top: -4px;
+}
+ul.findsearch{padding-top: 50px;}
+ul.findsearch li{
+  font-size: 45px;
+  font-size: 6.5vmin;
+  font-family: 'Montserrat', sans-serif;
+  color: #5bbc2e;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.findheadtitle .hrwhite{
+  width: 730px;
+  margin: 0px auto;
+}
+/*-- Search Section end --*/
+
+.category-list {
+  /*padding-top: 125px;*/
+  /*padding-bottom: 138px;*/
+  background: rgba(0,0,0,0.3);
+  padding: 15px 0;
+  text-align: center;
+}
+ul.category-list-item li{
+  display: inline-block;
+  /*background-color: rgba(255, 255, 255, 0.3);*/
+  padding: 12px 5px;
+  width: 100px;
+  height: 100px;
+}
+ul.category-list-item li:hover{
+  background-color: rgba(91, 187, 45, 0.3);
+}
+ul.category-list-item li a h6{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+/*-- Category list end --*/
+.findjob .ui.selection.dropdown{
+  font-size: 16px;
+  color: #cfcfcf;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+
+}
+
+/*-- Find job search section End --*/
+
+section.footage.mainSection {
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+.footagetitle h1{
+  font-size: 44px;
+  color: #494949;
+  line-height: 50px;
+  font-weight: bold;
+}
+.footagetitle p{
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30px;
+  color: #494949;
+  font-weight: 400;
+}
+.drn_footage .separator {
+    background: #cdcdcd;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: -5%;
+    top: 0;
+}
+.drn_footage .separator img {
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    margin: -15px 0 0;
+    width: auto;
+    max-width: none;
+}
+
+/*-- Footage section end --*/
+
+.test-bg-img{
+  background: url(../images/bg-img/test-bg-img.jpg)top center;
+  background-repeat: no-repeat;
+  padding-top: 115px;
+  padding-bottom: 70px;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.clienttest-bg{
+  background:#5bbb2d;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 43px;
+}
+.test-tile p{
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+}
+.test-tile h2{
+  font-size: 37px;
+  color: #ffffff;
+}
+.test-tile h2 span{
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 29px;
+  font-weight: lighter;
+}
+hr.test-hr {
+  margin-top: 18px;
+  width: 235px;
+}
+.clientest-bg{position: relative;}
+.clienttest-bg.test-tile:after {
+  content: "";
+  position: absolute;
+  bottom: -43px;
+  left: 20px;
+  background-image: url(../images/test-ribbon-img.png);
+  background-repeat: no-repeat;
+  height: 44px;
+  width: 60px;
+}
+
+/*-- Testimonial section end --*/
+
+.drjobstext h1{
+  font-size: 45px;
+  line-height: 50px;
+  color: #494949;
+  padding-top: 24px;
+  font-weight: bold;
+}
+.drjobstext h1 span{
+  color: #5bbc2e;
+}
+.drjobstext p{
+  font-size: 18px;
+  color: #494949;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.videoborder{padding: 30px 0px;}
+hr.green-border{
+  border: 2px solid #5cba47;
+  background: transparent;
+  height: 0px;
+}
+section.dronejobsfootage {
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+.footagevideo.demo-gallery{
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 288px;
+}
+
+.demo-gallery > ul {
+  margin-bottom: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.demo-gallery > ul > li {
+  margin-bottom: 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+.demo-gallery > ul > li a {
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.demo-gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.demo-gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+.demo-gallery > ul > li a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #cfcfcf;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.demo-gallery > ul > li a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.demo-gallery > ul > li a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo-gallery .justified-gallery > a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.demo-gallery .justified-gallery > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+  opacity:0.8;
+}
+.demo-gallery .justified-gallery > a .demo-gallery-poster {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+  left: 45%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 1;
+  position: absolute;
+  top: 45%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo-gallery .video .demo-gallery-poster img {
+ /* height: 48px;
+  width: 48px;*/
+  margin-left: -44px;
+  margin-top: -44px;
+  opacity: 0.8;
+}
+/*-- DRONEJOBS Footage section end --*/
+.findpilot-bg{
+  background: url(../images/bg-img/getstarted-bg-img.jpg)no-repeat top center;
+  padding: 100px 0px;
+  background-size: cover;
+}
+.fdtext h1{
+  font-size: 55px;
+  color: #ffffff;
+  line-height: 40px;
+  font-weight: bold;
+  padding-bottom: 70px;
+}
+.fdtext button{
+  height: 90px;
+  width: 352px;
+  border: 2px solid #99de9c;
+  background:transparent;
+  font-size: 35px;
+  color: #fff!important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.fdtext button:hover{
+  background-color: #ffffff;
+  color: #5cba47!important;
+}
+/*-- FindPilot section end --*/
+
+/*=================================
+        Home Page End
+===================================*/
+
+.LoginPageSection {
+  padding-top: 65px;
+  padding-bottom:100px;
+  clear: both;
+}
+.heading-title h3{
+  font-size: 58px;
+  line-height: 50px;
+  color:#494949;
+  font-weight: lighter;
+}
+.loginfrom-body{
+  width: 400px;
+  margin:auto;
+  padding-top: 78px;
+}
+.LoginFrom .input-group{
+  display: flex;
+}
+.LoginFrom .input-group input{
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  padding:20px;
+  height: 40px;
+  border-radius: 4px!important;
+  color: #999999;
+}
+.LoginBtn .btn-default{
+  background-color: #e8e8e8;
+  font-family: Helvetica Neue;
+  padding: 10px 45px;
+  float: left;
+}
+.LoginBtn .btn-default:hover{
+  background-color: #5bbc2e;
+  color: #ffffff;
+}
+.LoginBtn .checkbox{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.LoginBtn .checkbox label{
+  line-height: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #494949;
+  font-weight: 600;
+}
+.drn-LoginCheckbox:before{left: -2px;}
+.forgot-pass{
+  text-align: start;
+  padding-top: 10px;
+  clear: both;
+}
+.forgot-pass a{
+  font-size: 12px;
+  color: #5bbc2e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/*=================================
+      Login Page end
+===================================*/
+
+.sectionsign{
+  padding-top: 50px;
+  padding-bottom: 90px;
+  clear: both;
+}
+.blheadtitle h1{
+  font-size: 58px;
+  font-weight: lighter;
+  color: #494949;
+  line-height: 50px;
+}
+.blheadtitle h2{
+  font-size: 41px;
+  font-weight: lighter;
+  color: #494949;
+  line-height: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+.newaccount{padding-top: 50px;}
+.profile-usertitle {padding-top:5px;}
+.usertitle h3{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  line-height: 50px;
+}
+.hirebtn a{
+  padding:20px 30px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  border-radius: 4px;
+}
+.drn_hireBtn{padding-top:15px;}
+.hirebtn .greenbtn{background-color: #5bbc2e;}
+.greenbtn:hover, .greenbtn:focus, .greenbtn.focus{
+  background-color: #ffffff;
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+
+}
+.clientOrhire hr.Orhg{
+  height: 145px;
+  width:1px;
+  background-color: #cfcfcf;
+  margin: auto;
+}
+.clientOrhire h4{
+  font-size: 41px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 40px;
+  color: #cfcfcf;
+  font-weight: lighter;
+}
+.loginftbottom{padding-top: 70px;}
+.loginftbottom h6{
+  font-size: 12px;
+  font-weight: 600;
+}
+span.DRNlogo{font-family: 'Montserrat', sans-serif;font-size: 12px;}
+span.DRNlogo strong{color: #5bbc2e;font-size: 12px;}
+.bllogin a{
+  font-size: 12px;
+  font-weight: 600;
+  color: #666666;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+.bllogin a img{
+  margin-right: 15px;
+}
+
+/*=================================
+    Creat an account choose end
+===================================*/
+
+.blheadtitle p{
+  font-size: 20px;
+  color: #494949;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  padding-top: 18px;
+}
+.blheadtitle p a{
+  color: #5bbc2e;
+  font-weight: 600;
+}
+.social-signup .profile-userpic{
+  padding-bottom: 65px;
+}
+.social-signupbtn a.bluebtn{
+  background-color: #47639e;
+}
+.social-signup .hirebtn i{
+  font-size: 27px;
+  padding-right: 22px;
+  position: relative;
+  top: 4px;
+}
+.social-signup .hirebtn span{
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1;
+}
+.social-signup .hirebtn a{
+  padding: 7px 25px 10px;
+  width: 290px;
+  text-align: start;
+  height: 50px;
+  margin: auto;
+}
+.social-signup .hirebtn a:hover{
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+  background-color: #ffffff;
+}
+.socialOrbtn{
+  position: relative;
+  width: 355px;
+  margin: 30px auto;
+}
+.socialOrbtn h4{
+  font-size: 41px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  line-height: 30px;
+  color: #cfcfcf;
+}
+.socialOrbtn h4:before{
+  background-color: #cfcfcf;
+  height: 1px;
+  border-left: 145px solid #cfcfcf;
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 18px;
+}
+.socialOrbtn h4:after{
+  background-color: #cfcfcf;
+  height: 1px;
+  border-left: 145px solid #cfcfcf;
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 18px;
+}
+
+/*=================================
+      Creat Free Pilot Page end
+===================================*/
+
+.verifyphn.sectionsign{
+  padding-top: 40px;
+  padding-bottom: 285px;
+  clear: both;
+}
+.verifyaccount {padding-top: 45px;}
+.blvheadtitle h1{
+  font-size: 41px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  line-height: 50px;
+}
+.blvheadtitle p{
+  font-size: 20px;
+  color: #999999;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+ul.verifyacc li{
+  display: inline-block;
+  vertical-align: top;
+}
+ul.verifycountry li .vcontry .ui.compact.selection.dropdown{
+  font-size: 14px;
+  font-family: 'Helvetica Neue';
+  padding: 15px 30px;
+}
+ul.verifycountry li .vcontry .ui.compact.selection.dropdown i{
+  padding-left: 5px;
+  position: relative;
+  top: -3px;
+}
+.verifyphn{padding: 0px 20px;}
+#codeNumber{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  color: #999999;
+  font-weight: lighter;
+  padding-left: 20px;
+  min-width: 240px;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: none;
+}
+#phnNmber{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  color: #999999;
+  font-weight: lighter;
+  padding-left: 20px;
+  min-width: 240px;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.verifybtn.SubmitbtnV {
+  position: relative;
+  left: 20px;
+}
+.drn_grtxt .greentext{float: left;}
+.greentext{
+  color: #5bbc2e;
+  font-size: 14px;
+  line-height: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-align: start;
+}
+.greentext{color: #5bbc2e;}
+.btn.greenbtn{
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Helvetica Neue';
+  line-height:1;
+  background-color: #5bbc2e;
+  padding: 13px 15px;
+  font-weight: 500;
+  display: block;
+}
+.btn.greenbtn:hover{
+  background-color: #ffffff;
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+}
+
+/*=================================
+      Verify Page end
+===================================*/
+
+.mailnewaccount {padding-top: 45px;}
+form#mailnacc input{
+  border:1px solid #cfcfcf;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  margin-bottom: 25px;
+  padding-left: 16px;
+  border-radius: 4px;
+  color: #999999;
+}
+form#mailnacc .btn-block{
+  width:70%;
+  margin: auto;
+  border-radius: 4px;
+}
+form#mailnacc .btn-succes:hover{
+  background-color: #ffffff;
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+}
+form#mailnacc .checkbox{padding-bottom: 17px;}
+form#mailnacc .checkbox label{
+  font-size: 13px;
+  color: #494949;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 25px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/*=======================================
+    Creat a free Client account by mail
+========================================*/
+
+.claimpfbg-img{
+  background-image: url(../images/bg-img/claim-pf-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.claim-profile .sectionpadd{padding: 50px 0px 70px;clear: both;}
+.claim-top-body{
+  background-color:rgba(255, 255, 255, 0.9);
+  padding-top: 35px;
+}
+.claimtext-title h1{
+  font-size: 40px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+.check-title{
+  text-align: start;
+  padding-left: 88px;
+}
+.claimtext-title .greentext{font-size: 45px;}
+.rightpra .greentext{font-size: 19px;}
+.claimtext-title {padding-bottom: 28px;}
+.claimtext-title h1 strong{ font-weight: 500;}
+ul.check-list{padding-left: 33px;}
+ul.check-list li{display: flex;}
+ul.check-list li p{
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 40px;
+  color: #565656;
+  font-weight: 600;
+  float: left;
+}
+ul.check-list li i{
+  color: #5bbb2d;
+  font-size:30px;
+  padding-right: 10px;
+  text-align: right;
+  float: right;
+  line-height: 40px;      
+}
+.lefticon{width: 10%;}
+.rightpra{width: 90%;}
+span.urlsmp {
+  float: left;
+  background: #565656;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  font-style: italic;
+}
+.codefildtitle{
+  width: 50%;
+  margin: auto;
+}
+.codefildtitle h1{
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: start;
+}
+ul.verifyacc.claimcode .verifyphn input#codenumber{
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid #c1c1c1;
+  border-radius: 0px;
+  min-height: 63px;
+}
+/*.claimcode-fild {padding-top: 24px;}*/
+ul.verifyacc.claimcode li{display: inline;}
+ul.verifyacc.claimcode span.verifybtn a.btn.greenbtn{
+  padding: 19px 25px;
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+.verifyphn ::-webkit-input-placeholder {
+  color:#999999; 
+}
+.verifyphn ::-moz-placeholder {
+  color:#999999; 
+} /* firefox 19+ */
+.verifyphn :-ms-input-placeholder {
+  color:#999999; 
+} /* ie */
+.verifyphn input:-moz-placeholder {
+  color:#999999;
+}
+
+/*=======================================
+    Claim Profile page end 
+========================================*/
+
+section.claim-pgae-faq {
+  padding-top: 65px;
+  padding-bottom: 100px;
+}
+.claimfaq-toptext {
+  padding-bottom: 31px;
+}
+.claimfaq-toptext h3 {
+  font-size: 30px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #666666;
+}
+.claimfaq-toptext i{
+  padding-right:10px;
+  color: #5bbb2d;
+  font-size: 30px;
+}
+.claimfaq-accordion .panel-default{
+  border: 0px;
+} 
+.claimfaq-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body{
+  border-top-color: transparent;
+}
+.claimfaq-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body p{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  line-height: 22px;
+  color: #989898;
+  padding-bottom: 8px;
+  padding-top: 13px;
+} 
+#accordion .panel-heading {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0px;
+}
+#accordion .panel-title{
+  font-size: 18px;
+}
+#accordion .panel-title > a {
+  display: block;
+  padding:22px 0px;
+  font-weight:600;
+  text-decoration: none;
+  color: #565656;
+}
+
+#accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
+  content:"\e113";
+  float: right;
+  font-family: 'Glyphicons Halflings';
+  margin-right :1em;
+  color: #5bbb2d;
+}
+#accordion .panel-title > a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before  {
+  content:"\e114";
+}
+
+/*=======================================
+    Claim Profile page end 
+========================================*/
+
+.chbgwhite{
+  background-color: #ffffff;
+}
+.chosseaccount .clientOrhire{
+  padding:25.5px 0px;
+}
+.chosseaccount .usertitle h3{
+  line-height: 33px;
+  color: #717171;
+}
+.chosseaccount .profile-usertitle{padding: 30px;}
+/*.chosseaccount .chooseclient{padding-left: 60px;padding-right: 0px;}*/
+.chosseaccount .clientOrhire hr.Orhg{height: 128px;}
+.dotborder-lefttopbot{
+  border: 5px dotted #5bbb2d;
+  border-right: 0px;
+  border-radius: 5px;
+  margin-left: 14%;
+}
+.dotborder-topbottom{
+  border: 5px dotted #5bbb2d;
+  border-left: 0px;
+  border-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.dotborder-toprightbottom{
+  border: 5px dotted #5bbb2d;
+  border-left: 0px;
+  border-radius: 5px;
+}
+.dotborder{border: 5px dotted #5bbb2d;}
+
+/*=======================================
+    Account Chosse page end 
+========================================*/
+
+.hirepilot{padding-top:72px;}
+.hirepilot .profile-usertitle{padding: 30px 54px 40px;}
+.hirepilot .usertitle h3{
+  line-height: 33px;
+  color: #717171;
+}
+
+/*=======================================
+    Hire Pilot page end 
+========================================*/
+
+.how-it-works-bg-img{
+  background-image: url(../images/bg-img/how-it-works-head-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.howitworks .findpadd{
+  padding-top: 80px;
+  padding-bottom: 90px;
+  clear: both;
+}
+.ctwhheadtxt h1{
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: lighter;
+}
+.ctwhheadtxt p{
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.secwhpadding{padding: 80px 0px;}
+.blheadtext h1{
+  font-size: 58px;
+  line-height: 70px;
+  color: #494949;
+  font-weight: lighter;
+}
+.blheadtext p{
+  font-size: 20px;
+  color: #494949;
+  line-height: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+ul.whkindofcategory{
+  padding-top: 23px;
+  padding-bottom: 30px;
+}
+ul.ctlisthwitworks{padding-left: 22px;}
+ul.ctlisthwitworks li{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 30px;
+  color: #494949;
+  font-weight: lighter;
+  list-style-type: disc;
+}
+.hwitw-img.secpadding.text-center {padding-top: 98px;}
+.rppaddingimg{padding-top: 175px;}
+.secpaywrk{padding: 70px 0px;}
+.paypaddwrk{padding-top: 100px;}
+.btn-lg.btn-green{
+  background-color: #5bbc2e;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 30px;
+  padding: 20px 65px;
+  border-radius: 5px;
+}
+.btn-lg.btn-green:hover{
+  background-color: #ffffff;
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+}
+.getstbtn{padding-top: 22px;}
+section.readytofind {padding: 100px 0px;}
+
+
+/*=======================================
+    How it works page end 
+========================================*/
+
+.drn_CategoriImg {width: 100%;}
+.ctnavtabsbg{margin-top: -5px;}
+
+/*-- Categorie listing end --*/
+
+ul.cthwitused li i{
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+  padding-right: 10px;
+}
+.navtabgb{background-color: #5bbb2d;}
+.navtabgb .nav-categories > li a{
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  padding: 15px 24px;
+}
+.navtabgb .nav-categories > li{float: left;}
+.navtabgb .nav-categories > li a:hover{
+  background-color:#565656;
+  color: #ffffff;
+  border-color: transparent;  
+}
+.navtabgb .nav-categories > li.active a{
+  background-color: #565656;
+  color: #ffffff;
+  border-color:transparent;
+  border-radius: 0px;
+  margin-top: -10px;
+  padding-bottom:10px;
+  padding-top: 30px;
+}
+hr.gray-border{
+  border: 2px solid #dfdfdf;
+  background: transparent;
+  height: 0px;
+}
+section.ctsecpadd{padding:40px 0px;}
+.ctheadtext h1{
+  font-size: 48px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 50px;
+  font-weight: bold;
+  color: #565656;
+  padding-top: 10px;
+  padding-bottom: 22px;
+}
+.ctheadtext p{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  color: #565656;
+}
+.testpadd{padding: 45px 0px;}
+
+.testheadtext i{
+  color: #ffffff;
+  font-size: 25px;
+  position: relative;
+  top: -17px;
+  padding-right: 5px;
+}
+span.tstheadtext{
+  font-family: 'Lato', sans-serif;
+  font-size: 44px;
+  color: #565656;
+  font-weight: lighter;
+  line-height: 40px;
+  font-style: italic;
+}
+/*-- Categories sectin end --*/
+
+.authorinfo {padding-top: 50px;position: relative;}
+.authorinfo h3{
+  text-transform: uppercase;
+  color: #565656;
+  line-height:22px;
+}
+.authorinfo span{
+  font-size: 18px;
+  font-weight: lighter;
+}
+.authorinfo h3:after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  right:90px;
+  background-image: url(images/line-shape.jpg);
+  background-repeat: no-repeat;
+  height: 2px;
+  width: 30%;
+  background-position: right center;
+}
+.authorinfo h3:before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 90px;
+  background-image: url(images/line-shape.jpg);
+  background-repeat: no-repeat;
+  height: 2px;
+  width: 30%;
+  background-position: left center;
+}
+/*-- Testimonial sectin end --*/
+
+.howitwrkpadd{
+  padding: 40px 0px 90px;
+  border: 2px solid #dfdfdf;
+}
+.blheadingtitle h1{
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #565656;
+}
+.paddtopbtm{padding: 45px 0px;}
+.smpaddtopbtm{padding: 30px 0px;}
+.hwitworkstpone span{
+  font-size: 72px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  color: #5bbb2d;
+  font-weight: bold;
+}
+.hwitworkstpone span i{
+  font-size: 30px;
+  color: #989898;
+  padding-left: 10px;
+}
+.hwitworkstpone h4{
+  font-size: 24px;
+  line-height: 30px;
+  color: #5bbb2d;
+  padding: 30px 0px 20px;
+}
+.hwitworkstpone p{
+  color:#565656;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+/*-- How it works section end --*/
+
+.brtoppilotpadd {
+  padding-top:65px;
+  padding-bottom: 75px;
+}
+.toppilotinfobg{
+  background-color: #eeecf2;
+  padding-top: 25px;
+  border: 2px solid #8ccb6f;
+}
+.tppilotimg img{border:4px solid #cfcfcf;border-radius: 50%;}
+.pilotnminfo{padding: 20px 0px;}
+.pilothdtxt h3{
+  font-size: 18px;
+  line-height: 25px;
+  color: #565656;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.pilothdtxt p{
+  font-size: 14px;
+  line-height: 22px;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+}
+.pilotlocation{
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.pilotlocation i{
+  color: #5bbb2d;
+  font-size: 15px;
+}
+.pilotlocation span{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #565656;
+  line-height: 30px;
+}
+.toprating{padding: 15px 0px 25px;}
+.toprating i{
+  color: #5bbb2d;
+  font-size: 20px;
+}
+.btngreen .btn-lg.btn-green{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+  border-radius: 0px;
+}
+
+/*-- Browser Top Rated Pilot end --*/
+
+section.rdtobngpadd{
+  background-color: #5bbb2d;
+  padding:70px 0px 50px;
+}
+.whheadtxt h1{
+  font-size: 48px;
+  color: #ffffff;
+  line-height: 40px;
+  font-weight: bold;
+}
+.getbtn a.btn-white{
+  border:2px solid #99de9d;
+  height: 90px;
+  width: 352px;
+  background: transparent;
+  font-size: 28px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  padding: 20px;
+}
+.getbtn {padding-top: 60px;}
+.getbtn a.btn-white:hover{
+  background-color: #ffffff;
+  color: #5bbb2d;
+}
+
+/*=======================================
+    Categories page end 
+========================================*/
+
+.usercover-photo{
+	padding-bottom: 40px;
+}
+.usercover-photo img{width: 100%;}
+.drn_user_img{
+  background-color: #5bbb2d;
+  border-radius: 50%;
+  padding: 4px;
+  max-height: 163px;
+  padding-bottom: 0px;
+}
+.drn_userImg{
+	width: 100%;
+	max-width: 100%;
+	background-color: #a2a2a2;
+	border-radius: 50%;
+	-webkit-box-shadow: 9px 20px 48px -40px rgba(0,0,0,0.38);
+-moz-box-shadow: 9px 20px 48px -40px rgba(0,0,0,0.38);
+box-shadow: 9px 20px 48px -40px rgba(0,0,0,0.38);
+}
+
+/*-- user avatar image end --*/
+
+.greenicon i{color: #5bbe2c;}
+.dn_rating{
+  font-size: 14px;
+  line-height: 45px;
+}
+.dn_rating .RatingCount{
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	line-height: 22px;
+	color: #989898;
+}
+.usrimagerating{position: relative;}
+.usrthextlc h1{
+  font-size: 48px;
+  line-height: 50px;
+  color: #5bbb2d;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.dn_scope span{
+  color: #565656;
+  font-size: 30px;
+  line-height: 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+.dn_scope i{font-size: 30px;color: #989898;}
+.exemptionDate{
+	font-size: 18px;
+	color: #565656;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	line-height: 22px;
+}
+.exemptionDate small{color: #989898;}
+.dn_exdate{padding-top: 8px;}
+.userimgndRating{
+  margin-top: -50px;
+}
+.userinfoexpert{padding-top: 10px;}
+
+/*-- user name & details end --*/
+
+.dn_specialists{
+	background: #5bbb2d;
+	padding: 25px 10px;
+	text-align: center;
+	position: relative;
+	margin-top: -5px;
+	float: left;
+	min-width: 100%;
+}
+.dn_flimIcon {
+    position: absolute;
+    top: 11px;
+    left: -30px;
+}
+.dn_flimIcon .drj-flimvideo{
+	width: 60px;
+	height: 60px;
+	border:4px solid #dedde2;
+	background-color: #565656;
+	border-radius: 50%;
+	background-size: 28px;
+}
+.dn_specialists h4{
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 30px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom:0px;
+}
+.dn_ratingVerifyed{padding-top: 20px;clear: both;}
+.dn_verifyPilot{
+	border: 1px solid #cdcdcd;
+	padding: 5px;
+	float: left;
+	border-radius: 4px;
+	-webkit-box-shadow: inset -1px 12px 17px -23px rgba(0,0,0,0.38);
+-moz-box-shadow: inset inset -1px 12px 17px -23px rgba(0,0,0,0.38);
+box-shadow: inset -1px 12px 17px -23px rgba(0,0,0,0.38);
+}
+.dn_verifyPilot span{
+	float: left;
+	vertical-align: middle;
+	margin: 0px 5px;
+}
+.green_text{color: #5bbb2d;}
+.dn_verifiedtext{
+	font-size: 19px;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 22px;
+}
+
+.dn_small{font-size: 18px;}
+.dronejobs_logo{
+	color: #5bbb2d;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+.dronejobs_logo small{
+	text-transform: uppercase;
+	color: #494949;
+}
+.dn_verifyIcon img{margin-top: 5px;}
+
+/*-- top right side end --*/
+
+.dn_Overviewbg{
+	background:url(../images/bg-img/overview_bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: 10% 35%;
+	padding: 30px 0px;
+}
+.dn_blheadtext h4{
+	font-size: 32px;
+	color: #565656;
+	font-weight: bold;
+	line-height: 30px;
+}
+.dn_blheadtext p{
+	font-size: 18px;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	color: #565656;
+}
+/*-- Overview left side end --*/
+
+.whpaddexdate{
+	background-color:rgba(255, 255, 255, 0.8);
+	padding-bottom: 20px;
+}
+.dn_Availability{padding:20px;}
+.dn_blavailtext h4{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.dn_contact .btn{
+	font-size: 19px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+}
+.green-btn:hover, .green-btn:focus, .green-btn.focus{
+	background-color: #ffffff;
+	color: #5bbb2d;
+}
+.dn_available{
+	font-size: 24px;
+	color: #565656;
+	font-family: 'Lato', sans-serif;
+	line-height: 22px;
+}
+.dn_available i{
+	color: #5bbb2d;
+}
+.dn_userSocial.dn_followme{
+	clear: both;
+	padding-top: 40px;
+}
+.dn_userFollow.socialNav li{
+	display: inline-block;
+	margin-right: 5px;
+}
+.dn_userFollow.socialNav{text-align: start;}
+.dn_userFollow > li a{
+	background: #5bba2c;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	line-height: 40px;
+}
+.socialNav .instagram a:hover {
+    background-color: #517fa4;
+}
+.socialNav .linkedin a:hover {
+    background-color: #007ab9;
+}
+.socialNav .facebook a:hover {
+    background-color: #3b5998;
+}
+.socialNav .twitter a:hover {
+    background-color: #55acee;
+}
+.socialNav .vimeo a:hover {
+    background-color: #17aee1;
+}
+.socialNav .youtube a:hover {
+    background-color: #e14e42;
+}
+
+/*-- porfile page social nav end --*/
+
+.dn_userWebpage{
+	clear: both;
+	padding: 10px 25px;
+	background-color: #565656;
+	color: #ffffff;
+	width: 85%;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.dn_userWebpage a{
+	color: #ffffff;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 22px;
+}
+.dn_weblink i{
+	padding-right: 10px;
+}
+
+/*-- overview section end --*/
+
+.dn_userPortfoliobg{
+	background: #5bbb2d;
+	padding:20px 0px;
+}
+.dn_portfolio h3{
+	font-size: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 22px;
+	font-weight: bold;
+}
+.dn_viewAll a{
+	color: #ffffff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+.dn_userGallery li.dn_imgGallery{
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+}
+.dn_pgIcon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.dn_pgIcon i{
+	padding:9px;
+	background: #5bbb2d;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	color:#ffffff;
+}
+.dn_userGallery li.dn_imgGallery img{width: 100%;float: left;}
+.dn_userGallery li.col-sm-4.dn_imgGallery{
+	width: 36.27%;
+}
+.dn_userGallery li.col-sm-3.dn_imgGallery{
+	width: 21.24%;
+}
+
+/*-- User Gallery end --*/
+
+.Equipmentsurvey{padding-top: 50px;}
+.Equipmentsurvey .slick-arrow.arrow-left{left: 0px;}
+.Equipmentsurvey .slick-arrow.arrow-right{right: 0px;}
+.dn_textcenter{text-align: center;}
+hr.dn_borderwh{
+	margin-top: 12px;
+	background: rgba(255, 255, 255, 0.5);
+}
+section.dn_equipment{
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+.dn_product-text{text-align: center;}
+.dn_product-text h3{
+	color: #5bbb2d;
+	font-size: 24px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.dn_product-text p{
+	color: #565656;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 22px;
+}
+.green_arrow{
+	padding: 40px 5px;
+	background-color: #5bbb2d;
+	top: calc(20% - 13px);
+}
+.green_arrow i{
+	font-size: 18px;
+}
+
+/*-- Equipment end --*/
+
+.dn_graybg{background: #eeecf2;}
+.dn_workhistory{padding: 40px 0px 30px;}
+.dn_feedbackStar{padding-top: 50px;}
+.dn_reviews-rating{
+	text-align: end;
+	padding-bottom: 20px;
+	padding-top: 20px;	
+}
+.sr-ratingtxt h2{
+  font-size: 48px;
+  color: #5bbb2d;
+  line-height: 30px;
+}
+.sr-ratingtxt h2 small{
+  color: #898989;
+  font-size: 24px;
+  line-height: 30px;
+}
+.sr-count h5 {
+  font-size: 12px;
+  font-family: 'Lato',sans-serif;
+  color: #555553;
+}
+.dn_separator{
+	background: #cdcdcd;
+	height: 100%;
+	width: 1px;
+	position: absolute;
+	right: -5%;
+	top: 0;
+}
+.dn_separator img{
+	position: absolute;
+	left: -11px;
+	top: 50%;
+	margin: -15px 0 0;
+	width: auto;
+	max-width: none;
+}
+.dn_feedback-rating{
+	font-size: 70px;
+	color: #5bbb2d;
+	line-height: 30px;
+}
+.dn_feedback-rating small{
+	font-size:32px;
+	color: #989898;
+}
+.dn_star{font-size: 18px;}
+.green-icon i{color: #5bbb2d;}
+.dn_reviews-count h5{
+	font-size: 20px;
+	color: #989898;
+	font-family: 'Lato', sans-serif;
+	line-height: 40px;
+}
+.dn_reviews-count i{font-size: 16px;}
+
+.dn_progressStar{padding-left:20px;padding-top:20px;}
+.row.rating-desc {margin-bottom: 3px;}
+.dn_reviewStar .col-sm-3{padding-right: 0px;}
+.dn_ProgressRating .progress{
+  border: 2px solid #c1c1c1;
+  background-color: #e2eaef;
+  height: 18px;
+  border-radius: 0px;
+  margin-bottom: 5px;
+}
+.dn_ProgressRating .progress-bar-success{
+  background-color: #5bbb2d;
+}
+.dn_ratingtexticon{
+  font-size: 18px;
+  font-family: 'Lato',sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: #989898;
+  vertical-align: middle;
+}
+.dn_ratingtexticon i{color: #cccccc;}
+
+.sr-ratingtxt h2{
+  font-size: 48px;
+  color: #5bbb2d;
+  line-height: 30px;
+}
+.sr-ratingtxt h2 small{
+  color: #898989;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/*-- Feedback work history end  --*/
+
+.vm_authorFeedback {
+    padding-top: 30px;
+}
+.vm_authorname{
+	font-size: 20px;
+	color: #5bbb2d;
+}
+.vm_jobtitle{
+	font-size: 20px;
+	color: #565656;
+}
+.vm_location{
+	font-size: 18px;
+	color: #989898;
+	font-family: 'Lato',sans-serif;
+}
+.vm_location i{color: #5bbb2d;}
+.vm_star{
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	color: #565656;
+	padding-bottom: 5px;
+}
+.vm_compensated h5{
+	font-size: 16px;
+	color: #5bbb2d;
+	font-family: 'Lato', sans-serif;
+}
+.vm_comp{color:#989898;}
+.vm_finishdate{
+	font-size: 16px;
+	color: #989898;
+	font-family: 'Lato', sans-serif;
+}
+.vm_compensated{padding-bottom: 5px;}
+.vm_Feedbackstar{padding-left: 10px;}
+.vm_block h6{
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-style: italic;
+	color: #5bbb2d;
+	text-align: center;
+	clear: both;
+	padding: 40px 0px;
+}
+.vm_description{
+	font-size: 18px;
+	color: #565656;
+}
+.vm_pra{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	color: #565656;
+}
+.ng-item {
+	border-bottom: 2px solid #e8e8e8;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+li.ng-item:last-child{
+	padding-bottom: 0px;
+	border-bottom: 0px;
+}
+/*-- Pilot profile example Desktop view end --*/
+
+.mb_allWrapper{display: none;}
+
+
+/*===================================
+	pilot Profile Example Page End
+====================================*/
+
+.contact-info .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.stepnavwizard{padding-top: 30px;padding-bottom: 40px;}
+ul.nav.stepnav{
+  background-color: #f5f5f5;
+  border: 1px solid #ececec;
+  /*position: relative;*/
+  overflow: hidden;
+  max-height: 42px;
+}
+ul.nav.stepnav li{display: inline-block;float: left;}
+ul.nav.stepnav li a{
+  color: #444444;
+  padding: 5px 7px;
+  background-color: #f5f5f5;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  min-width: 135.5px;
+}
+
+ul.nav.stepnav li a.active-light{
+  background: #ffffff;
+  color: #444444;
+}
+ul.nav.stepnav li a.active-light:after{
+  content: '';
+  background: url(../images/right-arrow-wh.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  height: 40px;
+  width:22px;
+  top: 0px;
+  right: -21px;
+  z-index: 9;
+}
+ul.nav.stepnav li a:after{
+  content: '';
+  background: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  height: 44px;
+  width:22px;
+  top: 0px;
+  right: 0px;
+}
+ul.nav.stepnav li:last-child a:after{
+  content: '';
+  background: none;
+}
+ul.nav.stepnav li a.active{
+  background-color: #5bbe2c;
+  color: #ffffff;
+}
+ul.nav.stepnav li a.active:after{
+  content: '';
+  background: url(../images/right-arrow-green.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  height: 40px;
+  width:22px;
+  top: 0px;
+  right: -21px;
+  z-index: 9;
+}
+.bwonernavwizard ul.nav.stepnav{
+  width: 74.9%;
+  margin: 0 auto;
+}
+/*-- step 1 end --*/
+
+.wizardhdtext h1{
+  font-size: 34px;
+  line-height: 30px;
+  color: #494949;
+  font-weight: 400;
+  padding-bottom: 25px;  
+}
+.pilotpfconinfo{
+  padding: 20px;
+  background-color: #ffffff;
+}
+.pfconinfo input{
+  color: #666666;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: 1px solid #f1f1f1;
+  min-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  line-height: 30px;
+  width: 100%;
+}
+.pfconinfo select{width: 100%;}
+.pfconinfo option{
+  width: 100%;
+}
+.pfconinfo ::-webkit-input-placeholder { color:#666666; }
+.pfconinfo ::-moz-placeholder { color:#666666; } /* firefox 19+ */
+.pfconinfo :-ms-input-placeholder { color:#666666; } /* ie */
+.pfconinfo input:-moz-placeholder { color:#666666; }
+
+.pilotpfconinfo .ui.selection.dropdown .menu > .item{
+  color: #666666;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  padding-top: 15px!important;
+  padding-bottom: 15px!important;
+  border-top: 1px solid #d6d6d6;
+}
+.pilotpfconinfo .ui.selection.active.dropdown .menu{
+  border-color:#d6d6d6;
+  background: #f9f9f9;
+  color: #666666;
+}
+.pilotpfconinfo .ui.selection.active.dropdown .menu:hover {border-color: #d6d6d6;}
+.pilotpfconinfo .ui.multiple.dropdown > .label{
+  color: #666666;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size: 16px; 
+}
+.pilotpfconinfo .ui.selection.active.dropdown:hover{border-color:#d6d6d6;}
+.pilotpfconinfo .ui.fluid.dropdown{margin-top: 10px;}
+.wizardhdtext h3{
+ text-align: start;
+ font-weight: lighter;
+ font-size: 25px;
+ font-family: 'Montserrat', sans-serif;
+ color: #494949;
+ padding: 25px 0px;
+}
+/*-- Skill end --*/
+
+p.form-control-static {
+  text-align: start;
+  font-size: 12px;
+  color: #494949;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: lighter;
+}
+.contactinfo label.control-label{
+  text-align: start;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+.contactinfo{background-color: #ffffff;}
+.contactinfo input[type="text"]{
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  max-width: 100%;
+  width: 100%;
+  min-height: 40px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.controls-ctstzip input#city{
+  width: 35%;
+  margin-right: 10px;
+  float: left;
+}
+.control-group{
+  padding-top: 10px;
+  padding-right: 15px;
+}
+.controls-ctstzip input#zip-code{
+  width: 35%;
+  float: right;
+}
+.controls-ctstzip select#state{
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  font-weight: lighter;
+  float: left;
+}
+hr.contacthr{
+  background: #f9f9f9;
+  clear: both;
+}
+.contactinfo ::-webkit-input-placeholder { color:#666666; }
+.contactinfo ::-moz-placeholder { color:#666666; } /* firefox 19+ */
+.contactinfo :-ms-input-placeholder { color:#666666; } /* ie */
+.contactinfo input:-moz-placeholder { color:#666666; }
+.buttongrn .col-sm-offset-2.col-sm-10{padding: 0px;}
+.buttongrn button.btn-green{
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 10px 30px;
+  border-radius: 0px;
+}
+.buttongrn button.btn-green:hover{
+  background: #ffffff;
+  color: #5bbc2e;
+  border: 1px solid #5bbc2e;
+}
+.control.buttongrn.row {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+/*====================
+      Step 1 end 
+======================*/
+
+.blheadtextps{
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.portfoliosample{
+  background: #ffffff;
+  padding: 20px;
+  border: 2px dashed #5bbe2c;
+}
+.blheadtextps h1{
+  font-size: 41px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  line-height: 30px;
+  color: #494949;
+}
+.input-group.image-preview {
+  background: url(../images/bg-img/drag-drop-file.jpg) no-repeat top center;
+  background-size: cover;
+}
+.btn.btn-default.image-preview-input{
+  background: transparent;
+  border: 0px;
+}
+span.image-preview-input-title{
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: normal;
+
+}
+.portfoliosample .input-group-btn{padding:60px;}
+.btn.btn-default.image-preview-input{
+  border: 2px dashed #ffffff;
+  padding: 20px 0px;
+}
+.btn.btn-default.image-preview-input{
+  position: relative;
+  width: 245px;
+  height: 120px;
+  vertical-align: middle;
+}
+.psimage-preview input[type="file"]{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  top:0px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  opacity: 0;
+}
+.psimage-preview  button.btn-grayps{
+  font-size: 12px;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: normal;
+  color: #3b3b3b;
+  margin-top: 20px;
+  background: #e8e8e8;
+  padding: 5px 20px;
+  border-radius: 4px!important;
+}
+.pscontrol-group input[type="text"]{
+  font-size: 16px;
+  color:#666666;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  border: 1px solid #d6d6d6;
+  margin-bottom: 10px;
+  padding: 5px 6px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.pscontrol-group textarea{
+  font-size: 16px;
+  color:#666666;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  border: 1px solid #d6d6d6;
+  margin-bottom: 10px;
+  padding: 5px 6px;
+  width: 100%;
+  min-height: 115px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.pscontrol-group ::-webkit-input-placeholder { color:#666666; }
+.pscontrol-group ::-moz-placeholder { color:#666666; } /* firefox 19+ */
+.pscontrol-group :-ms-input-placeholder { color:#666666; } /* ie */
+.pscontrol-group input:-moz-placeholder { color:#666666; }
+button.btn.btn-green.psbtncontrl {
+  padding: 8px 100px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: normal;
+  margin-top: 5px;
+}
+button.btn.btn-green.psbtncontrl:hover{
+  background: #ffffff;
+  color: #5bbe2c;
+  border: 1px solid #5bbe2c;
+}
+.formpsupdate{margin-top: 20px;}
+
+/*-- Upload images and description --*/
+
+section.portfolioadd {
+  padding-bottom: 100px;
+}
+.addpfpaddtop{padding-top: 20px;}
+.addedportfolio {
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #f1f1f1;
+}
+.addportfolione:before {
+  content: '1';
+  position: absolute;
+  left: -40px;
+  border: 1px solid #5bbe2c;
+  border-radius: 50%;
+  padding: 5px 10px;
+  top: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #5bbc2e;
+  font-size: 20px;
+}
+.addportfolitwo:before {
+  content: '2';
+  position: absolute;
+  left: -40px;
+  border: 1px solid #5bbe2c;
+  border-radius: 50%;
+  padding: 5px 10px;
+  top: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #5bbc2e;
+  font-size: 20px;
+}
+.headtextlceq h6{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  line-height:18px;
+  font-weight: lighter;
+  color: #494949;
+  margin-bottom: 0px;
+}
+.headtextlceq h6 span{
+  border-bottom: 1px solid #cacaca;
+}
+.headtextlceq p{
+  font-size:9px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #494949;
+}
+.adddescription p{
+  border:1px solid #f1f1f1;
+  border-radius: 4px;
+  padding: 5px;
+  padding-bottom: 22px;
+  line-height: 15px;
+}
+a.GoBack{
+  font-size: 16px;
+  color: #52a028;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: 500;
+  vertical-align: middle;
+}
+a.GoBack:hover{
+  font-weight: bold;
+  color: #5bbe2c;
+}
+.lg-btngren{
+  color: #ffffff;
+  background: #5bbe2c;
+  font-size: 16px;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  line-height: 22px;
+  min-width: 185px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.lg-btngren:hover{
+  background: #ffffff;
+  color: #5bbe2c;
+  border:1px solid #5bbe2c;
+}
+.backnext {
+  padding-top: 15px;
+}
+.editedelete {
+  position: relative;
+  float: left;
+}
+.editedelete i{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #fff;
+  padding: 5px 6px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #5bbe2c;
+  border: 1px solid #5bbe2c;
+}
+.responsive_img img{width: 100%;}
+
+/*=================
+      setp 2
+===================*/
+
+.stepthreeuav .input-group.image-preview {
+  background: url(../images/bg-img/uav-drag-drop-file.jpg) no-repeat top center;
+  background-size: cover;
+}
+.stepthreeaddpf{margin-left: 40px;}
+.stepthreeaddpf .addportfolione:before{padding: 0px 10px;}
+
+/*=================
+      setp 3 end 
+===================*/
+.pfconinfo .controls {
+  padding-bottom: 10px;
+}
+.bownerhdtext .wizardhdtext h1{
+  font-size: 41px;
+}
+.bwdetails .controls-ctstzip input#city{
+  width: 33%;
+  margin-right: 13px;
+}
+.bwdetails .controls-ctstzip input#zip-code{
+  width: 33%;
+}
+.controls-ctstzip input#price{
+  width: 45%;
+  float: left;
+}
+.controls-ctstzip input#duedate{
+  width: 50%;
+  float: right;
+}
+textarea#Description{
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  line-height: 30px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.dragfile .col-sm-4{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.controlsds{position: relative;}
+.control-group .col-sm-12{padding-right: 0px;}
+.DragFileHere{
+  border: 2px dashed #797979;
+  padding: 43px 15px;
+  text-align: center;
+  background-color: #e2e2e2;
+  width: 100%;
+  float: left;
+}
+.draginfile input#InputFile{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: transparent;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.draginfile p.help-block{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 30px;
+  color: #666666;
+}
+.DragFileHere button.btn.btn-grayps{
+  font-size: 12px;
+  color: #3b3b3b;
+  background: #fff;
+  padding: 5px 20px;
+  line-height: 1;
+  font-family: 'HelveticaNeue', sans-serif;
+}
+.BSmartpbt{padding: 35px 0px;}
+
+/*=================
+      setp 1 end 
+===================*/
+
+.depgraybg{background-color: #eeecf2;}
+
+.LookingPilot button.btn.btn-lg.btn-green{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  padding: 1px 6px;
+  border-radius: 0px;
+  min-width: 200px;
+  min-height: 40px;
+  margin-bottom: 60px;
+}
+/*-- Looking Pilot end --*/
+
+.LfHeadText h4{
+  font-size: 14px;
+  color: #565656;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.LfLocation{width: 55%;}
+.LfRadius{width: 40%;}
+
+hr.grayline{
+  background: #d3d2d4;
+  margin: 10px 0px;
+}
+.reFineSrc.RFSintext.SJsrinj{position: relative;}
+.SJsrinj input#RefineTag{
+  padding: 6px 15px;
+  font-family: 'Lato', sans-serif;
+  color: #c1c1c1;
+  font-size: 14px;
+  width: 100%;
+}
+.SortByTopSec{text-align: right;}
+.RfineSrc .SJsrinj i{
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top:0px;
+  right:0px;
+}
+.RfineSrc .FRtag span{
+  font-size: 12px;
+  font-weight:700;
+}
+.FRtag{padding-top: 10px;}
+.ctsearchactions {
+  text-align: right;
+  padding-top: 20px;
+  clear: both;
+}
+input.LocationMiles{
+  font-family: 'Lato', sans-serif;
+  color: #c1c1c1;
+  font-size: 14px;
+  line-height: 20px;
+  border: 2px solid #c1c1c1;
+  font-weight: 600;
+}
+input.LocationMiles ::-webkit-input-placeholder {color:rgba(193,193,193,0.9);}
+input.LocationMiles ::-moz-placeholder {color:rgba(193,193,193,0.9);} /* firefox 19+ */
+input.LocationMiles :-ms-input-placeholder {color:rgba(193,193,193,0.9);} /* ie */
+input.LocationMiles input:-moz-placeholder {color:rgba(193,193,193,0.9);}
+.ctsearchactions button.btn.btn-green{
+  border-radius: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.ctsearchactions button.btn.btn-green:hover{
+  background-color: #ffffff;
+  color: #5bbe2c;
+  border:1px solid #5bbe2c;
+}
+.compensationhdtext .compensationhd{
+  display: inline-block;
+}
+.LfHeadText .compensationhd{
+  font-size: 14px;
+  color: #565656;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.compensationhdtext .badgebox + .badge{background-color: #ffffff;}
+
+.RefineJobSearchTp .ui.fluid.dropdown{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #c1c1c1;
+  line-height: 22px;
+  border:2px solid #c1c1c1;
+  border-radius: 0px;
+  float: left;
+}
+.RefineJobSearchTp .ui.dropdown .menu > .item{
+  font-size: 12px;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.RefineJobSearchTp .ui.label{
+  font-size: 12px!important;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  box-shadow: none!important;
+}
+
+/*-- Refine Job end --*/
+
+.drn-TopicName{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 20px;
+  color: #565656;
+}
+
+/*-- Category end --*/
+
+input#checkboxSelect{vertical-align: middle;}
+.lfctcount{
+  color: #989898;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.checkboxWhbg, .checkbox [type=checkbox]+.checkboxWhbg{
+  background-color: #ffffff;
+}
+/*-- CheckBox end --*/
+
+
+/*-- LestSide Bar End --*/
+
+.DroneJobsHead{padding-top:20px; }
+.JBheadtext h2{
+  font-size: 36px;
+  color: #565656;
+  line-height: 40px;
+  margin-bottom: 0px;
+}
+.JBheadtext p{
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #989898;
+  padding-bottom: 15px;
+}
+
+.btn-graysrtborder{
+  min-width: 185px;
+  box-shadow: none!important;
+  border: 2px solid #c1c1c1;
+  color: #37bc39;
+  background-color: #ffffff;
+  font-size: 13px;
+  line-height: 25px;
+  border-radius: 0px;
+  font-weight: 600;
+}
+.btn-graysrtborder:hover, .btn-graysrtborder:focus, .btn-graysrtborder.focus{
+  color: #72ca75;
+  border: 2px solid #72ca75;  
+}
+.btn-graysrtborder span{text-align: start;float: left;}
+.btn-graysrtborder i{
+  text-align: end;
+  float: right;
+  vertical-align: middle;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #c1c1c1;
+}
+.drpsrtmenubtn{
+  padding: 0px;
+  min-width: 185px;
+  border: 0px;
+  margin-top: 10px;
+}
+.drpsrtmenubtn li span{font-weight: 400;}
+.drpsrtmenubtn li a{
+  font-size: 13px;
+  font-weight: lighter;
+  padding:7px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-color: #c1c1c1;
+  border-style: solid;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+}
+.drpsrtmenubtn li a:hover{
+  color: #565656;
+  border-color: #7ad27b;
+  background-color: transparent;
+}
+.drpsrtmenubtn li a:last-child {border-bottom-width: 2px;}
+.drpsrtmenubtn li a:first-child {border-top-width: 2px;}
+
+/*-- Head Text End --*/
+
+.DroneJobsBody {
+  background: #fff;
+  padding: 20px;
+  border:2px solid #c1c1c1;
+}
+.DNJtitleText h2 a{
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  line-height: 30px;
+  color: #5bbb2d;
+  font-weight: bold;
+}
+.DNJtitleText h2 a:hover{text-decoration: underline!important;}
+.JobsInfotext h3{
+  font-size: 14px;
+  color: #494949;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.JobsInfotext{padding: 20px 0px;}
+.JobsInfotext p{
+  font-size: 14px;
+  color: #989898;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.JobsInfotext strong{
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  color: #494949;
+}
+.JobsInfotext strong .greentext{font-weight: lighter;}
+.DNJdescription p{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #494949;
+  line-height: 25px;
+}
+
+/*-- end description end --*/
+
+.DatenadTime {padding-top: 20px;}
+.DatenadTime h6{
+  font-size: 14px;
+  color: #494949;
+  font-weight: 600;
+  line-height: 30px;
+}
+span.DNJDate{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+/*-- DateTime end --*/
+
+.dnj-contact{text-align: center;}
+.dnj-contact button.btn.btn-green{
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+  min-width: 115px;
+  min-height: 40px;
+  border-radius: 0px;
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}
+.dnj-contact button.btn.btn-green:hover{
+  background-color: #ffffff;
+  color: #5bbe2c;
+  border:2px solid #5bbe2c;
+  box-shadow: none;
+}
+.btn-green:hover, .btn-green:focus, .btn-green.focus{
+  background-color: #ffffff;
+  color: #5bbe2c;
+  border:2px solid #5bbe2c;
+  box-shadow: none; 
+}
+.dnj-contact ul.dropdown-menu{
+  min-width: 117px;
+  border-radius: 0px;
+  text-align: center;
+  padding: 0px;
+  margin-top: 8px; 
+}
+.dnjmeschat .dropdown-menu > li > a{
+  text-align: start;
+  border: 2px solid #c1c1c1; 
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  color: #565656;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+.dnjmeschat .dropdown-menu > li > a:hover{
+  background: transparent;
+  border: 2px solid #5bbe2c;
+  color: #5bbe2c;
+}
+.mb_minamount{
+  width: 35%;
+  float: left;
+}
+.mb_toText{
+  font-size: 15px;
+  font-weight: 600;
+  vertical-align: middle;
+  position: relative;
+  top: 20px;
+  font-family: 'Montserrat',sans-serif;
+}
+.mb_tobrack.mb_compensationcheck {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.mb_hdtext h3{
+  font-size: 12px;
+  color: #494949;
+  font-weight: 600;
+}
+.mb_compensationcheck input[type="text"]{
+  font-family: 'Lato', sans-serif;
+  color: #c1c1c1;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #c1c1c1;
+  font-weight: lighter;
+}
+.mb_ActionButton{padding-top: 10px;}
+.btn_mb_leftside{
+  min-width: 100%;
+  font-size: 18px;
+}
+.btn_mb_leftside:hover, .btn_mb_leftside:focus, .btn_mb_leftside.focus{border: 1px solid #5bbe2c;}
+
+/*-- Right Side Dropdown menu end --*/
+
+input.amount{
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  background: transparent;
+  border: 0px;
+}
+.compensationslider{padding-top: 15px;}
+.ftdnjpage-pagination {float: right;}
+.ftdnjpage-pagination .pagination > li > a{
+  background: transparent;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #5bbe2c;
+  font-weight: 600;
+  border: 0px;
+}
+.ftdnjpage-pagination .pagination > li > a:hover{
+  color: #565656;
+}
+.ftdnjpage-pagination  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background: transparent;
+  color: #565656;
+}
+.ftdnjpage-pagination li.pagetext a{
+  cursor: none;
+  color: #565656;
+}
+.ftdnjpage-pagination .pagination > .disabled a{
+  color: #989898;
+}
+.ftdnjpage-pagination .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{
+  color: #989898;
+  border-color: transparent;
+  background: transparent;
+}
+/*=============================
+     Search Jobs Page end 
+===============================*/
+
+/*This will work for firefox*/
+@-moz-document url-prefix() { 
+
+  .verifyacc.verifycountry {
+    margin: auto;
+    text-align: center;
+    vertical-align: top;
+  }
+  ul.verifyacc li {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /*--------------------- 
+        Veriy page end
+  -----------------------*/
+  .verifyacc.verifycode{
+    margin: auto;
+    text-align: center;
+    vertical-align: top;
+  }
+  .LoginFrom .input-group input{
+    padding: 5px 15px;
+  }
+  span.username{
+    position: absolute;
+    right: 0px;
+  }
+  span.username{
+    position: absolute;
+    right: 0px;
+  }
+  .profilebar.userpotion.pull-left{
+    margin-bottom: 20px;
+  }
+  .navtabgb .nav-categories > li a{padding: 15px 23px;}
+
+
+
+}
+
+/*=======================================
+    CSS Hack page end 
+========================================*/
+
+
+/*=======================================
+    		style.css end 
+========================================*/
+
+
+.DRJicon{text-align:center;}
+.DRJicon .DRJcategoryIcon{
+	width:65px;
+	height:47px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+}
+.djusercog{
+	width:22px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: block;
+}
+.djcogicon{background:url(../images/icons/cog-icon.png) no-repeat center;}
+.drj-flimvideo{background:url(../images/icons/category-icons/flim-video.png) no-repeat center;}
+.drj-events{background:url(../images/icons/category-icons/events.png) no-repeat center;}
+.drj-weddings{background:url(../images/icons/category-icons/wedding.png) no-repeat center;}
+.drj-realestate{background:url(../images/icons/category-icons/real-estate.png) no-repeat center;}
+.drj-construction{background:url(../images/icons/category-icons/construction.png) no-repeat center;}
+.drj-mining{background:url(../images/icons/category-icons/mining.png) no-repeat center;}
+.drj-tourism{background:url(../images/icons/category-icons/tourism.png) no-repeat center;}
+.drj-promotions{background:url(../images/icons/category-icons/promotions.png) no-repeat center;}
+.drj-mapping{background:url(../images/icons/category-icons/mapping.png) no-repeat center;}
+
+
+/*=======================================
+    	css=> icon.css end
+========================================*/
+
+
+/*-- Left Side Nav End --*/
+
+.dronejobs-usr-icon{
+	width:22px;
+	height:26px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 5px;
+}
+.drn-userinfo{background:url(../images/icons/info-user-green-icon.png) no-repeat center;}
+
+/*-- User Info Icon End --*/
+
+.dronejobs-prt-icon{
+	width:24px;
+	height:20px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 4px;
+}
+.drn-portfolio{background:url(../images/icons/portfolio-green-icon.png) no-repeat center;}
+
+/*-- Portfolio Icon End --*/
+
+.dronejobs-equpm-icon{
+	width:24px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+}
+.drn-equipment{background:url(../images/icons/equipment-green-icon.png) no-repeat center;}
+
+/*-- Equipment Icon End --*/
+
+.dronejobs-passec-icon{
+	width:24px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+}
+.drn-passsec{background:url(../images/icons/password-security-green-icon.png) no-repeat center;}
+
+/*-- Password & Security Icon End --*/
+
+.dronejobs-noticationset-icon{
+	width:24px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+}
+.drn-notificatinsett{background:url(../images/icons/notification-green-icon.png) no-repeat center;}
+
+/*-- Notification Setting Icon End --*/
+
+.dronejobs-jobpst-icon{
+	width:24px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+}
+.drn-jposting{background:url(../images/icons/job-posting-icon.png) no-repeat center;}
+
+/*-- Job Posting Icon End --*/
+
+
+/*=============================
+
+	Backend Page Icon End 
+
+================================*/
+
+
+.drjexprticon{
+	width:48px;
+	height:48px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: inline-block;
+}
+.exflvideoicon{background:url(../images/icons/category-icons/ex-flim-video-img.png) no-repeat center;}
+
+
+
+.excameraicon{background:url(../images/icons/category-icons/ex-camera-img.png) no-repeat center;}
+.exmapicon{background:url(../images/icons/category-icons/ex-map-img.png) no-repeat center;}
+.exdroneicon{background:url(../images/icons/category-icons/ex-drone-img.png) no-repeat center;}
+
+/*
+.drjcionmap {
+    width: 22px;
+    height: 35px;
+    overflow: hidden;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -khtml-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.drjmapicon{background:url(../images/icons/map-icon.png) no-repeat center;}
+*/
+
+
+/*=======================================
+    	assets=> css=> icon.css end
+========================================*/
+
+
+/*-- Backend CSS file --*/
+
+.profile-nav-stacked{
+	padding-top: 50px;
+	clear: both;
+	padding-bottom: 250px;
+}
+
+.drn-lftnav-stacked li a{
+	font-size: 15px;
+	color: #5bbc2e;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	line-height: 30px;
+	border-radius: 0px;
+	border-left: 8px solid transparent;
+}
+.drn-nav-leftside .nav-pills > li.active > a{
+	background-color: #f1eeee;
+	color: #5bbc2e;
+	border-left: 8px solid #5bbc2e;
+}
+
+.drn-head-userinfo{
+	background-color: #fff;
+	padding: 20px 15px 20px 40px;
+}
+.drn-bk-author-avatar img{
+	border:4px solid #686e76;
+	padding-top: 5px;
+	width: 100%;
+}
+input[type=text].drn-bk-authorName,
+.drn-bk-authorName {
+	font-size: 38px;
+	font-weight: lighter;
+	line-height: 50px;
+	color: #494949;
+	text-transform: capitalize;
+	font-family: inherit;
+	/*padding: 0;*/
+}
+input[type=text].drn-bk-specialty,
+span.drn-bk-specialty{
+	font-size: 25px;
+	font-weight: 400;
+	color: #494949;
+	font-family: inherit;
+	/*padding: 0;*/
+}
+input[type=text].edit-normal {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	/*padding: 0;*/
+}
+input[type=text].drn-bk-authorName:disabled,
+input[type=text].drn-bk-specialty:disabled,
+input[type=text].edit-normal:disabled{
+	border-color: transparent;
+}
+.drn-bkauthor{float: left;}
+button.btn.drn-editbtn{
+    background-color: #fff;
+    color: #52a028;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid #eaeaea;
+    border-radius: 0px;
+    padding: 5px 12px;
+    vertical-align: middle;
+    margin-top: 15px;
+}
+button.btn.drn-editbtn:hover{
+	background-color: #5dbe2c;
+	color: #fff;
+	border:2px solid #5dbe2c;
+}
+.drn-conhd-title{
+	color: #494949;
+	font-weight: lighter;
+	padding-top: 6px;
+	float: left;
+}
+
+/*-- Contact Info Form --*/
+
+.drn-bkinfo-top{
+	background-color: #fff;
+	clear: both;
+	margin-top: 20px;
+}
+.drn-bk-control-group{
+	clear: both;
+	padding-left: 26px;
+	padding-bottom: 18px;
+	display: flex;
+}
+.drn-black-hdtitle{
+	font-size: 13px;
+	font-weight: lighter;
+	color: #494949;
+	line-height: 24px;
+	padding-top: 18px;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+}
+.drn-mail-add p.form-control-static{
+	padding-top: 17px;
+	font-size: 13px
+}
+.text_adinfo{
+	font-size: 13px;
+	font-weight: lighter;
+	color: #494949;
+	line-height: 24px;
+	padding-top: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
+/*===================================
+	Pilot Profile Page Step 1 End 
+=====================================*/
+
+.drn-whiteBGBorder{background-color: #fff;border: 2px dashed #5bbe2c;}
+.drn-dk-portfolio{padding: 15px;}
+.earth-green-imageBG{
+	background: url(../images/drn-bk-earth-bg.jpg) no-repeat top center;
+	display: inline-block;
+	width: 100%;
+	background-size: cover;
+}
+.drn-project-nav-list{
+	border-bottom: 0px;
+    position: relative;
+    top: 1px;
+}
+.drn-project-nav-list li a{
+	font-family: 'Montserrat Hairline', sans-serif;
+	font-weight: 200;
+	font-size: 21px;
+	background-color: #6ec056;
+	color: #fff;
+	border: 2px solid transparent;
+	border-bottom: 0px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	padding: 8px 22px;
+	margin-right: 10px;
+	-webkit-box-shadow: inset 10px -1px 22px -5px rgba(0,0,0,0.19);
+	 -moz-box-shadow: inset 10px -1px 22px -5px rgba(0,0,0,0.19);
+	  box-shadow: inset 10px -1px 22px -5px rgba(0,0,0,0.19);
+}
+.drn-project-nav-list li.active > a{
+	color: #5cba47;
+	font-family: 'Montserrat Hairline', sans-serif;
+	font-weight: 200;
+	font-size: 21px;
+	border: 2px dashed #5cba47;
+	border-bottom: 0px;
+	background-color: #fff;
+	box-shadow: none;
+}
+.drn-project-nav-list > li a:hover{
+	color: #fff;
+	border: 2px dashed #5cba47;
+	border-bottom: 0px;
+	background-color: #fff!important;
+	color: #5cba47;
+	border: 2px dashed #6ec056;
+	border-bottom: 0px;
+	box-shadow: none;
+}
+.drn-project-nav-list li.active > a:hover{
+	color: #fff;
+	border: 2px dashed #5cba47;
+	border-bottom: 0px;
+	background-color: #fff!important;
+	color: #5cba47;
+	border: 2px dashed #6ec056;
+	border-bottom: 0px;
+	box-shadow: none;
+}
+.drn-project-nav-list > li a:focus{
+	color: #fff;
+	border: 2px dashed #5cba47;
+	border-bottom: 0px;
+	background-color: #fff!important;
+	color: #5cba47;
+	border: 2px dashed #6ec056;
+	border-bottom: 0px;
+	box-shadow: none;
+}
+
+.drn-project-nav-list li.active > a:focus{
+	color: #fff;
+	border: 2px dashed #5cba47;
+	border-bottom: 0px;
+	background-color: #fff!important;
+	color: #5cba47;
+	border: 2px dashed #6ec056;
+	border-bottom: 0px;
+	box-shadow: none;
+}
+
+.drn-video-control{
+	width: 520px;
+	padding: 50px 15px;
+	margin:0 auto;
+}
+.drn-webVlink input[type="text"]{
+	width: 100%;
+	font-size: 16px;
+	font-weight: lighter;
+	color: #666666;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 25px;
+}
+.drn-videoproject{padding-top: 30px;}
+.drn-vidolink-group input[type="text"]{
+	font-size: 16px;
+	color: #666666;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	border: 1px solid #d6d6d6;
+	margin-bottom: 10px;
+	padding: 5px 6px;
+	width: 100%;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.drn-vidolink-group textarea{
+	font-size: 16px;
+    color: #666666;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    padding: 5px 6px;
+    width: 100%;
+    min-height: 120px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+button.drn-action-btn {
+    padding: 8px 100px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-top: 5px;
+}
+button.drn-action-btn:hover{
+	background: #ffffff;
+	color: #5bbe2c;
+	border: 1px solid #5bbe2c;
+}
+button.drnCancle{
+	color: #5bbb2d;
+	font-size: 15px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 500;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+	background-color: transparent;
+	padding: 0px;
+}
+button.drnCancle i{
+	font-size: 25px;
+	position: relative;
+	top: 4px;
+    padding-right: 5px;
+}
+button.drnCancle:hover{margin-left: 5px;}
+
+/*-- Video page end --*/
+
+.drn-drag-group{padding: 50px 0px;}
+.drn-image-preview-title{
+	color: #ffffff;
+	font-size: 15px;
+	font-family: 'HelveticaNeue', sans-serif;
+	font-weight: normal;
+}
+.drn-image-drapborder{
+	position: relative;
+	width: 270px;
+	height: 135px;
+	vertical-align: middle;
+	border: 1px dashed rgba(255,255,255,0.6);;
+	padding: 20px 0px;
+	background: transparent;
+}
+.drn-psimage-preview input[type="file"]{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  top:0px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  opacity: 0;
+}
+.drn-btn-grayps{
+  font-size: 14px;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-weight: normal;
+  color: #3b3b3b;
+  margin-top: 20px;
+  background: #e8e8e8;
+  padding: 2px 25px;
+  border-radius: 4px!important;
+}
+.drn-btn-grayps:hover{opacity: 0.9;}
+.drn-DragDrop-title{
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: normal;
+	padding-top: 20px;
+	clear: both;
+	display: block;
+}
+
+/*=================================
+	Equipment Page End
+===================================*/
+
+.drn-model-details{
+	padding: 15px 0px;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	margin-top: 10px;
+}
+.drn-editimg-model{position: relative;}
+.drn-editble-icon{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+button.drn-addbtn{
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 30px;
+  font-weight: 500;
+  padding: 6px 11px;
+  background-color: #5BBB2D;
+}
+button.drn-addbtn:hover{
+  background-color: #ffffff;
+  color: #5BBB2D;
+  border: 1px solid #5BBB2D;
+}
+.AddMoreBtn:hover, .AddMoreBtn:focus, .AddMoreBtn.focus{
+	color: #ffffff;
+	background-color: #5BBB2D;
+}
+
+button.drn-icon-editdelete{
+	background-color: #fff;
+	color: #5bde2c;
+	border: 1px solid #5bde2c;
+	border-radius: 50%;
+	padding: 5px 9px;
+}
+.drnEditD:hover, .drnEditD:focus, .drnEditD.focus{
+	color: #ffffff;
+	background-color: #5BBB2D;
+}
+.drn-editIcon{
+	float: right;
+	left: inherit;
+	right: 0px;
+	padding: 0px;
+	border: 1px solid #ddd;
+	border-radius: 0px;
+	background-color: #f9f9f9;
+	margin-top: 7px;
+}
+.drn-editIcon:before{
+	content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #cfcfcf;
+    position: absolute;
+    right: 11px;
+    top: -6px;
+}
+.drn-sm-Icon{min-width: 90px;}
+.drn-editIcon > li > a{
+	color: #5bde2c;
+	font-size: 12px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 500;
+}
+.drn-editIcon > li:first-child a{border-bottom: 1px solid #ddd;}
+.drn-editIcon > li:last-child a{border-bottom:0px}
+
+/*-- Model Image Section end --*/
+
+.drn-mdtitle {
+    font-size: 10px;
+    color: #494949;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid #f1f1f1;
+    float: left;
+}
+.drn-modelD{
+	font-size: 9px;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	clear: both;
+}
+.drn-Description {
+	font-size: 9px;
+	color: #494949;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	clear: both;
+	line-height: 13px;
+	border: 1px solid #f1f1f1;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+/*-- PopUp Custom CSS --*/
+
+.mfp-container.mfp-s-ready{
+	position: relative;
+	padding: 20px;
+	width: auto;
+	max-width:800px;
+	margin: 20px auto;
+}
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay Close Button */
+.mfp-close-btn-in .mfp-close{
+    background: #fff;
+    color: #5bde2c!important;
+    opacity: 1;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+/*-- PopUp Custom Css end --*/
+
+/*==================================
+	Equipment Page end
+====================================*/
+
+.bl-lg-text{
+	color: #494949;
+	font-weight: lighter;
+}
+.drn-changePass{
+	background-color: #ffffff;
+	padding: 10px 0px;
+	margin-top: 20px;
+}
+.drn-passtextbl{
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 30px;
+	color: #494949;
+	font-weight: lighter;
+}
+.drn-passalrt{
+	font-size: 13px;
+	color: #494949;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+}
+hr.drn-grayline{
+	background-color: #d4d4d5;
+	margin: 20px 0px;
+}
+.row.form-group{padding-left: 15px;padding-right: 15px;}
+.drn-passaction{text-align: right;}
+button.drn-passsave{
+	font-family:'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 20px;
+	padding: 10px 35px;
+}
+.drn-cancelbk{
+	font-size:16px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 22px;
+	color: #5bbc2e;
+	font-weight: 600;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.drn-cancelbk:hover{opacity: 0.8;}
+.drn-greenbtn:hover, .drn-greenbtn:focus, .drn-greenbtn.focus{
+	background-color: #ffffff;
+	color: #5bbc2e;
+	border:1px solid #5bbc2e;
+}
+
+/*-- Password & Security end --*/
+
+.drn-SecurityQuestion{padding-top: 70px;}
+select#drn-newQuestion{
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 20px;
+	color: #494949;
+	font-weight: lighter;
+}
+select#drn-newQuestion option{
+	font-size: 12px;
+	color: #52a028;
+	background-color: #f9f9f9;
+}
+
+.drn-checkans{
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+	color: #494949;
+	font-weight: 600;
+}
+
+/*==================================
+	Password & Security Page End 
+====================================*/
+
+.drn-notify-setting{
+	background-color: #ffffff;
+	padding:15px 0px;
+	margin-top: 20px;
+}
+.drn-notifytxt{
+	font-size: 13px;
+	color: #494949;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+button.btn-greensvbtn {
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 30px;
+	padding: 10px 15px;
+	float: right;
+	border-radius: 0px;
+}
+.btn-greensvbtn:hover, .btn-greensvbtn:focus, .btn-greensvbtn.focus{
+	background-color: #ffffff;
+	color: #5bbe2c;
+	border-color: #5dbe2c;
+}
+
+/*============================
+	Notification Page end
+==============================*/
+
+.drn-PSWhiteBg{
+	background-color: #ffffff;
+	padding: 15px 0px 0px;
+	border: 1px solid #c1c1c1;
+	margin-top: 20px;
+}
+.drnVideoImageGallery {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.drn-videoIcon{
+	position: absolute;
+	right: 42px;
+	top: 5px;
+}
+.drn-CameraIcon{
+	position: absolute;
+	right: 42px;
+	top: 5px;
+}/*
+.drn-PPshocase{
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	min-height: 800px;
+}*/
+.drn-lg-addbtn {
+	width: 170px;
+	height: 40px;
+	padding: 5px;
+	line-height: 1;
+}
+.drn_PortFolio {
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+/*============================
+	Pilot Profile End
+==============================*/
+
+.drn-user-set{width: 115px;height: 115px;}
+input[type=text].drn-bk-authorDT,
+.drn-bk-authorDT{
+	font-size: 25px;
+	font-weight: 400;
+	color: #494949;
+	font-family: inherit;
+}
+input[type=text].drn-bk-authorDT:disabled {
+	border-color: transparent;
+}
+.drn-author-Emailinfo{
+	background-color: #ffffff;
+	margin: 20px 0px;
+}
+.drn-black-hdtitle i{
+	font-size:25px;
+	color: #494949;
+}
+
+/*===================================
+	Info Page end
+=====================================*/
+
+.drn-job-wrapper{
+	position: relative;
+}
+.drn-ProjectTable *{
+	box-sizing: border-box;
+}
+.drn-ProjectTable-body {
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.drn-ProjectTable-Header{
+	font-size: 13px;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 30px;
+	padding: 5px 10px!important;
+}
+.drn-JtitleColumn{
+	width: 25%;
+	position: relative;
+}
+.drn-ProjectTable-cell{
+	color: #494949;
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	padding: 5px 10px!important;
+}
+.drn-ProjectTitle{
+	color: #5bbc2e;
+	font-weight: 500;
+}
+.drn-JdesColumn{
+	width: 35%;
+	position: relative;
+}
+.drn-JlocationColumn {
+    width: 18%;
+    position: relative;
+}
+.drn-JpayColumn{
+	width: 9%;
+	position: relative;
+}
+.drn-ProjectTable-des{
+	max-width:130px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.drn-ProjectTableActoin{
+	margin-top: 6px;
+}
+.drn-ProjectTable-action{
+	width:90px;
+	background: transparent;
+	border: 1px solid #c1c1c1;
+	color: #5dbe2c;
+	padding: 5px 10px;
+	height: 30px;
+	font-size: 11px;
+	border-radius: 0px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 500;
+}
+.drn-ProjectTable-action i{
+	padding-left: 10px;
+	color: #6c6c6c;
+}
+.drnTableAction:hover, .drnTableAction:focus, .drnTableAction.focus{color: #494949;}
+.drn-ProjctTable-action{
+	min-width: auto;
+	padding: 0px;
+    background-color: #f9f9f9;
+    border: 1px solid #c1c1c1;
+    border-radius: 0px;
+}
+.drn-ProjctTable-action > li > a{
+	font-size: 11px;
+	color: #52a028;
+	font-family: 'Helvetica Neue', sans-serif;
+	line-height: 22px;
+	border-bottom: 1px solid #ddd;
+}
+.drn-ProjctTable-action li:last-child a{
+	border-bottom: 0px;
+}
+.drn-ProjctTable-action > li > a:hover, .drn-ProjctTable-action > li > a:focus{
+	color: #494949;
+}
+
+.drn-ProjectDetails{
+    background-color: #fff;
+}
+.drn_ProjectBody{padding-top: 30px;}
+.drn-PostJobTitle{padding-left: 50px;}
+.drn_projectTxt{
+	font-size: 13px;
+	color: #494949;
+	line-height: 22px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+}
+ul.drn-PostProject li{
+	border-bottom: 1px solid rgba(193, 193, 193, 0.37);
+	padding: 15px;
+	padding-left: 30px;
+}
+label.drn-TriggerImport{
+    background: #e8e8e8;
+    padding: 5px 15px;
+    color: #3b3b3b;
+    font-size: 12px;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+}
+ul.drn-PostProject li:last-child{border-bottom:0px;}
+.drn_projectAction{padding-top: 20px;clear: both;}
+.AcbackListing i{
+	padding-right: 10px;
+	font-size: 20px;
+}
+.AcbackListing{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #5bbc2e;
+	font-weight: 600;
+}
+.AcbackListing:hover{margin-left:5px;color: rgba(91, 188, 46, 0.7);}
+.btn.drnActionBtn{
+	font-size: 16px;
+	padding: 10px 40px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 500;
+}
+.btn.drnActionBtn:hover{
+	background-color: #ffffff;
+	color: #5bbb2d;
+	border:1px solid #5bbb2d;
+}
+
+
+
+/*===================================
+	PostJob Page end
+=====================================*/
+.checkbox, .radio {
+	padding-left: 28px;
+	margin: 0;
+	display: block; 
+	min-height: 18px; 
+}
+.checkbox label, .radio label {
+    font-size: 13px;
+    display: inline;
+	color: #494949;
+	font-size: 14px;
+	font-family: 'Montserrat',sans-serif;
+	padding: 5px 10px 5px 0;
+	margin: 0!important;
+	display: block;
+	font-weight: 400;
+	cursor: pointer;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]{
+	float: left;
+	margin-left: -25px;
+	margin-top: 6px;
+	position: absolute;
+	left: -9999px;
+	margin: 4px 0 0;
+    line-height: normal;
+}
+.checkbox-helper, .checkbox [type=checkbox]+.checkbox-helper, .checkbox [type=radio]+.checkbox-helper, .checkbox-inline [type=checkbox]+.checkbox-helper, .checkbox-inline [type=radio]+.checkbox-helper, .radio [type=checkbox]+.checkbox-helper, .radio [type=radio]+.checkbox-helper, .radio-inline [type=checkbox]+.checkbox-helper, .radio-inline [type=radio]+.checkbox-helper{
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+	line-height: 18px; 
+	font-size: 18px; 
+	color: #37a000; 
+    position: relative;
+    top: 5px;
+    background-color: transparent;
+	border: 2px solid #37a000; 
+    margin-left: -28px;
+    margin-right: 10px;
+}
+.checkbox-helper:before, .caret, .checkbox [type=checkbox]:checked+.checkbox-helper:before, .checkbox-inline [type=checkbox]:checked+.checkbox-helper:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    font-family: FontAwesome;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    width: 20px;
+    height: 20px;
+    font-size:17px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left:0px;
+    margin-right: 10px;
+	position: absolute;
+	top: -3px;
+}
+
+.btn .checkbox-helper:before, .checkbox [type=checkbox]:checked+.checkbox-helper:before, .checkbox-inline [type=checkbox]:checked+.checkbox-helper:before{
+	content: "\f00c";
+}
+
+/*=======================================
+   assets=> css=> profile-setup.css end
+========================================*/
+
+
+
+.new_wrapper .logo{max-width:185px; padding:12px 0 0;}
+.find_pilot{background:#5bbb2d; padding:70px 0; text-align:center;}
+.find_pilot h1{color:#ffffff; font-size:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 40px;}
+.find_pilot button{
+  height:80px;
+  width: 298px;
+  border:2px solid #99de9c;
+  background:transparent;
+  font-size: 35px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.find_pilot button:hover{
+  background-color: #ffffff;
+  color: #5cba47!important;
+}
+
+.manufacturer{width:100%; background:url(../images/future_bg.jpg) no-repeat center bottom / cover; padding:75px 0 50px;}
+.manufacturer h1{color:#565656; font-size:48px; line-height:48px; white-space:nowrap; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 40px;}
+.manufacturer p{color:#565656; font-size:20px; line-height:30px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+.manufacturer .btn{
+  width: 167px;
+  background:rgba(255,255,255,0.25);
+  font-size: 20px; padding:8px 0; border:1px solid #9d9c9d; margin:30px 0 0;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+}
+.manufacturer .btn:hover{
+  background-color: #ffffff;
+}
+
+.attributes{width:100%; background:#fff; padding:50px 0;}
+.attributes h1,.price_comparison h1,.performance_grade h1{color:#565656; font-size:48px; line-height:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 60px;}
+.attributes h2{color:#5bbb2d; font-size:23px; line-height:26px; font-family: 'Montserrat', sans-serif; font-weight:normal; text-transform:uppercase; margin:20px 0;}
+.attributes p{color:#565656; font-size:14px; line-height:18px; font-weight:300; font-family: 'Montserrat', sans-serif; padding:0 3%;}
+.attributes .btn,.zenmuse .btn,.performance_grade .btn{
+  width: 154px;
+  background:#5bbb2d;
+  font-size: 18px; padding:8px 0; margin:60px 0 0;
+  color: #ffffff; text-transform:uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.attributes .btn:hover{
+  
+}
+
+.zenmuse{background:#565656; padding:0 0 50px;}
+.zenmuse h2{color:#ffffff; font-size:48px; line-height:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 50px;}
+.zenmuse p{color:#ffffff; font-size:20px; line-height:30px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+.zenmuse .btn{float:right;}
+
+.zenmuse #horizontalTab{width:100%; display:inline-block; float:left; position:relative;}
+.zenmuse .resp-tab-content{width:100%; float:left;}
+.zenmuse .resp-tab-content img{margin:60px 0 0; display:inline-block;}
+.zenmuse .resp-tab-content .col-sm-7{padding:100px 0 0 25px;}
+.zenmuse .resp-tabs-list{position:absolute; right:0; top:0; z-index:11;}
+.zenmuse .resp-tab-content .col-sm-5{text-align:center;}
+
+
+.price_comparison{background:#eeecf2; padding:35px 0 50px;}
+
+.price_head{background:#989898; border:1px solid #cdcdcd; border-top-width:2px; border-bottom-width:2px; height:140px; text-align:center; position:relative;}
+.price_head.blank{background:none; border:0; border-right:1px solid #cdcdcd;}
+
+.price_head img{display:inline-block; margin:20px 0 10px;}
+.price_head span{position:absolute; text-align:left; left:10px; text-transform:uppercase; bottom:10px; font-size:14px; line-height:16px; color:#ffffff; font-family: 'Montserrat', sans-serif; font-weight:600;}
+.price_head span:before{background:#cdcdcd; width:10px; height:10px; display:inline-block; content:''; margin:0 5px 0 0; vertical-align:middle; -webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;}
+.price_head span.active:before{background:#5bbb2d;}
+
+.price_comparison .col-sm-3{padding:0;}
+.price_comparison ul{border-bottom:1px solid #cdcdcd;}
+.price_comparison li{color:#989898; font-size:14px; font-family: 'Montserrat', sans-serif; border-bottom:1px solid #cdcdcd; border-right:2px solid #cdcdcd; background:#fff; padding:14px 0 14px 15px;}
+
+.price_first li{background:#cdcdcd; color:#565656; border-bottom-color:#eeecf2;}
+.price_first li:last-child{ border-bottom-color:#cdcdcd;}
+
+.photo1,.photo2,.photo3{float:left;}
+.photo1{width:38.68%;}
+.photo2{width:35.69%;}
+.photo3{width:25.62%;}
+.inspire_pics img{width:100%; float:left;}
+
+.PG_progress{width:400px; background:url(../images/progress_bg.png) no-repeat left top; height:48px; float:left; position:relative; margin:40px 0 0;}
+.PG_progress img{position:absolute; top:-40px; margin:0 0 0 -20px;}
+.PG_bar{background:url(../images/fill_color.png) no-repeat left bottom; height:100%; position:absolute; left:2px; bottom:2px;
+ -moz-transition:all 0.5s; -webkit-transition:all 0.5s; -o-transition:all 0.5s;	transition:all 0.5s;}
+
+.performance_grade{padding:40px 0;}
+.performance_grade h1{color:#5cbb2e; text-align:center;}
+
+.performance_grade .separator{background:#cdcdcd; height:100%; width:1px; position:absolute; right:-5%; top:0;}
+.performance_grade .separator img{position:absolute; left:-11px; top:50%; margin:-15px 0 0; width:auto; max-width:none;}
+.PG_text li{width:50%; float:left; padding:0 0 15px;}
+.PG_text li h3{font-size:18px; color:#565656; font-family: 'Montserrat', sans-serif;}
+.PG_text li p{font-size:14px; color:#989898; font-family: 'Lato', 'Montserrat', sans-serif; font-weight:400; line-height:18px; padding:0px 0 0 15px;}
+.performance_grade .btn{margin:0; float:right;}
+
+.max_width{max-width:400px; width:100%;}
+
+.performance_grade .col-sm-5 h3{font-size:20px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; padding:10px 0 40px;}
+
+.home_banner{background:url(../images/home_banner.jpg) no-repeat center bottom / cover; padding:35px 0 0;}
+.banner_options{background:rgba(255,255,255,0.60); margin:0 0 35px; padding-top:10px; padding-bottom:10px; -webkit-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+-moz-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+box-shadow:rgba(0,0,0,0.30) 0px 0px 3px; width:418px;}
+.banner_options h1{font-size:48px; line-height:45px; color:#5bbb2d; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 30px;}
+.banner_options h1 span{color:#565656; font-size:34px; line-height:34px; text-transform:uppercase;}
+
+.banner_options h3{font-size:24px; line-height:24px; color:#ffffff; font-family: 'Montserrat', sans-serif; display:inline-block; text-transform:uppercase; padding:5px 10px; background:#5bbb2d; margin:0 0 20px;}
+.banner_options li{float:left; width:50px; text-align:center; margin:0 6px 0 0; font-weight:600; color:#565656; font-size:10px; line-height:12px; font-family: 'Montserrat', sans-serif;}
+.banner_options li a{color:#565656; background:#565656; position:relative; -webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px; float:left; padding:8px 0; margin:0 0 40px; width:100%;}
+.banner_options li a:hover{ background-color:#5bbb2d;}
+.banner_options li span{text-transform:uppercase; position:absolute; left:0; width:100%; text-align:center; bottom:-20px;}
+.banner_options li.two_lines span{bottom:-32px;}
+
+.video_options{background:#ffffff; padding:5px; -webkit-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+-moz-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+box-shadow:rgba(0,0,0,0.30) 0px 0px 3px; width:418px; margin:0 0 0px;}
+.video_options ul{float:left; width:100%;}
+.video_options li{float:left; width:49.3%; position:relative; overflow:hidden;}
+.video_options li:last-child{float:right;}
+.video_options .see_more{width:6%; text-align:center; padding:0; margin:0; float:right; display:none;}
+
+.video_options li img{width:100%; float:left;  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);}
+
+.video_options li:hover img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.video_options li span{background:url(../images/thumb-icon.png) no-repeat center center; width:100%; -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s; 
+  height:100%; position:absolute; left:0; top:0; z-index:1; opacity:0.7;}
+.video_options li:hover span{background-color:rgba(0, 0, 0, 0.3); opacity:1;}
+.video_options .see_more img{width:auto; float:none; display:inline-block; margin:10px 0 0;  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);}
+
+.home_submenu{width:100%; position:relative; z-index:11; background:#fff; border-bottom:1px solid #fff;}
+.home_submenu:after{width:50%; position:absolute; right:0; top:0; background:#565656; content:''; height:100%;}
+
+.home_submenu .container{position:relative; z-index:11; background:#565656;}
+
+.home_submenu h3{background:#fff; color:#565656; margin:0; padding:16px 0 15px; font-size:13px; font-family: 'Montserrat', sans-serif; font-weight:600; text-transform:uppercase;}
+.home_submenu h3 span{color:#5cbb2e; text-transform:uppercase;}
+.home_submenu [class*="col"]{padding:0;}
+
+.navigation ul{padding:6px 0 6px 20px; float:left;}
+.navigation li{font-size:14px; color:#fff; padding:3px 10px; border-right:1px solid #fff; font-family: 'Montserrat', sans-serif; font-weight:600;
+float:left; margin:4px 0 0;}
+.navigation li a{color:#fff;}
+.navigation li a:hover,.navigation li.active a{color:#5bbb2d;}
+.navigation li:last-child{padding-right:0; border:0;}
+.navigation li a.btn{background:#5cbb2e; margin:-9px 0 -3px; font-weight:600;}
+.navigation li a.btn:hover{color:#fff;}
+
+.navigation .small_arrow{position:absolute; left:-10px; top:14px;}
+.right_btn a{background:#fff; border:1px solid #cdcdcd; text-align:center; font-size:12px; color:#989898; line-height:14px; font-family: 'Montserrat', sans-serif; font-weight:600;
+margin:7px 0 0; text-transform:uppercase; padding:6px 10px; float:left;
+-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.right_btn a img{display:inline-block; vertical-align:middle;}
+.right_btn a em{color:#5bbb2d; font-size:14px; font-weight:600; font-style:italic; font-family: 'Open Sans', sans-serif;}
+
+/*=======================================
+FAQ Styles start here
+========================================*/
+.faq{padding:30px 0 50px;}
+.faq .accordion-header h4{font-size:18px; color:#565656; font-family: 'Montserrat', sans-serif;}
+
+.faq h1{font-size:30px; color:#565656; font-family: 'Montserrat', sans-serif; text-transform:uppercase; margin:0 0 25px;}
+.faq h1 span{color:#5bbb2d; text-transform:uppercase;}
+.faq h1 img{display:inline-block; margin:-5px 0 0; vertical-align:middle;}
+
+/*=======================================
+Specs Styles start here
+========================================*/
+.specs .PG_text ul{padding:15px 0 0; width:100%; float:left;}
+
+/*=======================================
+Camera Options Styles start here
+========================================*/
+.camera_option{background:#565656;}
+.white_container{background:#fff; padding:45px 0 25px;}
+
+.camera_option .zenmuse{padding-bottom:20px;}
+.camera_option .zenmuse h2{padding-top:50px;}
+.camera_option .zenmuse img{margin:60px 0 0; display:inline-block;}
+.camera_option .zenmuse .col-sm-5{text-align:center;}
+
+
+.CO_border{border-top:1px solid #cdcdcd; margin:0px 0 0;}
+.CO_border h2{font-size:30px; color:#ffffff; font-family: 'Montserrat', sans-serif; text-transform:uppercase; margin:30px 0;}
+.CO_border h2 span{color:#5bbb2d; text-transform:uppercase;}
+.CO_border h2 img{display:inline-block; margin:-5px 0 0; vertical-align:middle;}
+
+.CO_border ul{float:right; margin:-48px 0 0;}
+.CO_border li{display:table-cell; vertical-align:top; padding:0 0 0 15px;}
+.CO_border p{display:table-cell; font-size:42px; color:#ffffff; font-family: 'Montserrat', sans-serif; line-height:24px; text-transform:uppercase; 
+ background:#5bbb2d; text-align:center; vertical-align:middle; margin:0 0 0 10px; width:94px; height:94px; -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.CO_border p small{font-size:18px; line-height:24px; text-transform:uppercase; font-weight:normal;}
+.CO_border p span{font-size:30px; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:normal;}
+
+.white_container .PG_text li p{}
+.PG_text .list_dots{font-size:14px; color:#989898; font-family: 'Lato', 'Montserrat', sans-serif; font-weight:400; line-height:18px; padding:0px 0 0 15px;}
+.PG_text .list_dots li:before{width:6px; height:6px; background:#989898; -webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px; content:''; margin:0 5px 0 0; display:inline-block; vertical-align:middle;}
+.PG_text .list_dots li{width:100%; padding:0;}
+
+/*=======================================
+Features Styles start here
+========================================*/
+.powerful_motors{background-image:url(../images/features_banner.jpg); padding:90px 0 140px;}
+.powerful_motors p{font-size:16px; line-height:24px;}
+
+.heading{padding:25px 0 0;}
+
+.ready_fly p{font-size:16px; line-height:24px; padding:0 0 20px; max-width:715px; margin:0 auto;}
+.ready_fly .col-sm-4{padding-top:50px;}
+.ready_fly h2{font-size:18px; line-height:18px;}
+
+.lightbridge{background:url(../images/lightbridge_banner.jpg) no-repeat center bottom / cover; padding:80px 0;}
+.lightbridge h1{font-size:46px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; text-transform:uppercase; margin:0 0 50px 0;}
+.lightbridge p{color:#565656; font-size:18px; line-height:28px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+
+.dual_operator{background:#565656 !important; padding:0 0 0px 0;}
+.dual_operator h1{color:#fff; margin:60px 0 30px;}
+.dual_operator p{color:#fff; font-size:20px;}
+.dual_operator img{margin:80px 0 0;}
+
+.welcome_cam{text-align:center; padding:50px 0 100px; position:relative;}
+.welcome_cam h3{font-size:36px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0 0;}
+.welcome_cam p{color:#565656; font-size:30px; line-height:48px; font-weight:300; font-family: 'Montserrat', sans-serif; margin:0 0 30px;}
+
+.welcome_cam:before{background:#cdcdcd; height:1px; width:100%; content:''; position:absolute; bottom:50px; left:0;}
+.welcome_cam:after{background:#fff url(../images/down_arrow_white.png) no-repeat center center; height:42px; width:42px; content:'';
+position:absolute; bottom:31px; left:50%; margin:0 0 0 -15px;}
+
+.only_mob{display:none;}
+
+.dual_operator .col-sm-6{text-align:center;}
+.dual_operator .col-sm-6 img{display:inline-block;}
+
+
+/*=======================================
+3DR DRONE Styles start here
+========================================*/
+.drone_3dr .home_banner{background-image:url(../images/3dr-solo/home_banner.jpg);}
+.drone_3dr .manufacturer{background-image:url(../images/3dr-solo/future_bg.jpg);}
+.drone_3dr .lightbridge{background-image:url(../images/3dr-solo/lightbridge_banner.jpg);}
+
+.drone_3dr .photo1{width:39.23%;}
+.drone_3dr .photo2{width:35.13%;}
+.drone_3dr .photo3{width:25.62%;}
+
+/*=======================================
+dji-inspire-1 Styles start here
+========================================*/
+.drone_inspire .home_banner{background-image:url(../images/dji-inspire-1/home_banner.jpg);}
+.drone_inspire .manufacturer{background-image:url(../images/dji-inspire-1/future_bg.jpg);}
+.drone_inspire .lightbridge{background-image:url(../images/dji-inspire-1/lightbridge_banner.jpg);}
+
+.drone_inspire .photo1{width:43.81%;}
+.drone_inspire .photo2{width:30.48%;}
+.drone_inspire .photo3{width:25.69%;}
+
+.drone_inspire .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_inspire .lightbridge{padding:80px 0 0;}
+.drone_inspire .camera_option .zenmuse img{margin:0px 0 0;}
+
+/*=======================================
+dji-phantom-3 Styles start here
+========================================*/
+.drone_phantom .home_banner{background-image:url(../images/dji-phantom-3/home_banner.jpg);}
+.drone_phantom .manufacturer{background-image:url(../images/dji-phantom-3/future_bg.jpg);}
+.drone_phantom .lightbridge{background-image:url(../images/dji-phantom-3/lightbridge_banner.jpg);}
+
+.drone_phantom .photo1{width:45.06%;}
+.drone_phantom .photo2{width:26.87%;}
+.drone_phantom .photo3{width:27.98%;}
+
+.drone_phantom .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_phantom .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_phantom .camera_option .zenmuse img{margin:0px 0 0;}
+
+/*=======================================
+dji-spreadingwing-s900 Styles start here
+========================================*/
+.drone_s900 .home_banner{background-image:url(../images/dji-spreadingwing-s900/home_banner.jpg);}
+.drone_s900 .manufacturer{background-image:url(../images/dji-spreadingwing-s900/future_bg.jpg);}
+.drone_s900 .lightbridge{background-image:url(../images/dji-spreadingwing-s900/lightbridge_banner.jpg);}
+
+.drone_s900 .photo1{width:43.81%;}
+.drone_s900 .photo2{width:30.55%;}
+.drone_s900 .photo3{width:25.62%;}
+
+.drone_s900 .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_s900 .dual_operator .col-sm-6 img{margin:0;}
+.drone_s900 .dual_operator{background:#565656 !important; padding:0 0 60px 0;}
+
+/*=======================================
+dji-spreadingwing-s1000 Styles start here
+========================================*/
+.drone_s1000 .home_banner{background-image:url(../images/dji-spreadingwing-s1000/home_banner.jpg);}
+.drone_s1000 .manufacturer{background-image:url(../images/dji-spreadingwing-s1000/future_bg.jpg);}
+.drone_s1000 .lightbridge{background-image:url(../images/dji-spreadingwing-s1000/lightbridge_banner.jpg);}
+
+/*=======================================
+yuneec-typhoon-q500 Styles start here
+========================================*/
+.drone_typhoon .home_banner{background-image:url(../images/yuneec-typhoon-q500/home_banner.jpg);}
+.drone_typhoon .manufacturer{background-image:url(../images/yuneec-typhoon-q500/future_bg.jpg);}
+.drone_typhoon .lightbridge{background-image:url(../images/yuneec-typhoon-q500/lightbridge_banner.jpg);}
+
+.drone_typhoon .photo1{width:38.75%;}
+.drone_typhoon .photo2{width:35.62%;}
+.drone_typhoon .photo3{width:25.62%;}
+
+.drone_typhoon .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_typhoon .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_typhoon .camera_option .zenmuse img{margin:0px 0 0;}
+.drone_typhoon .mf_logo img{margin:60px 0 0;}
+.drone_typhoon .powerful_motors h1 {
+    padding-top: 60px;
+}
+.drone_typhoon .dual_operator{padding:0 0 60px 0;}
+.drone_typhoon .powerful_motors {
+    background-image:url(../images/yuneec-typhoon-q500//features_banner.jpg);
+    padding: 90px 0 140px;
+}
+
+/*=======================================
+dji-phantom-3 Styles start here
+========================================*/
+.drone_tornado .home_banner{background-image:url(../images/yuneec-tornado-h920/home_banner.jpg);}
+.drone_tornado .manufacturer{background-image:url(../images/yuneec-tornado-h920/future_bg.jpg);}
+.drone_tornado .lightbridge{background-image:url(../images/yuneec-tornado-h920/lightbridge_banner.jpg);}
+
+.drone_tornado .photo1{width:38.68%;}
+.drone_tornado .photo2{width:35.69%;}
+.drone_tornado .photo3{width:25.62%;}
+
+.drone_tornado .dual_operator .col-sm-6 img{margin:40px 0 0;}
+.drone_tornado .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_tornado .dual_operator{background:#565656 !important; padding:0 0 60px 0;}
+
+.drone_tornado .mf_logo img{margin:60px 0 0;}
+.drone_tornado .powerful_motors h1 {
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+/* ============== RESPONSIVE CSS =============== */
+
+
+/*---------------------------------------------------------------*/
+/*                  Max width :1200px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+    .drones_main .mix .btn {
+        right: 5px;
+        padding: 4px 8px;
+    }
+
+	.performance_grade .separator{right:-14%;}
+	.resp-tabs-list li{padding:8px; margin:0 2px;}
+	.manufacturer h1,.lightbridge h1{font-size:40px;}
+	.camera_option .zenmuse{padding-bottom:50px;}
+
+    /*=================================
+        commercial-use page end 
+    ==================================*/
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                  Max width :1199px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 1199px) {
+
+    .drn-lftnav-stacked li a {
+	    font-size: 13px;
+	    padding: 5px;
+	}
+	.findheadtitle h1{font-size: 7vmin;}
+	.drjobstext h1{font-size: 38px;padding-top: 0px;}
+
+    /*=================================
+        profile pilot page end 
+    ==================================*/
+    
+    .chosseaccount .clientOrhire {
+    	padding: 23.5px 0px;
+	}
+
+    /*=================================
+        SignUp page end 
+    ==================================*/
+
+    .dn_specialists{padding: 15px 10px;}
+    .dn_specialists h4{font-size: 18px;}
+    .dn_flimIcon .drj-flimvideo{
+    	width: 50px;
+    	height: 50px;
+    	background-size: 22px;
+    }
+    .dn_flimIcon{top: 5px;}
+    .dn_rating{line-height: 38px;font-size: 12px;}
+    .dn_rating .RatingCount{font-size: 15px;}
+    .dn_verifyPilot{padding: 3px;}
+    .dn_small {font-size: 13px;}
+    .dn_verifiedtext{font-size: 15px;}
+
+    .dn_blavailtext h4{font-size: 25px;}
+    .dn_available{font-size: 22px;}
+    .dn_Availability{padding: 10px;}
+    .dn_userFollow.socialNav li{margin-right: 0px;}
+    .dn_userWebpage a{font-size: 15px;}
+    .dn_userWebpage{padding: 10px 22px;}
+    .dn_contact .btn{font-size: 15px;}
+
+    /*=================================
+       Pilot Profile example page end 
+    ==================================*/
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width :1074px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 1074px) {
+
+	.findheadtitle h1{font-size: 7vmin;}
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*             min-width:750px and   Max width :992px
+/*---------------------------------------------------------------*/
+
+@media only screen and (min-width:750px) and (max-width:992px) {
+    .drones_main .mix {
+        padding: 10px;
+    }
+    .drones_main .mix .btn {
+        right: 5px;
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+    .drones_main .PG_progress {
+        width: 150px;
+        height: 20px;
+    }
+    .drones_main .PG_bar {
+        height: 18px;
+    }
+    .drones_main .mix h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .drones_main .mix p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 10px;
+    }
+    .drones_main .mix .gray_icons li {
+        width: 38px;
+    }
+
+    .btn.btn-default.image-preview-input{
+        width: 100%;
+        height: 100%;
+    }
+    .mb_contactInfo .col-sm-6{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*=================================
+        pilot info wizard step 2
+    ==================================*/
+
+    .navigation li{font-size:12px; padding:3px 7px;}
+	.navigation li a.btn{font-size:12px;}
+	.right_btn a{padding:4px 3px; font-size:10px;}
+	.right_btn a em{font-size:11px;}
+	.home_submenu h3{padding:13px 0 14px;}
+	.navigation .small_arrow{top:11px;}
+	
+	.PG_progress{width:300px; background-size:auto 100%; height:36px;}
+	.PG_bar{ background-size:auto 100%; height:33px;}
+	.performance_grade .max_width{min-width:300px; max-width:300px;}
+
+	.performance_grade .separator{right:-14%;}
+	
+	.price_comparison li{font-size:12px; padding-left:5px;}
+	
+	.resp-tabs-list li{padding:6px; margin:0 2px; font-size:13px;}
+	.zenmuse .resp-tabs-list{padding:0;}
+	.zenmuse .resp-tab-content .col-sm-7{padding:50px 0 0 0;}
+	.zenmuse h2{font-size:40px; line-height:42px; margin:0 0 15px;}
+	.zenmuse p,.manufacturer p,.lightbridge h1{font-size:16px; line-height:24px;}
+	.manufacturer h1{font-size:40px; white-space:normal;}
+	
+	.CO_border{margin:40px 0 0;}
+	.CO_border h2{font-size:24px;}
+	.CO_border p{font-size:30px; line-height:32px;}
+	.CO_border p small{font-size:14px; line-height:18px;}
+	.CO_border p span{font-size:24px; line-height:26px;}
+	
+	.lightbridge h1{font-size:32px; line-height:38px; margin:0 0 20px;}
+
+    /*=================================
+        Commercial-use pages end 
+    ==================================*/
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width :990px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 990px) {
+
+	ul.findsearch li{
+		display: list-item;
+	}
+	.home-page .findsearch {
+    	padding-top: 8vmin;
+    	padding-bottom: 8vmin;
+	}
+	.findjob.findlocation .ui.fluid.dropdown{
+		width: 440px;
+	}
+	.srcpilotjob .ui.selection.dropdown{
+		width: 440px;
+	}
+	.findjob.findlocation{
+		margin-top: 20px;
+	}
+	.drn_footage .col-sm-6{
+		width: 100%;
+		text-align: center;
+	}
+	.footagetitle {
+    	padding-bottom: 50px;
+	}
+	.test-bg-img .col-sm-6 {
+    	width: 100%;
+	}
+
+
+ 	/*=================================
+            Home page end
+    ==================================*/
+
+    .mb_contactInfo .col-sm-6{
+        margin: 0px auto;
+        width: 100%;
+    }
+    .mb_protfolioAdded .col-sm-6.col-sm-offset-3{
+        width: 100%;
+        margin: 0px auto;
+    }
+    .uppstitledes{padding-top: 30px;}
+    .blheadtitle h1{font-size: 48px;}
+    .mailnewaccount .col-sm-6.col-sm-offset-3{
+    	width: 100%;
+    	margin-left: 0;
+    }
+    .chosseaccount .usertitle h3{
+    	font-size: 18px;
+    	line-height:25px;
+    }
+    .btn.greenbtn{font-size: 14px;}
+    .chosseaccount .clientOrhire {padding: 13.5px 0px;}
+
+    /*=================================
+            Signup page end
+    ==================================*/
+
+    .sm-SortBysr{width: 100%;}
+    .btn-graysrtborder{min-width: 100%;}
+    .DroneJobsBody {position: relative;}
+    .dnj-sarchresult article .col-sm-3 {
+        position: absolute;
+        top: 75px;
+        right: 30px;
+    }
+
+    /*=================================
+            Search Job page end
+    ==================================*/
+
+    .mb_lftnav{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .drn-lftnav-stacked li a{
+        font-size: 13px;
+        padding: 5px;
+    }
+    .mb_userInfo .col-sm-2{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+    .mb_userInfo .drn-info-edit{
+        width: 100%;
+        float: left;
+    }
+    input.drn-bk-authorName[type="text"], .drn-bk-authorName{
+        font-size: 30px;
+    }
+    input.drn-bk-specialty[type="text"], span.drn-bk-specialty{
+        font-size: 22px;
+    }
+    .mb_contactInfo input.edit-normal[type="text"]{
+        clear: left;
+        float: left;
+    }
+    .mb_galleryedit .col-sm-3{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .stepthreeaddpf .addportfolione::before {
+		padding: 0px 10px;
+		width: 30px;
+		height: 30px;
+	}
+    .mb_addequipment .col-sm-6.col-sm-offset-3{
+    	width: 100%;
+		margin-left: 0;
+    }
+    .drn-model-details .col-sm-3 {
+		width: 100%;
+		float: left;
+		clear: both;
+	}
+	.drn-editimg-model{float: left;}
+
+    /*===============================
+        Pilot Profile info page end 
+    =================================*/
+
+    .headtopjpost{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .drn-jpost-body{
+        padding-top: 20px;
+    }
+
+    /* Force table to not be like tables anymore */
+    #drn-JobListing-tables table, 
+    #drn-JobListing-tables thead, 
+    #drn-JobListing-tables tbody, 
+    #drn-JobListing-tables th, 
+    #drn-JobListing-tables td, 
+    #drn-JobListing-tables tr { 
+        display: block; 
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #drn-JobListing-tables thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #drn-JobListing-tables tr { 
+        border: 1px solid #ccc; 
+        margin-bottom: 15px;
+    }
+    .drn-ProjectTable-des{max-width: 100%;}
+    #drn-JobListing-tables td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 33%!important; 
+        white-space: normal;
+        text-align:left;
+    }
+
+    #drn-JobListing-tables td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+     
+    /*
+    Label the data
+    */
+    #drn-JobListing-tables td:before { content: attr(data-title); }
+
+
+    /*===================================
+        JobListing Page responsive end
+    =====================================*/
+
+    .usrthextlc h1{font-size: 35px;}
+    .dn_scope i{font-size: 25px;}
+    .exemptionDate{font-size: 15px;}
+    .dn_scope span{font-size: 25px;line-height: 30px;}
+    .dn_specialists{text-align: end;}
+    .dn_specialists h4{font-size: 15px;}
+    .userinfoexpert{padding: 0px;}
+    .dn_verifyIcon{clear: left;}
+    .dn_rating{padding-top: 13px;}
+    .dn_nopaddlfrh{padding-left: 0px;padding-right:0px;}
+    .dn_available {font-size: 20px;}
+    .dn_blavailtext h4 {font-size: 22px;}
+    .dn_userFollow > li a{
+		width: 30px;
+		height: 30px;
+		font-size: 15px;
+		line-height: 30px;
+    }
+    .dn_contact .btn {font-size: 12px;}
+    .dn_userWebpage {padding: 8px 18px;}
+    .dn_userWebpage a {font-size: 12px;}
+    .dn_product-text h3{font-size: 19px;}
+    .dn_userSocial.dn_followme{padding-top: 20px;}
+    .dn_product-text p{font-size: 11px;line-height: 16px;}
+    .dn_blheadtext p{
+    	font-size: 15px;
+    	line-height: 20px;
+    }
+    .vm_pra{
+    	font-size: 15px;
+    	line-height: 20px;
+    }
+    .vm_block h6{font-size: 13px;}
+    .dn_exdate {padding-top: 0px;}
+
+    /*===================================
+        Pilot profile example Page end
+    =====================================*/
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width :800px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 800px) {
+
+    
+    .subheadtext .pull-right {float: right!important;}
+    .feedbackcl .col-sm-6{
+        width: 50%;
+        float: left;
+        padding-left: 10px;
+    }
+
+    /*===================================
+        Pilot Profile example Page end
+    =====================================*/
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*               min-width:750px and max-width:992px
+/*---------------------------------------------------------------*/
+
+@media only screen and (min-width:750px) and (max-width:992px) {
+  #mainNav{
+    margin:0 0 0 -250px;
+    top: 12px;
+  }
+  
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width :768px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+    html{overflow: hidden;}
+    .logo{padding: 3px 0 0;}
+    #mainNav{top: 0px;}
+    .drn-TopmainNav{
+        padding-top: 0px;
+    }
+    .mainNav .navTabs > li > a, .mainNav .navTabs > li > button{
+        font-size: 11px;
+        padding: 0px 10px;
+    }
+
+  	.findheadtitle h1{font-size: 6vh;}
+	.findheadtitle h3 {font-size: 4vh;}
+	ul.findsearch li {font-size: 3vh;}
+	.findjob {
+		top: 0;
+	}
+	.findjob.findlocation {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+    
+    /*-- Header Section end --*/
+
+    .chosseaccount .usertitle h3{
+        font-size: 20px;
+    }
+    .dotborder-lefttopbot{
+        margin-left: 5%;
+        width: 40%;
+        float: left;
+    }
+    .dotborder-toprightbottom{
+        width: 40%;
+        float: left;
+    }
+    .chosseaccount .clientOrhire{
+        padding: 23px 0px;
+    }
+
+    /*=================================
+            Signup page end
+    ==================================*/
+
+    .mailnewaccount .col-sm-6.col-sm-offset-3{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .mb_protfolioAdded .col-sm-6.col-sm-offset-3{
+		width: 90%;
+		margin: 0px auto;
+		margin-left:7%;
+    }
+
+    /*=================================
+        Signup pilot info page end
+    ==================================*/
+
+    .btn-graysrtborder{min-width: 138px;}
+    .drpsrtmenubtn{min-width: 100%;left: -30px;}
+    .dnj-sarchresult article{position: relative;}
+    .dnj-sarchresult .col-sm-9{
+        width: 100%;
+    }
+    .dnj-sarchresult .col-sm-3{
+        width: inherit;
+        position: absolute;
+        top: 40px;
+        right:0px;
+        float: right;
+        text-align: right;
+    }
+    .dnj-contact{
+        text-align: right;
+        margin-right: 10px;
+        margin-top:15px;
+        float: right;
+    }
+    .dnj-contact button.btn.btn-green{
+        min-width:100%;
+        padding: 6px 25px;
+    }
+
+
+    /*=================================
+        Search Job page end
+    ==================================*/
+
+    .col-xs-12.logoWrapper{
+        width: 200px;
+        padding-top: 10px;
+    }
+    .bsrcfind{
+        width: 130px;
+    }
+    .mb_backendheader .ui.search.dropdown > .text{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 125px;
+    }
+    .bsrcfind .ui.selection.dropdown .menu .item{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    /*-- Header Section end --*/
+
+    .topFooter .footerWidget .footerLinksList li a{
+        font-size: 15px;
+    }
+
+    /*-- Footer Section end --*/
+
+    .mb_lftnav{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .drn-lftnav-stacked li a{
+        font-size: 13px;
+        padding: 5px;
+    }
+    .mb_userInfo .col-sm-2{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+    .mb_userInfo .drn-info-edit{
+        width: 100%;
+        float: left;
+    }
+    input.drn-bk-authorName[type="text"], .drn-bk-authorName{
+        font-size: 30px;
+    }
+    input.drn-bk-specialty[type="text"], span.drn-bk-specialty{
+        font-size: 22px;
+    }
+    .mb_contactInfo input.edit-normal[type="text"]{
+        clear: left;
+        float: left;
+
+    }
+    /*===============================
+        Pilot Profile info page end 
+    =================================*/
+
+    .drn-Description{
+        height: 60px;
+        overflow: hidden;
+    }
+
+    /*===================================
+        Pilot Profile equipment page end 
+    ====================================*/
+    
+    .userblheadtext h4 {font-size: 15px;}
+
+    /*===================================
+        Pilot Profile example page end 
+    ====================================*/
+
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width :767px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+
+	.home-page .find-job{
+		background:url("../images/bg-img/home_bg.jpg") no-repeat;
+		background-size: 100% 100%;
+	}
+	.home-page .video-wrapper{display: none;}
+	.mobile_footer{display: block;}
+	.slick-gallery .slick-arrow{
+		top: calc(35% - 13px);
+	}
+
+	#video-thumbnailssq1 li.video{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#video-thumbnailssq1 .demo-gallery-poster{
+		position: absolute;
+		width: 100%;
+		margin: auto;
+		background-color: rgba(0, 0, 0, 0.1);
+		border: 1px solid rgb(207, 207, 207);
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		transition: background-color 0.15s ease 0s;
+	}
+	#video-thumbnailssq1 .demo-gallery-poster img{
+		left: 50%;
+		/*margin-left: -10px;
+		margin-top: -10px;*/
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		-webkit-transition: opacity 0.3s ease 0s;
+		-o-transition: opacity 0.3s ease 0s;
+		transition: opacity 0.3s ease 0s;
+		z-index: 9999999999999;
+	}
+	ul#video-thumbnailssq1 > li a:hover .demo-gallery-poster{
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.demo-gallery .slick-gallery .slick-arrow i{
+		height: 100px;
+		background: #5dbe2c;
+		color: #fff;
+		padding: 20px 5px;
+		line-height: 60px;
+		color: #ffffff;
+	}
+
+    /*============================== 
+        Home page end
+    ===============================*/
+
+    .mobile_header{display:block;}
+    .dronejobsheader{padding:0 0 9px; z-index:101;}
+    .scrollHeaderWrapper .col-sm-9,.right_settings{display:none;}
+
+    /*-- Fornt End Header End --*/
+
+    .addedpfbody .col-sm-4{
+        width: 100%;
+        float: left;
+    }
+    .editedelete{
+        float: left;
+    }
+    .mb_equipmentpor .col-sm-6{
+        width: 100%;
+        float: left;
+    }
+    /*-- info, verify,confirm page end --*/
+
+    .contactinfo label.control-label{
+        width: 100%;
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+    .controls-ctstzip select#state{
+        width: 25%;
+    }
+    .mb_contactInfo.securityStep{
+        padding-bottom: 80px;
+    }
+
+    /*============================== 
+        Signup pilot info page end
+    ===============================*/
+
+    .mobile_header{display:block;}
+    .dronejobsheader{padding:0 0 17px; z-index:101;}
+    .scrollHeaderWrapper .col-sm-9,.right_settings{display:none;}
+
+
+    /* --- logo --------------------- */
+
+    .logo a img {width: 165px;}
+    .usermenu-mobile-trigger {list-style: none;}
+    .mobile-wrapper {
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        background: #fff;
+        z-index: 10;
+        border-left: 1px solid #cdcdcd;
+        height: auto!important;
+    }
+    .mobile .userprofie-img {
+        background: none;
+        position: relative;
+        z-index: 1;
+        float: left;
+        padding: 3px 0 5px 10px;
+        /*margin-left: -20px;*/
+        /*border-left: 1px solid #cdcdcd;*/
+        /*border-radius: 0;*/
+    }
+    #userinfo-close {
+        color: #989898;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        font-size: 2em;
+    }
+    .mobile .login-thumb {
+        margin-top: 15px;
+        margin-left: 20px;
+        position: relative;
+    }
+    .mobile .login-thumb .thumb-img {
+        top: -18px;
+        right: 0;
+    }
+    .mobile .login-thumb .thumb-img img {
+        border: 0;
+    }
+    .mobile .userprofie-img img {
+        width: 54px;
+        float: left;
+    }
+    .mobile .btn-signup {
+        margin-top: 12px;
+        margin-left: -10px;
+        position: relative;
+    }
+    .mobile .sing-upbtn {
+        border: 1px solid #cdcdcd;
+        padding: 12px 35px;
+    }
+    .mobile .sing-upbtn:before {
+        left: 13px;
+    }
+    .mb_SR_filter i{
+        font-size: 17px;
+        margin: 0px 15px;
+        position: relative;
+    }
+    .mobile #userinformation li {
+        padding: 15px 20px;
+        margin: 0 0 1px;
+        background: #fff;
+        border: 0;
+    }
+    .mobile #userinformation li a {
+        color:#565656;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }   
+
+    .mobile.roomFilter li {
+        display: block;
+        float: left
+    }
+
+    .Chat-page .LeftBgwhite, .Chat-page .LeftNavBg {
+        height: auto !important;
+        padding: 0;
+    }
+
+    .conversation-wrap {
+        height: 290px !important;
+        position: absolute;
+        z-index: 1;
+        background-color:#fff;
+        width: 100%;
+    }
+
+    ul.room-list.proper li.room-list-item {
+        border-bottom: 2px solid #e8e8e8;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        padding-top: 13px;
+        float: left;
+        padding-bottom: 15px;
+    }
+
+    .visible-xs.roomFilter li {
+        display: block;
+        float: left;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0 15px;
+    }
+
+    .visible-xs.roomFilter li a {
+        color: #989898;
+    }
+
+    .visible-xs.roomFilter li.active a {
+        color: #5bbb2d;
+    }
+
+    .main-column {
+        padding: 0;
+    }
+
+    #userinformation{
+        position: absolute;
+        /*display: block;*/
+        position: absolute;
+        background-color: white;
+        z-index: 3;
+        left: 0px;
+        top: 62px;
+        width: 100%;
+        border: 1px solid #5bbb2d;
+    }
+
+    li.away-toggle.away-toggle-user.clearfix {
+        padding: 0 !important;
+    }
+
+    .available.active.userabaw,
+    .away.userabaw {
+        padding: 10px;
+        width: 50%;
+    }
+
+    .available.active.userabaw label,
+    .away.userabaw label {
+        width: 100%;
+    }
+
+    .settingtext h5 {
+        margin-top: 13px;
+        margin-bottom: 0;
+    }
+
+    .userdropdown .userset {
+        height: 50px;
+        border-top: 1px solid #cdcdcd;
+        padding: 0 10px;
+    }
+
+    .userdropdown .userset .settingtext img {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .userdropdown .userset .settingtext {
+        width: 100%;
+        height: 100%;
+
+    }
+   
+    .search-arrow-wrapper {
+        width: 20px;
+        height: 12px;
+        padding: 0;
+        display: block;
+        background: url("../images/icons/arrows.png") 20px -1px;
+        position: relative;
+        top: -18px;
+        margin-right: 45px;
+        margin-bottom: 10px;
+    }
+    .user-logout {
+        width: auto;
+        max-width: 140px;
+        width: 70%;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px 0 11px 32px;
+        /*float: left;*/
+        clear: none;
+        border: 1px solid #d7d7d7;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;;
+        position: absolute;
+        left: 50px;
+        z-index: 0;
+        top: 9px;
+    }
+
+    .user-logout .fluserlogout {
+        margin: 0px 0 0 0;
+        padding: 0;
+    }
+
+    .user-logout .fluserlogout i {
+        padding: 0;
+    }
+
+    .srchide {
+        display: block !important;
+        width: calc(100% - 30px);
+    }
+
+    .bsrcfind {
+        width: 100%;
+    }
+
+    .mobile-menu-wrapper {
+        width: 100%;
+        margin: 0px;
+        padding: 0;
+        position: absolute;
+        top: 61px;
+        left: 0;
+        z-index: 3;
+    }
+    .mobile-menu-wrapper.collapse {
+        overflow: visible;
+    }
+    .bsrcfind .ui.selection.dropdown .menu {
+        width: calc(100% + 34px );
+    }
+    .userinfo-toggler {
+        margin: 21px 0px 0 5px;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: 0;        
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: #989898;
+        width: 26px;
+        height: 4px;
+    }
+
+    .droneJobsBK {
+        padding: 0;
+    }
+
+    .conversation {
+        padding: 0;
+    }
+
+    .logoWrapper {
+        float: left;
+        width: auto;
+        padding-top: 8px;
+    }
+
+    .mobile-menu-toggler {
+        display: none;
+        /*height: 100%;
+        margin: 0;
+        padding: 20px 20px 20px 0px;
+        border-right: 1px solid #cdcdcd;
+        border-radius: 0;*/
+    }
+
+    ul.mobile.visible-xs.nav.pull-left {
+        margin: 0 -15px 0;
+        width: 100%;
+        height: 63px;
+        padding: 0 0 20px 20px;
+    }
+    .droneJobsBK.fixedHeader {
+        padding: 0;
+    }
+    .footer {
+        /*height: 380px;
+        margin-top: 70px;*/
+        text-align: center;
+    }
+    .socials {
+        display: block;
+        margin: 0 auto;
+    }
+    .social {
+        background-image: url("../images/icons/socials.png");
+        display: block;
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 20px;
+    }
+    .foot-instagram {
+        background-position: 0 0;
+    }
+    .foot-linkedin {
+        background-position: -62px 0;
+    }
+    .foot-facebook {
+        background-position: -124px 0;
+    }
+    .foot-twitter {
+        background-position: -186px 0;
+    }
+    .foot-vimeo {
+        background-position: -248px 0;
+    }
+    .foot-youtube {
+        background-position: -310px 0;
+    }
+   
+    .btn-closePilotsFilter,
+    .btn-openPilotsFilter {
+        width: 50px;
+        height: 50px;
+        float: left;
+        border-radius: 0;
+        background: #5bbb2d url("../images/icons/arrow-right.png") no-repeat center 15px;
+    }
+    .pilotSearch-form {
+        width: calc(100% - 50px);
+        float: right;
+    }
+    .pilotSearch-form input[type="text"], .RFSintext input[type="text"] {
+        height: 50px;
+        border: 1px solid #5bbb2d;
+        border-radius: 0;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+    .pilotSearch-clear {
+        height: 21px;
+        width: 22px;
+        padding: 0;
+        display: block;
+        position: absolute;
+        background: transparent url("../images/icons/close.png");
+        top: 14px;
+        right: 20px;
+    }
+    .searchPilot-page .TopPilotSearch{
+        z-index: 2;
+    }
+  	.searchPilot-page .RGoogleMaps {
+    	width: auto !important;
+  	}
+    .RefineSearchMobile {
+        padding: 0;
+    }
+    .RefineSearchMobile .reFineSrc {
+        width: calc(100% - 50px);
+        float: left;
+    }
+    .btn-closePilotsFilter {
+        -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    .topnavRefine {
+        padding-top: 0;
+        background-color: #eeecf2;
+    }
+
+    .searchPilot-page .FilterPilot {
+        /*height: 500px !important;*/
+    }
+    .pilot-search-toggle {
+        left: -100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .pilot-search-toggle.togle-search {
+        top: 64px;
+        width: 100%;
+    }
+    .pilot-search-toggle.togle-search2 {
+        top: 152px;
+        background: #fff;        
+    }
+    .pilot-search-toggle.togle-search2 li,
+    .pilot-search-toggle.togle-search2 ul{
+        list-style: none;
+    }
+
+    .FilterPilot .main-bodyleft {
+        max-height: 400px;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+     .searchPilot-page .sr-resultbody .main-bodyleft {
+        height: 60%;
+        min-height: 400px;
+        width: 100%!important;
+     }
+    .pilotResultToggler {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .Vpilotinfohead {
+        float: left;
+    }
+    .Vpilotinfohead h3{
+        margin-bottom: 0;
+    }
+    .RatingLocation {
+        clear: left;
+    }
+    .equipmenttype p{
+        font-size: 1.2em;
+    }
+    .VPilotImg {
+        padding-right: 20px;
+        padding-top: 5px;
+    }
+
+    .togglePilotResults{
+        width: 100%;
+        padding: 17px 35px 17px 20px;
+        background: #5bbb2d;
+        text-align: right;
+        text-transform: uppercase;
+    }
+    .togglePilotResults.closeResults{
+        height: 10px;
+        width: 15px;
+        position: absolute;
+        right: 0px;
+        top: 0;
+    }
+    .togglePilotResults:after {
+        content: "";
+        position: absolute;
+        background: url("../images/icons/arrow-down-large-white.png") no-repeat 0 0;
+        right: 10px;
+        top: 20px;
+        width: 15px;
+        height: 10px;
+        -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    .resultsToggle .togglePilotResults:after{
+        -webkit-transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+    .togle-search2 {
+        padding: 0;
+    }
+    .togle-search2 .btnactionRefine button.btn-green {
+        font-size: 20px;
+        margin-top: 10px;
+        background-color: #5bbb2d;
+    }
+    .RefineSpecialtiesHeader {
+        background: #5bbb2d;
+    }
+    .RefineSpecialtiesHeader h4{
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #fff;
+        padding: 15px 0;
+        margin-bottom: 0px;
+    }
+    .RefineSpecialtiesWrapper {
+        background: #eeecf2;
+        border-bottom: 1px solid #cdcdcd;
+        padding: 5px 15px 15px 15px;
+    }
+    #citystatezip {
+        border: 1px solid #989898;
+        height: 35px;
+        margin: 10px 0;
+    }
+    .room-body .topsecFilter {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+    }
+    .room-body .filterBy .sm-RFfilterBy li.active a {
+        color: #5bbb2d;
+    }
+    .room-body .filterBy .sm-RFfilterBy li a {
+        color: #989898;
+    }
+    .room-body .filterBy .sm-RFfilterBy li {
+        display: block;
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 30px;
+    }
+    .room-body .filterBy .sm-RFfilterBy span {
+        display: block;
+        float: left;
+        height: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        color: #565656;
+    }
+    .room-body .filterBy .sm-RFfilterBy {
+        height: 60px;
+        padding: 22px 15px 0 15px;
+    }
+    .room-body .filterBy {
+        border-bottom: 2px solid #dddddd;
+        background-color: white;
+    }
+    .room-body .showFilter  {
+        width: 100%;
+        height: 60px;
+        padding: 12px 15px 0 15px;
+        background-color: #5bbb2d;
+    }
+    .room-body .showFilter .drn-shtext {
+        font-size: 16px;
+    }
+    .room-body .showFilter .checkbox-helper {
+        border-color: white;
+        top: 3px;
+    }
+    .room-body .showFilter .drn-shtext {
+        color: white;
+    }
+    .LeftsideBarVP {
+        min-height: 500px;
+    }
+    .reFineLoc {
+        position: relative;
+    }
+    .reFineLoc::after {
+        content: '';
+        display: block;
+        height: 35px;
+        width: 35px;
+        background: #5bbb2d url("../images/icons/location-marker.png") no-repeat 12px 7px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+    .FRtag span {
+        position: relative;
+        top: 8px;
+    }
+    .dnjpilotsrbody {
+        padding-top: 80px;
+        z-index: 1;
+    }
+    .room-body .VPilotImg {
+        padding-top: 16px;
+        padding-bottom: 18px;
+    }
+    .room-body .VPilotImg img {
+        max-height: 80px;
+    }
+    .room-body .DNjPilotInfoBody {
+        padding: 0;
+    }
+    .dronejobsheader {
+        position: relative;
+        z-index: 99999;
+    }
+
+    .profileToggleNav .nav-pills {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        background: #fff;
+        z-index: 1;
+    }
+    .profileToggleNav {
+        overflow: hidden;
+        margin-top: -50px;
+    }
+  	/*.profileToggleNavBusines {
+        margin-left: -15px;
+        margin-right: -15px;
+    }*/
+    #profileToggleNav {
+        position: relative;
+        top: -5px;
+        left: 0;
+        float: left;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        background: #5bbb2d url("../images/icons/arrow-right.png") no-repeat center 15px;
+    }
+    .profileToggleNav.toggled #profileToggleNav {
+        -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    .topFooter{
+        display: none;
+    }
+    .profile-nav-stacked{
+        padding-bottom:  100px;
+    }
+
+    .drn-user-set {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .LokkingPilot-2 {
+        margin-left: -20px;
+        margin-top: 15px;
+    }
+    .LokkingPilot-2 .btn {
+        font-weight: bold;
+    }
+    .SortByTopSec {
+        padding-top: 15px;
+        max-width: 100%;
+    }
+    .SortByTopSec .sm-SortBysr {
+        width: 100%;
+    }
+    .SortByTopSec .sm-SortBysr button{
+        min-width: 100%;
+        width: 100%;
+    }
+    .dnj-sarchresult article {
+        position: relative;
+    }
+    .dnj-sarchresult article .col-sm-3{
+        position: absolute;
+        top: 55px;
+        right: 0;
+    }
+    .jobsearchfilter-mobile-wrapper {
+        left: -100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        top: 63px;
+        position: absolute;
+        background: #eeecf2;
+        z-index: 10;
+        border: 2px solid #5bbb2d;
+    }
+    #jobsearchfilter-open,
+    #jobsearchfilter-close {
+        position: relative;
+        left: 0;
+        float: left;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        background: #5bbb2d url("../images/icons/arrow-right.png") no-repeat center 15px;
+    }
+    #jobsearchfilter-open {
+        position: absolute;
+        top:15px;
+    }
+    #jobsearchfilter-close {
+        top: 0;
+        --webkit-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+
+    /*============================== 
+        Search pilot info page end
+    ===============================*/
+
+    .DroneJobsHead {
+        padding-top: 80px;
+        padding-bottom: 10px;
+    }
+    .drpsrtmenubtn{left: 0px;}
+    .RfineSrc .SJsrinj i{padding: 18px;}
+    .JBheadtext h2{display: none;}
+    .JBheadtext p{display: none;}
+    .mb_Srtext{
+        font-size: 25px;
+        color: #565656;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        line-height: 70px;
+    }
+    .PilotRefineGMAPState  .mb_leftRefineSearchFrom{
+    	padding-top: 0px;
+    }
+    .mb_leftRefineSearchFrom .RFSintext input[type="text"]{height: 50px;}
+
+    /*============================== 
+        Search job page end
+    ===============================*/
+
+    .dotborder-topbottom{
+        width: 10%;
+        float: left;
+    }
+    .mailnewaccount{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mb_protfolioAdded .col-sm-6.col-sm-offset-3{
+        width: 80%;
+        margin: 0px auto;
+        margin-left: 10%;
+    }
+
+    /*============================== 
+        signup page end
+    ===============================*/
+
+    .drn-lftnav-stacked li a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .text_adinfo{
+        float: left;
+        clear: both;
+    }
+
+    /*=================================
+        Pilot profile info page end 
+    ===================================*/
+
+    .drn-model-details .col-sm-3{
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+    .drn-editimg-model{
+        float: left;
+    }
+    .drn-passaction{
+        text-align: right;
+        padding-top: 20px;
+    }
+    .mb_galleryedit .col-sm-3{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .mb_galleryedit{
+        text-align: center;
+    }
+    .drn-video-control{width: 100%;}
+
+    /*===================================
+        Pilot profile portfolio page end 
+    =====================================*/
+
+    .mb_allWrapper{display: block;}
+    .profile_page .allWrapper{display: none;}
+    .drn_user_img{
+    	padding: 4px 4px 0px;
+    	max-height: inherit;
+    	width: 180px;
+		margin: auto;
+    }
+    .usrthextlc h1{font-size: 48px;margin-bottom: 15px;}
+    .dn_verifyIcon{clear: none;}
+    .dn_verifyPilot {
+	    padding: 5px;
+	    background: #fff;
+	}
+    .mb_coverPhoto{position: relative;}
+    .mb_coverPhotobg img{max-width: 100%;}
+    .mb_verifyed-status{
+		position: absolute;
+		z-index: 9999;
+		top: 30px;
+		right: 60px;
+    }
+    .mb_vm_rating{text-align: end;font-size: 20px;}
+    .mb_vm_userimg{margin-top: -100px;}
+    .mb_ratingCount{color: #989898;}
+    .mb_vm_specialists{
+		width: 55%;
+		margin: auto;
+		clear: both;
+    }
+    .mb_vm_loclity{
+    	clear: left;
+    	display: block;
+		padding-top: 10px;
+    }
+    .dn_specialists h4 {
+	    font-size: 24px;
+	    text-transform: uppercase;
+	}
+	.dn_specialists{text-align: center;}
+	.mb_vm_tppadd{padding-top: 40px;}
+	.dn_flimIcon .drj-flimvideo{border: 3px solid #fff;}
+	.mb_vm_overViewbg{
+		background: url(../images/bg-img/overview_bg.jpg) no-repeat;
+		background-size: cover;
+		background-position: 10% 35%;
+		padding: 40px 0px 60px;
+		margin-top: 20px;
+	}
+	.dn_blheadtext p {
+	    font-size: 22px;
+	    line-height: 30px;
+	}
+	.dn_viewAll{text-align: end;}
+	.mb_vmGallery .slick-arrow.arrow-left{left: 0px;}
+	.mb_vmGallery .slick-arrow.arrow-right{right: 0px;}
+	.mb_dn_imgGallery{position: relative;}
+	.mb_dn_imgGallery img{
+		width: 100%;
+	}
+	.mb_vmGallery .green_arrow{top: calc(40% - 13px);}
+	.mb_vm_equipment{padding: 40px 0px;}
+
+	.mb_vm_Feedbackhistory{padding: 40px 0px;}
+	.vm_jobdetails{padding: 0px 15px;}
+	.vm_block{padding: 0px 15px;}
+	.vm_block h6 {
+	    font-size: 22px;
+	    line-height: 30px;
+	}
+	.whpaddexdate{text-align: center;}
+	.dn_userFollow.socialNav{text-align: center;}
+	.dn_userWebpage{
+		width: 50%;
+		margin: 0 auto;
+		border-radius: 4px;
+		margin-top: 15px;
+	}
+	.dn_userFollow.socialNav li {margin-right: 5px;}
+	li.ng-item:last-child{margin-bottom: 0px;}
+	.mb_vm_tpbtpadd{padding: 40px 0px;}
+
+	.dn_blavailtext h4{font-size: 30px;}
+	.dn_available{font-size: 24px;}
+	.dn_contact .btn{
+		font-size: 19px;
+		line-height: 30px;
+		padding: 5px 12px;
+		margin-top: 15px;
+	}
+	.dn_userFollow > li a{
+		width: 40px;
+		height: 40px;
+		font-size: 22px;
+		line-height: 40px;
+	}
+	.dn_userWebpage a{
+		font-size: 20px;
+		line-height: 22px;
+	}
+	.Equipmentsurvey .slick-arrow.arrow-left{left: 0px;}
+	.Equipmentsurvey .slick-arrow.arrow-right{right: 0px;}
+	.dn_pgIcon i {
+	    padding: 11px;
+	    width: 40px;
+	    height: 40px;
+	    font-size: 20px;
+	}
+
+    /*===================================
+        Pilot Profile Example page end 
+    =====================================*/
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 750px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+
+	.performance_grade .separator,.price_first,.navigation .small_arrow,.photo3{display:none;}
+	.banner_options h1{font-size:48px; line-height:48px;}
+	
+	.price_comparison li:before{content:'Cameras: '; display:inline-block; margin:0 10px 0 0; color:#666;}
+	.price_comparison li:nth-child(2):before{content:'Max Resolution: ';}
+	.price_comparison li:nth-child(3):before{content:'Total Flight Time: ';}
+	.price_comparison li:nth-child(4):before{content:'Control Distance: ';}
+	.price_comparison li:nth-child(5):before{content:'Max Speed: ';}
+	.price_comparison li:nth-child(6):before{content:'Mobile App: ';}
+	.price_comparison li:nth-child(7):before{content:'GPS Mode: ';}
+	
+	.home_submenu [class*="col"]{padding:0 15px; float:left;}
+	.home_submenu .col-sm-2{background:#fff;}
+	
+	.zenmuse .resp-tabs-list{padding:0;}
+	.zenmuse .resp-tab-content .col-sm-7{padding:50px 0 0 0;}
+	.attributes h1, .price_comparison h1, .performance_grade h1,.manufacturer h1,.find_pilot h1{font-size:40px; line-height:42px; margin:0 0 15px;}
+	
+	.zenmuse{padding:0;}
+	.zenmuse .resp-tab-content{padding:15px; border-bottom:1px solid #c1c1c1;}
+	.zenmuse h2{font-size:24px; line-height:26px; margin:0; width:100%; float:left;}
+	.resp-tab-active{color:#000 !important;}
+	.photo1{width:59%;}
+	.photo2{width:41%;}
+	
+	.zenmuse p,.manufacturer p{font-size:16px; line-height:24px;}
+	.manufacturer h1{white-space:normal;}
+	
+	.navigation ul{width:100%; float:left; padding:5px 0; text-align:center;}
+	
+	/*.navigation li{width:100%; border:0; border-bottom:1px solid #fff; padding:5px 0; margin:0;}*/
+	.navigation li{float:none; display:inline-block; padding:1px 5px;}
+	.navigation li a.btn{margin:0;}
+	.right_btn a{margin:0 0 10px;}
+	
+	.faq{padding:35px 15px;}
+	
+	.CO_border ul{margin:0 0 20px; float:none;}
+	.white_container{padding-left:15px; padding-right:15px;}
+	.CO_border li{padding:0 10px 0 0;}
+	
+	.powerful_motors{padding:50px 0;}
+	.powerful_motors img{margin-bottom:30px;}
+	.ready_fly .col-sm-4{margin:0 !important; width:50%; float:left; padding-left:0; padding-right:0;}
+	
+	.lightbridge{background:#edebf1; padding-top:60px;}
+	.dual_operator{padding:20px 0 60px;}
+	.lightbridge img{margin-top:40px;}
+	
+	.manufacturer h1, .lightbridge h1{text-align:center;}
+	.no_mob{display:none !important;}
+	
+	.performance_grade .col-sm-5{text-align:center;}
+	
+	.PG_progress,.max_width{margin:0 auto; float:none; display:inline-block;}
+	.PG_progress{margin-top:40px;}
+	.only_mob{width:100%; display:block;}
+
+	/*===================================
+        Commercial-use pages end 
+    =====================================*/
+
+    .dn_specialists h4{font-size: 22px;}
+    .usrthextlc h1{font-size: 42px;}
+    .exemptionDate {font-size: 14px;}
+    .mb_vm_userimg {margin-top: -85px;}
+    .drn_user_img{width:150px;}
+
+	/*===================================
+        pilot Profile example pages end 
+    =====================================*/
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 667px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 667px) {
+
+    .blheadtitle h1 {font-size: 45px;}
+    .blheadtitle h2 {font-size: 35px;}
+    .hirebtn a{
+        font-size: 15px;
+        padding: 15px;
+    }
+    .chosseaccount .usertitle h3{line-height: 25px;}
+    .chosseaccount .clientOrhire {padding:15px 0px;}
+    .chosseaccount .profile-usertitle {padding: 30px 10px;}
+    .blvheadtitle h1{font-size: 35px;}
+    .blvheadtitle p{font-size: 17px;}
+
+    /*============================== 
+        signup page end
+    ===============================*/
+
+    ul.pfgallery .col-sm-4 {width: 31.5%;}
+    .userexpertarea {padding-top: 8px;}
+    .userinfoexpert {padding-top: 0px;}
+    .usrthextlc h1 {font-size: 38px;}
+    .usrthextlc span {font-size: 20px;}
+    .userblheadtext h4{line-height: 22px;}
+    .dn_specialists h4 {font-size: 20px}
+    .mb_vm_rating{text-align: center;}
+    .mb_vm_exdate{text-align: center;}
+    .exemptionDate {font-size: 15px;}
+
+    /*==================================
+        Pilot profile example page end 
+    ===================================*/
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 640px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 640px) {
+
+    .blheadtitle h1 {
+        font-size: 40px;
+        line-height: 35px;
+        margin-bottom: 0px;
+    }
+    .blheadtitle h2 {font-size: 30px;}
+
+    /*============================== 
+        signup page end
+    ===============================*/
+
+    .mb_vm_specialists {width: 60%;}
+	.dn_feedbackStar .col-xs-5.mb_vm_progress{width: 50%;}
+	.dn_userWebpage a {
+	    font-size: 17px;
+	    line-height: 26px;
+	}
+
+    /*================================= 
+        pilot Profile example page end
+    ==================================*/
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 568px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 568px) {
+
+	/*.findheadtitle h1{font-size: 55px;}*/
+	/*.findheadtitle h3 {font-size: 30px;}*/
+	/*ul.findsearch li {font-size: 40px;}*/
+	.findheadtitle h1{font-size: 8vmin;}
+	.findheadtitle h3 {font-size: 5vmin;}
+	.test-tile p{font-size: 22px;line-height: 30px;}
+	.test-tile h2 {font-size: 30px;}
+	.drjobstext h1{font-size: 40px;text-align: center;}
+	.drjobstext p{font-size: 16px;padding-left: 15px;}
+	.footagetitle p{font-size: 16px;padding-left: 15px;text-align: start;}
+	.footagetitle h1{font-size: 40px;}
+	.findpilot-bg{padding: 70px 0px;}
+
+    /*============================== 
+        Home page end
+    ===============================*/
+
+    .searchPilot-page{
+        overflow: hidden!important;
+    }
+    .drpsrtmenubtn li a{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .drpsrtmenubtn{right: 0px;}
+    ul.nav.stepnav li a{
+        min-width: 120px;
+        font-size: 14px;
+    }
+    .wizardhdtext h1{
+        font-size: 28px;
+    }
+
+    /*============================== 
+        Search job page end
+    ===============================*/
+
+    .pilotResultToggler{
+        bottom: 0px !important;
+        top: inherit!important;
+    }
+    .profile-userpic {
+        width: 70%;
+        margin: 0px auto;
+    }
+    .chosseaccount .clientOrhire {padding:8px 0px;}
+    .drn_hireBtn {padding-top:32px;}
+    .mb_ownerDetails .control-group{clear: both;}
+    .blheadtextps h1 {font-size: 35px;}
+    .bwonernavwizard ul.nav.stepnav{width: 100%;}
+    .blheadtitle h1{font-size: 35px;}
+
+    /*============================== 
+        Signup page end
+    ===============================*/
+
+    button.drn-action-btn{
+        padding: 8px 40px;
+        font-size: 15px;
+    }
+    .userblheadtext p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .userblheadtext h4 {font-size: 15px;}
+    ul.pfgallery .col-sm-4 {width: 31.2%;}
+    .clientrating i {font-size: 12px;}
+
+    /*==================================
+        Profile pilot info page end 
+    ===================================*/
+
+    .mb_vm_specialists {width: 65%;}
+    .drn_user_img {width: 130px;}
+    .mb_vm_userimg {margin-top: -75px;}
+    .mb_verifyed-status{top: 20px;right: 30px;}
+    .mb_vm_rating{font-size: 17px;}
+    .exemptionDate {font-size: 14px;}
+
+    /*==================================
+        Pilot Profile Example page end 
+    ===================================*/
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 550px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 550px) {
+
+	.PG_progress{width:300px; background-size:auto 100%; height:36px;}
+	.PG_bar{ background-size:auto 100%; height:33px;}
+	.performance_grade .max_width{min-width:300px; max-width:300px;}
+	.camera_option .PG_text li{width:100%;}
+	
+	.banner_options li{max-width:44px; margin-right:2px;}
+	.CO_border h2{font-size:24px;}
+	.CO_border p{font-size:30px; line-height:32px;}
+	.CO_border p small{font-size:14px; line-height:18px;}
+	.CO_border p span{font-size:24px; line-height:26px;}
+	.lightbridge h1{font-size:32px; line-height:38px; margin:0 0 20px;}
+	
+	.ready_fly h2{font-size:15px;}
+	.home_submenu .navigation{padding:0;}
+	.navigation li{font-size:11px;}
+	.navigation li a.btn{font-size:11px; padding:3px 5px; margin:-5px 0 0;}
+	.video_options .see_more img{margin:5px 0 0; width:80%;}
+	
+	.banner_options li a{padding:5px 0;}
+	.banner_options li a img{height:28px;}
+	.video_options li span{background-size:50px;}
+
+
+    /*==================================
+        Commercial-use pages end 
+    ===================================*/
+
+	.mb_vm_specialists {width: 70%;}
+	.mb_vm_user .col-xs-4{padding-left: 5px;padding-right: 5px;}
+	.dn_feedback-rating{font-size: 60px;}
+	.dn_star {font-size: 15px;}
+	.dn_reviews-count h5{font-size: 18px;}
+	.dn_reviews-count i{font-size: 14px;}
+	.row.rating-desc .col-xs-3.text-right{padding-right: 0px;}
+	.dn_userWebpage {width: 70%;}
+
+    /*==================================
+        Pilot Profile example pages end 
+    ===================================*/
+
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 480px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+	/*.findheadtitle h1 {font-size: 45px;}*/
+	/*.findheadtitle h3 {font-size: 25px;}*/
+	/*ul.findsearch li {font-size: 35px;}*/
+	.footagetitle h1 {font-size: 30px;line-height: 40px;}
+	.drjobstext h1{font-size: 32px;line-height: 45px;}
+	.fdtext button{
+		height: 70px;
+		width: 290px;
+		font-size: 28px;
+	}
+	.srcpilotjob .ui.selection.dropdown {width: 320px;}
+	.findjob.findlocation .ui.fluid.dropdown {width: 320px;}
+	.fdtext h1 {font-size: 40px;padding-bottom: 30px;}
+
+    /*==================================
+        		Home page end 
+    ===================================*/
+
+    .room-body .filterBy .sm-RFfilterBy li{
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .blvheadtitle h1{font-size:28px; }
+
+    /*============================== 
+        Search pilot page end
+    ===============================*/
+
+    .blheadtitle h1{font-size: 30px;}
+    .blheadtitle h2 {font-size: 25px;}
+    .dotborder-lefttopbot{
+        width: 70%;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .dotborder-topbottom{
+        width: 100%;
+        background: transparent;
+        border: 0px;
+        position: relative;
+        clear: both;
+        float: left;
+    }
+    .chosseaccount .clientOrhire hr.Orhg{display: none;}
+    .clientOrhire h4:before{
+        background-color: #cfcfcf;
+        height: 1px;
+        border-left: 145px solid #cfcfcf;
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 25px;
+    }
+    .clientOrhire h4:after{
+        background-color: #cfcfcf;
+        height: 1px;
+        border-left: 145px solid #cfcfcf;
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+    .dotborder-toprightbottom{
+        width: 70%;
+        float: none;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+    .dotborder-lefttopbot{border-right: 5px dotted #5bbb2d; }
+    .dotborder-toprightbottom{border-left: 5px dotted #5bbb2d;}
+    .chosseaccount .profile-usertitle {padding: 30px 16px;}
+
+    .blvheadtitle p{
+        padding: 0px 20px;
+    }
+    .creata-signup.verifyPhoneNumber.sectionsign{
+        padding-bottom: 250px;
+    }
+    .verifyacc.verifycountry{
+        position: relative;
+        padding-bottom: 30px;
+        clear: both;
+        margin: auto;
+        width: 100%;
+    }
+    ul.verifyacc li{
+        display: block;
+        text-align: center;
+    }
+    .vcontry{
+        width: 35%;
+        float: left;
+        padding-left: 20px;     
+    }
+    .verifyphn{
+        width: 65%;
+        float: left;
+    }
+    .verifybtn{
+        width: 100%;
+        float: left;
+        padding: 0px 20px;
+    }
+    .verifyCodeNumber  .verifyCodeN{
+        padding: 0px 20px;
+        position: relative;
+        padding-bottom: 90px;
+    }
+    .verifyCodeNumber .verifybtn{
+        padding: 0px;
+        left: 0px;
+    }
+    .VCodeSend{
+        position: absolute;
+        bottom: 0px;
+        display: block;
+    }
+    ul.verifycountry li .vcontry .ui.compact.selection.dropdown{width: 100%;}
+    .verifyphn a.greentext{
+        position: absolute;
+        left: 20px;
+        top: 130px;
+        display: block;
+    }
+
+    ul.nav.stepnav li a {
+        min-width: 100px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .contactinfo input[type="text"]{font-size: 13px;}
+    .controls-ctstzip select#state{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .controls-ctstzip input#city{width: 33%}
+    .controls-ctstzip input#zip-code{width: 33%;}
+    .dragfile .col-sm-4{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .control-group .col-sm-12 {padding-right: 15px;}
+    .control.buttongrn .pull-right{float: none!important;}
+    .wizardhdtext h1 {font-size: 25px;}
+    ul.nav.stepnav li a.active{
+        border-top-right-radius: 13px;
+        border-bottom-right-radius: 10px;
+    }
+    ul.nav.stepnav li a.active::after{right: -14px;}
+    ul.nav.stepnav li a.active-light::after{right: -15px;}
+    ul.nav.stepnav li a.active-light{
+        border-top-right-radius: 13px;
+        border-bottom-right-radius: 10px;
+    }
+    ul.nav.stepnav li a {
+        min-width: 90px;
+        font-size: 11px;
+    }
+    .bownerhdtext .wizardhdtext h1 {font-size: 33px;}
+    .bwonernavwizard ul.nav.stepnav li a {min-width: 120px;}
+
+    /*============================== 
+        Signup page end
+    ===============================*/
+
+    .user-logout{
+        max-width: 100px;
+        padding: 10px 0 10px 20px;
+        left: 40px;
+    }
+    .fluserlogout{font-size: 10px;}
+    .fluserlogout i{font-size: 15px;}
+    .search-arrow-wrapper{margin-right: 35px;}
+    .VPilotImg {padding-right: 10px;}
+
+    input.drn-bk-authorName[type="text"], .drn-bk-authorName{
+        font-size: 25px;
+        line-height: 35px;
+        padding: 10px;
+    }
+    input.drn-bk-specialty[type="text"], span.drn-bk-specialty {font-size: 20px;}
+    .drn-head-userinfo{padding: 20px 15px 20px 10px;}
+
+    .drn-user-set {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*==================================
+        Profile pilot info page end 
+    ===================================*/
+
+    .mb_avatarProfile{width: 100%;position: relative;}
+    .mb_avatarProfile .usrimagerating{width: 30%;}
+    .mb_avatarProfile .userinfoexpert{width: 70%;}
+    .usrthextlc span {font-size: 20px;}
+    .usrthextlc h1 {font-size: 38px;}
+    .mb_vm_specialists {width: 80%;}
+    .userimgndRating {margin-top: 0px;}
+    .mb_visible-xs{display: none;}
+    .userrating {font-size: 12px;}
+    .Portfolioimgvideo{
+        padding: 0px;
+        background: transparent;
+        border: 0px none;
+    }
+    .pfthumb-mg{padding-bottom: 0px;}
+    .pfgallery.mb_thumbnailImg{
+        margin-left: -10px;
+    }
+    ul.pfgallery li{
+        width: 50% !important;
+        float: left;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        margin-right: 0px;
+    }
+    .projecThumbnail img{
+        max-height: 120px;
+        height: 120;
+    }
+    .mb_EquipImg{width: 100%;}
+    .mb_EquipImg img{width: 100%;}
+    .userEquipment{
+        padding: 0px;
+        background: transparent;
+    }
+    .modeldes p{background: #fff;}
+    .feedbackcl .col-sm-6{width: 100%;}
+
+    /*==================================
+        pilot Example Profile page end 
+    ===================================*/
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 414px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 414px) {
+
+    .DroneJobsHead .col-sm-4.col-xs-4{width:45%;}
+    .DroneJobsHead .col-sm-8.col-xs-8{width:55%;}
+    .mb_Srtext{font-size: 1.5em;}
+    .SortByTopSec{padding-bottom: 30px;}
+    .dnj-contact{
+        margin-right: -20px;
+        margin-top: 8px;
+    }
+    .jobsearchfilter-mobile-wrapper{width: 100%;}
+    /*.logoWrapper{padding-top: 0px;}*/
+    .DNJtitleText h2{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .drpsrtmenubtn li a{font-size: 12px;}
+
+    /*============================== 
+        Search job page end
+    ===============================*/
+
+    .VpEequipment.pull-right{
+        float: left!important;
+        padding-bottom: 20px;
+    }
+    .room-body .VPilotImg img {
+        max-height: 60px;
+        max-width: 60px;
+    }
+    .DNjPilotInfoBody .col-xs-offset-1{
+        margin-left: 5%!important;
+    }
+
+    /*============================== 
+        Search Pilot page end
+    ===============================*/
+
+    .blheadtitle h1 {font-size: 28px;}
+    .blheadtitle p a{
+        display: block;
+        clear: both;
+        padding-top: 10px;
+    }
+    .verifyacc.verifycode{
+        position: relative;
+        padding: 0px 20px;
+    }
+    ul.verifyacc li{display: inline;}
+    .verifyphn{padding-right: 20px!important;padding: 0px;}
+    span.verifybtn a.btn.greenbtn{margin-top: 20px;}
+    .verifyCodeNumber .verifyCodeN{
+        padding-bottom: 120px;
+    }
+    .verifyphn #phnNmber{
+        width: 100%;
+        min-width: 100%;
+    }
+    .verifyphn a.greentext{
+        position: absolute;
+        left: 20px;
+        text-align: center;
+        bottom: -40px;
+    }
+    .blvheadtitle h1 {font-size: 40px;}
+    ul.verifycountry li .vcontry .ui.compact.selection.dropdown{
+        padding: 15px;
+        font-size: 13px;
+    }
+    .vcontry .ui.dropdown .menu > .item{font-size: 13px;}
+    .vcontry{padding-right: 15px;}
+    .blheadtextps h1{font-size:25px;}
+    .portfoliosample .input-group-btn {padding: 30px 15px;}
+    .btn.btn-default.image-preview-input{
+        width: 100%;
+        height: 100%;
+    }
+    .editedelete img{width: 100%;}
+    button.btn.btn-green.psbtncontrl{padding: 8px 30px;}
+    .pfconinfo input{font-size: 13px;}
+    .wizardhdtext h1 {font-size: 20px;}
+    ul.nav.stepnav li a {min-width: 80px;}
+    .bwonernavwizard ul.nav.stepnav li a {min-width: 105px;}
+
+    /*============================== 
+        Signup page end
+    ===============================*/
+
+    .loginfrom-body{
+        padding-left: 0px;
+        width: 100%;
+    }
+    .LoginBtn .checkbox{
+        float: left;
+        clear: left;
+        margin-left: 0px;
+    }
+
+    .mobile .userprofie-img{
+        padding: 3px 0 5px 5px;
+    }
+    .user-logout {
+        max-width: 90px;
+    }
+    #userinfo-close{
+        right: 5px;
+    }
+    .away-toggle-user label {
+        padding: 6px 5px;
+        min-width: 70px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .VPilotImg {
+        padding-right: 0;
+    }
+
+    .drn-bk-control-group{padding-left: 0px;position: relative;}
+    .bottomFooter .footerSocial ul li{
+        padding-bottom: 20px;
+    }
+
+    button.drn-action-btn{
+        padding:8px 25px;
+    }
+    .drn-drag-group{
+        padding: 50px 20px;
+    }
+    .drn-image-drapborder{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*==================================
+        Profile pilot info page end 
+    ===================================*/
+
+    .usrthextlc h1 {font-size: 35px;}
+    .usrthextlc span {font-size: 18px;}
+    .mb_vm_userimg {margin-top: -55px;}
+    .drn_user_img {width: 110px;}
+    .mb_vm_rating {font-size: 14px;}
+    .exemptionDate {font-size: 12px;}
+    .dn_verifyPilot{padding: 1px;}
+    .dn_small {font-size: 12px;}
+    .dn_verifiedtext {font-size: 13px;}
+    .dn_specialists h4{
+    	font-size: 18px;
+    	line-height: 25px;
+    }
+    .dn_flimIcon {top: 2px;}
+    .dn_ProgressRating .progress{height: 15px;}
+    .dn_ratingtexticon{font-size: 15px;}
+	.dn_userWebpage {width: 80%;}
+
+
+    /*==================================
+        pilot Profile example page end 
+    ===================================*/
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 375px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 375px) {
+
+	/*.findheadtitle h1 {font-size: 38px;}*/
+	/*.findheadtitle h3 {font-size: 22px;}*/
+	.test-tile h2 span {font-size: 18px;}
+	.srcpilotjob .ui.selection.dropdown {width: 285px;}
+	.findjob.findlocation .ui.fluid.dropdown {width: 285px;}
+	ul.findsearch li {font-size: 30px;}
+	.test-tile p {
+	    font-size: 17px;
+	    line-height: 22px;
+	}
+	.test-tile h2 {font-size: 22px;}
+	.test-tile h2 {font-size: 25px;}
+	.test-tile h2 span {font-size: 20px;font-weight: 600;}
+	.drjobstext h1 {
+    	font-size: 27px;
+    	line-height: 36px;
+	}
+	.drjobstext p{
+		font-size: 14px;
+		line-height: 25px;
+	}
+	.fdtext button {
+	    height: 56px;
+	    width: 225px;
+	    font-size: 20px;
+	}
+	.footagetitle h1 {
+    	font-size: 25px;
+    	line-height: 30px;
+	}
+	.footagetitle p{
+		font-size: 15px;
+		line-height: 25px;
+	}
+	.fdtext h1 {font-size: 36px;}
+
+    /*==================================
+        	Home page end 
+    ===================================*/
+
+    .blheadtitle h1 {font-size: 25px;margin-bottom: 0px;}
+    .blheadtitle h2 {font-size: 20px;}
+    .dotborder-lefttopbot {width: 90%;}
+    .dotborder-toprightbottom {width: 90%;}
+    .clientOrhire h4::before {
+        left: 22px;
+        border-left: 90px solid #cfcfcf;
+    }
+    .clientOrhire h4::after {
+        right: 22px;
+        border-left: 90px solid #cfcfcf;
+    }
+    .mailnewaccount {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .blvheadtitle h1 {font-size: 35px;}
+    .vcontry{width: 40%;}
+    .verifyphn{width: 60%;}
+    #phnNmber{
+        font-size: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .wizardhdtext h1 {font-size: 20px;}
+    .blheadtextps h1 {font-size: 22px;}
+    .lg-btngren{
+        padding: 8px 30px;
+        min-width: 100%;
+    }
+    .stepnavwizard{margin-left: -12px;}
+    ul.nav.stepnav li a {
+        min-width: 75px;
+        font-size: 10px;
+    }
+    ul.nav.stepnav li a::after{
+        right: -7px;
+        z-index: 99;
+    }
+    .wizardhdtext h1 {font-size: 18px;}
+    .bownerhdtext .wizardhdtext h1 {font-size: 25px;}
+    .bwonernavwizard ul.nav.stepnav li a {min-width: 100px;}
+
+
+    /*============================== 
+        Signup page end
+    ===============================*/
+
+    .mb_Srtext {font-size: 1.2em;}
+
+    /*============================== 
+        Search page end
+    ===============================*/
+
+    .settingtext h5{
+        margin-top: 10px;
+        padding-left: 5px;
+        font-size: 10px;            
+    }
+    .available.active.userabaw, .away.userabaw {
+        padding: 5px 10px;
+        width: 100%;
+        float: left;
+        clear: left;
+    }
+    .userdropdown .userset{height: 40px;}
+    .mobile .userprofie-img img{width: 45px;}
+    .mobile .userprofie-img img {
+        width: 40px;
+        float: left;
+        position: relative;
+        top: 7px;
+    }
+    .user-logout {
+        max-width: 80px;
+        padding: 5px 0 5px 15px;
+        left: 35px;
+        top: 15px;
+    }
+    .search-arrow-wrapper {margin-right: 22px;}
+    .rmchathdtxt h3 {font-size: 20px;}
+
+    /*==================================
+        Header section end 
+    ===================================*/
+
+    input.drn-bk-authorName[type="text"], .drn-bk-authorName{
+        font-size: 22px;
+    }
+    input.drn-bk-authorDT[type="text"], .drn-bk-authorDT{
+        font-size: 18px;
+    }
+    input.drn-bk-specialty[type="text"], span.drn-bk-specialtyinput.drn-bk-specialty[type="text"], span.drn-bk-specialty{
+        font-size: 18px;
+    }
+
+    button.drn-action-btn{
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    #drn-JobListing-tables td::before{font-size: 10px;}
+
+    /*==================================
+        Profile pilot info page end 
+    ===================================*/
+    
+    .visible-xs.roomFilter span{font-size: 13px;}
+    .visible-xs.roomFilter span{font-size: 13px;}
+    .mbFiltering i{
+        font-size: 17px;
+        margin-top: 3px;
+    }
+    .exemptionDate {font-size: 11px;}
+    .usrthextlc h1 {font-size: 32px;}
+    .mb_vm_userimg {margin-top: -45px;}
+    .drn_user_img {width: 100px;}
+	.dn_scope span {font-size: 22px;}
+	.dn_specialists h4 {font-size: 16px;}
+	.vm_authorname {font-size: 15px;margin-bottom: 10px;}
+	.vm_jobtitle{font-size: 15px;margin-bottom: 10px;}
+	.vm_location{font-size: 15px;}
+	.vm_feedback.pull-right{display: none;}
+	.vm_block h6 {
+    	font-size: 15px;
+   		line-height: 22px;
+	}
+	.vm_pra{font-size: 13px;}
+
+    /*==================================
+       pilot profile example page end 
+    ===================================*/
+
+
+
+}
+
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 359px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 359px) {
+
+	.mb_vm_rating {font-size: 13px;}
+	.exemptionDate {
+    	font-size: 10px;
+    	line-height: 12px;
+	}
+	.dn_flimIcon .drj-flimvideo {
+	    width: 45px;
+	    height: 45px;
+	    background-size: 18px;
+	}
+	.dn_flimIcon {top: 5px;}
+	.dn_scope span {font-size: 20px;line-height: 22px;}
+	.dn_blheadtext p {
+	    font-size: 18px;
+	    line-height: 25px;
+	}
+	.dn_blheadtext h4 {font-size: 25px;}
+	.drn_user_img {width:90px;}
+	.dn_feedbackStar .col-xs-5.mb_vm_progress {width: 55%;}
+	.dn_userWebpage {width: 85%;}
+	.dn_userFollow > li a {
+	    width: 35px;
+	    height: 35px;
+	    font-size: 18px;
+	    line-height: 35px;
+	}
+
+    /*================================= 
+       Pilot profile example page end
+    ==================================*/
+
+
+
+}
+
+/*---------------------------------------------------------------*/
+/*                      Max width : 320px
+/*---------------------------------------------------------------*/
+
+@media only screen and (max-width: 320px) {
+
+	.srcpilotjob .ui.selection.dropdown{margin-top: 20px;}
+	.footagetitle h1{font-size: 23px;}
+	.test-tile h2 {font-size: 18px;}
+	.test-tile h2 span {font-size: 17px;}
+	.drjobstext h1 {font-size: 25px;}
+	.fdtext h1 {font-size: 33px;}
+
+    /*============================== 
+        	Home page end
+    ===============================*/
+
+    .VPilotLocation{
+        float: left!important;
+        padding: 5px 0px;
+    }
+
+    /*============================== 
+        Search Pilot page end
+    ===============================*/
+
+    .blheadtitle h1 {font-size: 22px;}
+    ul.nav.stepnav li a {
+        min-width: 74px;
+        font-size: 9px;
+    }
+    .bwdetails .controls-ctstzip input#zip-code{width: 32%;}
+    textarea#Description{font-size: 13px;}
+    .bwdetails .contactinfo input[type="text"]{
+        font-size: 12px;
+    }
+    /*============================== 
+        Signup page end
+    ===============================*/
+
+    .usrthextlc h1 {
+	    font-size: 25px;
+	    margin-bottom: 5px;
+	}
+	.exemptionDate {font-size: 9px;}
+	.mb_vm_rating {font-size: 12px;}
+	.drn_user_img {width: 85px;}
+	.dn_specialists h4 {font-size: 14px;}
+	.dn_scope span {font-size: 18px;}
+	.dn_scope i {font-size: 19px;}
+	.dn_blheadtext p {
+	    font-size: 15px;
+	    line-height: 22px;
+	}
+	.dn_verifyIcon{width: 12px;}
+	.dn_verifyPilot span{margin: 0px 2px;}
+	.dn_small {font-size: 10px;}
+	.dn_verifiedtext {font-size: 12px;}
+	.dn_feedbackStar .col-xs-5.mb_vm_progress {width: 58%;}
+	.dn_feedback-rating {font-size: 50px;}
+	.dn_feedback-rating small {font-size: 25px;}
+	.dn_star {font-size: 14px;}
+	.dn_reviews-count h5 {font-size: 16px;}
+
+    /*================================ 
+       Pilot profile example page end
+    =================================*/
+
+
+
+}
+
+
+
+
+@media all and (max-height: 540px) and (max-width: 670px) {
+	.findheadtitle h1 {
+		font-size: 6vmin;
+	}
+	.findheadtitle h3 {
+		font-size: 3.5mvin;
+	}
+	.home-page .findsearch {
+		padding: 3vmin 0;
+	}
+	.category-list {
+		padding: 0;
+	}
+}
+@media all and (max-height: 420px) and (max-width: 670px) {
+	.dronejobsheader {
+		padding: 0 0 5px;
+	}
+	.findheadtitle h1 {
+		margin-bottom: 0;
+	}
+	.home-page .findsearch {
+		padding: 2px 0;
+	}
+	.findjob .ui.selection.dropdown {
+		font-size: 14px;
+		height: 36px;
+		line-height: 28px;
+	}
+	.findlocation .ui.search.selection.dropdown > input.search {
+		font-size: 14px;
+	}
+	.findjob.findlocation {
+		margin: 4px 0 10px;
+	}
+	ul.category-list-item li {
+		padding: 5px;
+		height: 60px;
+	}
+	.DRJicon .DRJcategoryIcon {
+		height: 35px;
+		-webkit-background-size: auto 24px;
+		background-size: auto 24px;
+	}
+	ul.category-list-item li a h6 {
+		font-size: 12px;
+		padding-top: 0;
+	}
+	/*.DRJicon .DRJcategoryIcon i {*/
+	/*}*/
+
+	button.btn.btn-large.green-btn {
+		font-size: 14px;
+		margin-top: -3px;
+		padding: 4px 20px 4px 25px;
+	}
+}

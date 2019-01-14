@@ -1,0 +1,952 @@
+@import url('bootstrap.css');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600italic|Lato);
+@import url('header.css');
+@import url('footer.css');
+@import url('font-awesome.css');
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat/Montserrat-Bold.eot');
+	src: url('fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat/Montserrat-Bold.woff') format('woff'),  url('fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat Hairline';
+	src: url('fonts/Montserrat/Montserrat-Hairline.eot');
+	src: url('fonts/Montserrat/Montserrat-Hairline.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat/Montserrat-Hairline.woff') format('woff'),  url('fonts/Montserrat/Montserrat-Hairline.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat Semi';
+	src: url('fonts/Montserrat/Montserrat-SemiBold.eot');
+	src: url('fonts/Montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'),  url('fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat/Montserrat-Regular.eot');
+	src: url('fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat/Montserrat-Regular.woff') format('woff'),  url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat/Montserrat-Light.eot');
+	src: url('fonts/Montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat/Montserrat-Light.woff') format('woff'),  url('fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+/* --- general resets --------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, embed, object {
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	outline: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	font-variant: normal;
+	text-transform: none;
+	speak: none;
+}
+/* --- HTML5 display-role reset for older browsers --------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	height: auto;
+}
+/* --- typography --------------------- */
+/*headings*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 15px;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 25px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 14px;
+}
+/* paragraphs */
+p {
+	font-size: 17px;
+	line-height: 24px;
+	font-family: 'Open Sans', sans-serif;
+	color: #494949;
+	font-weight: lighter;
+}
+p:last-child {
+	margin-bottom: 0px;
+}
+p:before {
+	width: 30px;
+	display: inline-block;
+}
+/* small */
+code, pre {
+	display: block;
+	white-space: pre;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+cite, em, dfn {
+	font-style: italic;
+}
+i {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size: 16px;
+	display: inline-block;
+}
+/* Fontello */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	width: auto;
+	margin-right: 0px;
+	margin-left: 0px;
+	line-height: 1;
+}
+/*strong*/
+strong {
+	font-weight: bold;
+}
+/* Lists */
+ol, ul {
+	list-style: none;
+}
+/* Code */
+
+/* --- Forms --------------------- */
+form {
+	outline: none;
+}
+input, textarea, button, input[type="button"], .generalBtn {
+	outline: none !important;
+	box-shadow: none;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input, textarea {
+	font-size: 12px;
+	color: #5d5d5d;
+	font-family: 'Open Sans', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
+}
+input:focus, textarea:focus {
+	color: #333;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], textarea, select {
+	border: 1px solid #e0e0e0;
+	padding: 8px 9px;
+	outline: none;
+	color: #21242e;
+	margin: 0;
+	max-width: 100%;
+	background: #ffffff;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+	font-size: 15px;
+	font-weight: 700;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	width: 100%;
+	max-width: 100%;
+	min-height: 132px;
+	position: relative;
+}
+textarea::before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+button, input[type="button"], input[type="submit"] {
+	border: 0px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 13px 20px;
+	background-color: #5bbb2d;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+
+/* placeholder */
+*::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999999;
+ font-weight: lighter;
+}
+*:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999999;
+ opacity: 1;
+ font-weight: lighter;
+}
+*::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999999;
+ opacity: 1;
+ font-weight: lighter;
+}
+*:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999999;
+ font-weight: lighter;
+}
+/* --- images --------------------- */
+img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+/* --- links --------------------- */
+a, a:link, a:visited, a:active, a:focus {
+	text-decoration: none!important;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-khtml-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+a, a:visited {
+	outline: 0px;
+}
+a:hover {
+	color: inherit;
+}
+/* break */
+.br {
+	display: block;
+	height: 30px;
+}
+/* hr */
+hr, .container hr {
+	margin: 0px;
+	height: 1px;
+	background: #ffffff;
+	border: 0px;
+}
+.none {
+	display: none!important;
+}
+/* --- clearing --------------------- */
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: " ";
+}
+.clearfix:after {
+	clear: both;
+}
+/* --- Svg --------------------- */
+.svg {
+	width: 100%;
+	height: 100%;
+}
+/* col */
+[class*="col"] {
+ -webkit-transition: all 0.4s ease-in-out;
+ -moz-transition: all 0.4s ease-in-out;
+ -o-transition: all 0.4s ease-in-out;
+ -ms-transition: all 0.4s ease-in-out;
+ -khtml-transition: all 0.4s ease-in-out;
+ transition: all 0.4s ease-in-out;
+}
+/* --- selection --------------------- */
+::-moz-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-webkit-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-o-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-khtml-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::-ms-selection {
+ background-color: #5bbb2d;
+ color: #ffffff;
+}
+::selection {
+	background-color: #5bbb2d;
+	color: #ffffff;
+}
+/*=============================================================================
+
+	Globally pages Applied Styles
+
+	=============================================================================*/
+/* --- all wrapper --------------------- */
+.allWrapper {
+	margin: auto;
+	height: auto;
+	position: relative;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-khtml-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+/* --- contents --------------------- */
+.section {
+	position: relative;
+}
+.section .sectionWrapper {
+	padding: 80px 0px 80px 0px;
+	position: relative;
+}
+/* bgcolorSection */
+.greenSection {
+	background-color: #68d835;
+}
+.graylightbg {
+	background-color: #f9f9f9;
+}
+.graydeepbg {
+	background-color: #cfcfcf;
+}
+/* Social Nav */
+.socialNav {
+	text-align: center;
+}
+.socialNav > li {
+	font-size: 12px;
+	margin: 0px 2.5px;
+	white-space: nowrap;
+	text-align: center;
+	position: relative;
+	margin-right: 17px;
+}
+.socialNav > li:first-child {
+	margin-left: 0px;
+}
+.socialNav > li:last-child {
+	margin-right: 0px;
+}
+.socialNav > li a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 17px;
+	position: relative;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+	-webkit-border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-o-border-radius: 2px 2px 2px 2px;
+	-ms-border-radius: 2px 2px 2px 2px;
+	-khtml-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+	overflow: hidden;
+}
+.socialNav > li a:hover {
+	background-color: #ff6b6b;
+}
+
+
+/*=======================================
+ Home page Styles start here
+========================================*/
+.new_wrapper .logo{max-width:185px; padding:12px 0 0;}
+.find_pilot{background:#5bbb2d; padding:70px 0; text-align:center;}
+.find_pilot h1{color:#ffffff; font-size:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 40px;}
+.find_pilot button{
+  height:80px;
+  width: 298px;
+  border:2px solid #99de9c;
+  background:transparent;
+  font-size: 35px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.find_pilot button:hover{
+  background-color: #ffffff;
+  color: #5cba47!important;
+}
+
+.manufacturer{width:100%; background:url(../images/future_bg.jpg) no-repeat center bottom / cover; padding:75px 0 50px;}
+.manufacturer h1{color:#565656; font-size:48px; line-height:48px; white-space:nowrap; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 40px;}
+.manufacturer p{color:#565656; font-size:20px; line-height:30px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+.manufacturer .btn{
+  width: 167px;
+  background:rgba(255,255,255,0.25);
+  font-size: 20px; padding:8px 0; border:1px solid #9d9c9d; margin:30px 0 0;
+  color: #565656;
+  font-family: 'Montserrat', sans-serif;
+}
+.manufacturer .btn:hover{
+  background-color: #ffffff;
+}
+
+.attributes{width:100%; background:#fff; padding:50px 0;}
+.attributes h1,.price_comparison h1,.performance_grade h1{color:#565656; font-size:48px; line-height:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 60px;}
+.attributes h2{color:#5bbb2d; font-size:23px; line-height:26px; font-family: 'Montserrat', sans-serif; font-weight:normal; text-transform:uppercase; margin:20px 0;}
+.attributes p{color:#565656; font-size:14px; line-height:18px; font-weight:300; font-family: 'Montserrat', sans-serif; padding:0 3%;}
+.attributes .btn,.zenmuse .btn,.performance_grade .btn{
+  width: 154px;
+  background:#5bbb2d;
+  font-size: 18px; padding:8px 0; margin:60px 0 0;
+  color: #ffffff; text-transform:uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.attributes .btn:hover{
+  
+}
+
+.zenmuse{background:#565656; padding:0 0 50px;}
+.zenmuse h2{color:#ffffff; font-size:48px; line-height:48px; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 50px;}
+.zenmuse p{color:#ffffff; font-size:20px; line-height:30px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+.zenmuse .btn{float:right;}
+
+.zenmuse #horizontalTab{width:100%; display:inline-block; float:left; position:relative;}
+.zenmuse .resp-tab-content{width:100%; float:left;}
+.zenmuse .resp-tab-content img{margin:60px 0 0; display:inline-block;}
+.zenmuse .resp-tab-content .col-sm-7{padding:100px 0 0 25px;}
+.zenmuse .resp-tabs-list{position:absolute; right:0; top:0; z-index:11;}
+.zenmuse .resp-tab-content .col-sm-5{text-align:center;}
+
+
+.price_comparison{background:#eeecf2; padding:35px 0 50px;}
+
+.price_head{background:#989898; border:1px solid #cdcdcd; border-top-width:2px; border-bottom-width:2px; height:140px; text-align:center; position:relative;}
+.price_head.blank{background:none; border:0; border-right:1px solid #cdcdcd;}
+
+.price_head img{display:inline-block; margin:20px 0 10px;}
+.price_head span{position:absolute; text-align:left; left:10px; text-transform:uppercase; bottom:10px; font-size:14px; line-height:16px; color:#ffffff; font-family: 'Montserrat', sans-serif; font-weight:600;}
+.price_head span:before{background:#cdcdcd; width:10px; height:10px; display:inline-block; content:''; margin:0 5px 0 0; vertical-align:middle; -webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;}
+.price_head span.active:before{background:#5bbb2d;}
+
+.price_comparison .col-sm-3{padding:0;}
+.price_comparison ul{border-bottom:1px solid #cdcdcd;}
+.price_comparison li{color:#989898; font-size:14px; font-family: 'Montserrat', sans-serif; border-bottom:1px solid #cdcdcd; border-right:2px solid #cdcdcd; background:#fff; padding:14px 0 14px 15px;}
+
+.price_first li{background:#cdcdcd; color:#565656; border-bottom-color:#eeecf2;}
+.price_first li:last-child{ border-bottom-color:#cdcdcd;}
+
+.photo1,.photo2,.photo3{float:left;}
+.photo1{width:38.68%;}
+.photo2{width:35.69%;}
+.photo3{width:25.62%;}
+.inspire_pics img{width:100%; float:left;}
+
+.PG_progress{width:400px; background:url(../images/progress_bg.png) no-repeat left top; height:48px; float:left; position:relative; margin:40px 0 0;}
+.PG_progress img{position:absolute; top:-40px; margin:0 0 0 -20px;}
+.PG_bar{background:url(../images/fill_color.png) no-repeat left bottom; height:100%; position:absolute; left:2px; bottom:2px;
+ -moz-transition:all 0.5s; -webkit-transition:all 0.5s; -o-transition:all 0.5s;	transition:all 0.5s;}
+
+.performance_grade{padding:40px 0;}
+.performance_grade h1{color:#5cbb2e; text-align:center;}
+
+.performance_grade .separator{background:#cdcdcd; height:100%; width:1px; position:absolute; right:-5%; top:0;}
+.performance_grade .separator img{position:absolute; left:-11px; top:50%; margin:-15px 0 0; width:auto; max-width:none;}
+.PG_text li{width:50%; float:left; padding:0 0 15px;}
+.PG_text li h3{font-size:18px; color:#565656; font-family: 'Montserrat', sans-serif;}
+.PG_text li p{font-size:14px; color:#989898; font-family: 'Lato', 'Montserrat', sans-serif; font-weight:400; line-height:18px; padding:0px 0 0 15px;}
+.performance_grade .btn{margin:0; float:right;}
+
+.max_width{max-width:400px; width:100%;}
+
+.performance_grade .col-sm-5 h3{font-size:20px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; padding:10px 0 40px;}
+
+.home_banner{background:url(../images/home_banner.jpg) no-repeat center bottom / cover; padding:35px 0 0;}
+.banner_options{background:rgba(255,255,255,0.60); margin:0 0 35px; padding-top:10px; padding-bottom:10px; -webkit-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+-moz-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+box-shadow:rgba(0,0,0,0.30) 0px 0px 3px; width:418px;}
+.banner_options h1{font-size:48px; line-height:45px; color:#5bbb2d; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:0 0 30px;}
+.banner_options h1 span{color:#565656; font-size:34px; line-height:34px; text-transform:uppercase;}
+
+.banner_options h3{font-size:24px; line-height:24px; color:#ffffff; font-family: 'Montserrat', sans-serif; display:inline-block; text-transform:uppercase; padding:5px 10px; background:#5bbb2d; margin:0 0 20px;}
+.banner_options li{float:left; width:50px; text-align:center; margin:0 6px 0 0; font-weight:600; color:#565656; font-size:10px; line-height:12px; font-family: 'Montserrat', sans-serif;}
+.banner_options li a{color:#565656; background:#565656; position:relative; -webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px; float:left; padding:8px 0; margin:0 0 40px; width:100%;}
+.banner_options li a:hover{ background-color:#5bbb2d;}
+.banner_options li span{text-transform:uppercase; position:absolute; left:0; width:100%; text-align:center; bottom:-20px;}
+.banner_options li.two_lines span{bottom:-32px;}
+
+.video_options{background:#ffffff; padding:5px; -webkit-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+-moz-box-shadow:rgba(0,0,0,0.30) 0px 0px 3px;
+box-shadow:rgba(0,0,0,0.30) 0px 0px 3px; width:418px; margin:0 0 0px;}
+.video_options ul{float:left; width:100%;}
+.video_options li{float:left; width:49.3%; position:relative; overflow:hidden;}
+.video_options li:last-child{float:right;}
+.video_options .see_more{width:6%; text-align:center; padding:0; margin:0; float:right; display:none;}
+
+.video_options li img{width:100%; float:left;  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);}
+
+.video_options li:hover img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.video_options li span{background:url(../images/thumb-icon.png) no-repeat center center; width:100%; -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s; 
+  height:100%; position:absolute; left:0; top:0; z-index:1; opacity:0.7;}
+.video_options li:hover span{background-color:rgba(0, 0, 0, 0.3); opacity:1;}
+.video_options .see_more img{width:auto; float:none; display:inline-block; margin:10px 0 0;  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);}
+
+.home_submenu{width:100%; position:relative; z-index:11; background:#fff; border-bottom:1px solid #fff;}
+.home_submenu:after{width:50%; position:absolute; right:0; top:0; background:#565656; content:''; height:100%;}
+
+.home_submenu .container{position:relative; z-index:11; background:#565656;}
+
+.home_submenu h3{background:#fff; color:#565656; margin:0; padding:16px 0 15px; font-size:13px; font-family: 'Montserrat', sans-serif; font-weight:600; text-transform:uppercase;}
+.home_submenu h3 span{color:#5cbb2e; text-transform:uppercase;}
+.home_submenu [class*="col"]{padding:0;}
+
+.navigation ul{padding:6px 0 6px 20px; float:left;}
+.navigation li{font-size:14px; color:#fff; padding:3px 10px; border-right:1px solid #fff; font-family: 'Montserrat', sans-serif; font-weight:600;
+float:left; margin:4px 0 0;}
+.navigation li a{color:#fff;}
+.navigation li a:hover,.navigation li.active a{color:#5bbb2d;}
+.navigation li:last-child{padding-right:0; border:0;}
+.navigation li a.btn{background:#5cbb2e; margin:-9px 0 -3px; font-weight:600;}
+.navigation li a.btn:hover{color:#fff;}
+
+.navigation .small_arrow{position:absolute; left:-10px; top:14px;}
+.right_btn a{background:#fff; border:1px solid #cdcdcd; text-align:center; font-size:12px; color:#989898; line-height:14px; font-family: 'Montserrat', sans-serif; font-weight:600;
+margin:7px 0 0; text-transform:uppercase; padding:6px 10px; float:left;
+-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.right_btn a img{display:inline-block; vertical-align:middle;}
+.right_btn a em{color:#5bbb2d; font-size:14px; font-weight:600; font-style:italic; font-family: 'Open Sans', sans-serif;}
+
+/*=======================================
+FAQ Styles start here
+========================================*/
+.faq{padding:30px 0 50px;}
+.faq .accordion-header h4{font-size:18px; color:#565656; font-family: 'Montserrat', sans-serif;}
+
+.faq h1{font-size:30px; color:#565656; font-family: 'Montserrat', sans-serif; text-transform:uppercase; margin:0 0 25px;}
+.faq h1 span{color:#5bbb2d; text-transform:uppercase;}
+.faq h1 img{display:inline-block; margin:-5px 0 0; vertical-align:middle;}
+
+/*=======================================
+Specs Styles start here
+========================================*/
+.specs .PG_text ul{padding:15px 0 0; width:100%; float:left;}
+
+/*=======================================
+Camera Options Styles start here
+========================================*/
+.camera_option{background:#565656;}
+.white_container{background:#fff; padding:45px 0 25px;}
+
+.camera_option .zenmuse{padding-bottom:20px;}
+.camera_option .zenmuse h2{padding-top:50px;}
+.camera_option .zenmuse img{margin:60px 0 0; display:inline-block;}
+.camera_option .zenmuse .col-sm-5{text-align:center;}
+
+
+.CO_border{border-top:1px solid #cdcdcd; margin:0px 0 0;}
+.CO_border h2{font-size:30px; color:#ffffff; font-family: 'Montserrat', sans-serif; text-transform:uppercase; margin:30px 0;}
+.CO_border h2 span{color:#5bbb2d; text-transform:uppercase;}
+.CO_border h2 img{display:inline-block; margin:-5px 0 0; vertical-align:middle;}
+
+.CO_border ul{float:right; margin:-48px 0 0;}
+.CO_border li{display:table-cell; vertical-align:top; padding:0 0 0 15px;}
+.CO_border p{display:table-cell; font-size:42px; color:#ffffff; font-family: 'Montserrat', sans-serif; line-height:24px; text-transform:uppercase; 
+ background:#5bbb2d; text-align:center; vertical-align:middle; margin:0 0 0 10px; width:94px; height:94px; -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.CO_border p small{font-size:18px; line-height:24px; text-transform:uppercase; font-weight:normal;}
+.CO_border p span{font-size:30px; text-transform:uppercase; font-family: 'Montserrat', sans-serif; font-weight:normal;}
+
+.white_container .PG_text li p{}
+.PG_text .list_dots{font-size:14px; color:#989898; font-family: 'Lato', 'Montserrat', sans-serif; font-weight:400; line-height:18px; padding:0px 0 0 15px;}
+.PG_text .list_dots li:before{width:6px; height:6px; background:#989898; -webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px; content:''; margin:0 5px 0 0; display:inline-block; vertical-align:middle;}
+.PG_text .list_dots li{width:100%; padding:0;}
+
+/*=======================================
+Features Styles start here
+========================================*/
+.powerful_motors{background-image:url(../images/features_banner.jpg); padding:90px 0 140px;}
+.powerful_motors p{font-size:16px; line-height:24px;}
+
+.heading{padding:25px 0 0;}
+
+.ready_fly p{font-size:16px; line-height:24px; padding:0 0 20px; max-width:715px; margin:0 auto;}
+.ready_fly .col-sm-4{padding-top:50px;}
+.ready_fly h2{font-size:18px; line-height:18px;}
+
+.lightbridge{background:url(../images/lightbridge_banner.jpg) no-repeat center bottom / cover; padding:80px 0;}
+.lightbridge h1{font-size:46px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; text-transform:uppercase; margin:0 0 50px 0;}
+.lightbridge p{color:#565656; font-size:18px; line-height:28px; font-weight:300; font-family: 'Montserrat', sans-serif;}
+
+.dual_operator{background:#565656 !important; padding:0 0 0px 0;}
+.dual_operator h1{color:#fff; margin:60px 0 30px;}
+.dual_operator p{color:#fff; font-size:20px;}
+.dual_operator img{margin:80px 0 0;}
+
+.welcome_cam{text-align:center; padding:50px 0 100px; position:relative;}
+.welcome_cam h3{font-size:36px; color:#565656; font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0 0;}
+.welcome_cam p{color:#565656; font-size:30px; line-height:48px; font-weight:300; font-family: 'Montserrat', sans-serif; margin:0 0 30px;}
+
+.welcome_cam:before{background:#cdcdcd; height:1px; width:100%; content:''; position:absolute; bottom:50px; left:0;}
+.welcome_cam:after{background:#fff url(../images/down_arrow_white.png) no-repeat center center; height:42px; width:42px; content:'';
+position:absolute; bottom:31px; left:50%; margin:0 0 0 -15px;}
+
+.only_mob{display:none;}
+
+.dual_operator .col-sm-6{text-align:center;}
+.dual_operator .col-sm-6 img{display:inline-block;}
+
+/*=======================================
+3DR DRONE Styles start here
+========================================*/
+.drone_3dr .home_banner{background-image:url(../images/3dr-solo/home_banner.jpg);}
+.drone_3dr .manufacturer{background-image:url(../images/3dr-solo/future_bg.jpg);}
+.drone_3dr .lightbridge{background-image:url(../images/3dr-solo/lightbridge_banner.jpg);}
+
+.drone_3dr .photo1{width:39.23%;}
+.drone_3dr .photo2{width:35.13%;}
+.drone_3dr .photo3{width:25.62%;}
+
+/*=======================================
+dji-inspire-1 Styles start here
+========================================*/
+.drone_inspire .home_banner{background-image:url(../images/dji-inspire-1/home_banner.jpg);}
+.drone_inspire .manufacturer{background-image:url(../images/dji-inspire-1/future_bg.jpg);}
+.drone_inspire .lightbridge{background-image:url(../images/dji-inspire-1/lightbridge_banner.jpg);}
+
+.drone_inspire .photo1{width:43.81%;}
+.drone_inspire .photo2{width:30.48%;}
+.drone_inspire .photo3{width:25.69%;}
+
+.drone_inspire .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_inspire .lightbridge{padding:80px 0 0;}
+.drone_inspire .camera_option .zenmuse img{margin:0px 0 0;}
+
+/*=======================================
+dji-phantom-3 Styles start here
+========================================*/
+.drone_phantom .home_banner{background-image:url(../images/dji-phantom-3/home_banner.jpg);}
+.drone_phantom .manufacturer{background-image:url(../images/dji-phantom-3/future_bg.jpg);}
+.drone_phantom .lightbridge{background-image:url(../images/dji-phantom-3/lightbridge_banner.jpg);}
+
+.drone_phantom .photo1{width:45.06%;}
+.drone_phantom .photo2{width:26.87%;}
+.drone_phantom .photo3{width:27.98%;}
+
+.drone_phantom .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_phantom .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_phantom .camera_option .zenmuse img{margin:0px 0 0;}
+
+/*=======================================
+dji-spreadingwing-s900 Styles start here
+========================================*/
+.drone_s900 .home_banner{background-image:url(../images/dji-spreadingwing-s900/home_banner.jpg);}
+.drone_s900 .manufacturer{background-image:url(../images/dji-spreadingwing-s900/future_bg.jpg);}
+.drone_s900 .lightbridge{background-image:url(../images/dji-spreadingwing-s900/lightbridge_banner.jpg);}
+
+.drone_s900 .photo1{width:43.81%;}
+.drone_s900 .photo2{width:30.55%;}
+.drone_s900 .photo3{width:25.62%;}
+
+.drone_s900 .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_s900 .dual_operator .col-sm-6 img{margin:0;}
+.drone_s900 .dual_operator{background:#565656 !important; padding:0 0 60px 0;}
+
+/*=======================================
+dji-spreadingwing-s1000 Styles start here
+========================================*/
+.drone_s1000 .home_banner{background-image:url(../images/dji-spreadingwing-s1000/home_banner.jpg);}
+.drone_s1000 .manufacturer{background-image:url(../images/dji-spreadingwing-s1000/future_bg.jpg);}
+.drone_s1000 .lightbridge{background-image:url(../images/dji-spreadingwing-s1000/lightbridge_banner.jpg);}
+
+/*=======================================
+yuneec-typhoon-q500 Styles start here
+========================================*/
+.drone_typhoon .home_banner{background-image:url(../images/yuneec-typhoon-q500/home_banner.jpg);}
+.drone_typhoon .manufacturer{background-image:url(../images/yuneec-typhoon-q500/future_bg.jpg);}
+.drone_typhoon .lightbridge{background-image:url(../images/yuneec-typhoon-q500/lightbridge_banner.jpg);}
+
+.drone_typhoon .photo1{width:38.75%;}
+.drone_typhoon .photo2{width:35.62%;}
+.drone_typhoon .photo3{width:25.62%;}
+
+.drone_typhoon .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_typhoon .zenmuse .resp-tab-content img{margin:0px 0 0;}
+.drone_typhoon .camera_option .zenmuse img{margin:0px 0 0;}
+.drone_typhoon .mf_logo img{margin:60px 0 0;}
+.drone_typhoon .powerful_motors h1 {
+    padding-top: 60px;
+}
+.drone_typhoon .dual_operator{padding:0 0 60px 0;}
+.drone_typhoon .powerful_motors {
+    background-image:url(../images/yuneec-typhoon-q500//features_banner.jpg);
+    padding: 90px 0 140px;
+}
+
+/*=======================================
+dji-phantom-3 Styles start here
+========================================*/
+.drone_tornado .home_banner{background-image:url(../images/yuneec-tornado-h920/home_banner.jpg);}
+.drone_tornado .manufacturer{background-image:url(../images/yuneec-tornado-h920/future_bg.jpg);}
+.drone_tornado .lightbridge{background-image:url(../images/yuneec-tornado-h920/lightbridge_banner.jpg);}
+
+.drone_tornado .photo1{width:38.68%;}
+.drone_tornado .photo2{width:35.69%;}
+.drone_tornado .photo3{width:25.62%;}
+
+.drone_tornado .dual_operator .col-sm-6 img{margin:40px 0 0;}
+.drone_tornado .zenmuse .resp-tab-content .col-sm-7 {
+    padding: 100px 0 0 25px;
+}
+.drone_tornado .dual_operator{background:#565656 !important; padding:0 0 60px 0;}
+
+.drone_tornado .mf_logo img{margin:60px 0 0;}
+.drone_tornado .powerful_motors h1 {
+    padding-top: 60px;
+}
+
+/* ============== RESPONSIVE CSS =============== */
+@media only screen and (max-width: 1200px) {
+	.performance_grade .separator{right:-14%;}
+	.resp-tabs-list li{padding:8px; margin:0 2px;}
+	.manufacturer h1,.lightbridge h1{font-size:40px;}
+	
+	.camera_option .zenmuse{padding-bottom:50px;}
+	.home_submenu h3{padding:7px 0 10px;}
+}
+@media only screen and (min-width:750px) and (max-width:992px) {
+	.navigation li{font-size:12px; padding:3px 7px;}
+	.navigation li a.btn{font-size:12px;}
+	.right_btn a{padding:4px 3px; font-size:10px;}
+	.right_btn a em{font-size:11px;}
+	.home_submenu h3{padding:7px 0 7px;}
+	.navigation .small_arrow{top:11px;}
+	
+	.PG_progress{width:300px; background-size:auto 100%; height:36px;}
+	.PG_bar{ background-size:auto 100%; height:33px;}
+	.performance_grade .max_width{min-width:300px; max-width:300px;}
+
+	.performance_grade .separator{right:-14%;}
+	
+	.price_comparison li{font-size:12px; padding-left:5px;}
+	
+	.resp-tabs-list li{padding:6px; margin:0 2px; font-size:13px;}
+	.zenmuse .resp-tabs-list{padding:0;}
+	.zenmuse .resp-tab-content .col-sm-7{padding:50px 0 0 0;}
+	.zenmuse h2{font-size:40px; line-height:42px; margin:0 0 15px;}
+	.zenmuse p,.manufacturer p,.lightbridge h1{font-size:16px; line-height:24px;}
+	.manufacturer h1{font-size:40px; white-space:normal;}
+	
+	.CO_border{margin:40px 0 0;}
+	.CO_border h2{font-size:24px;}
+	.CO_border p{font-size:30px; line-height:32px;}
+	.CO_border p small{font-size:14px; line-height:18px;}
+	.CO_border p span{font-size:24px; line-height:26px;}
+	
+	.lightbridge h1{font-size:32px; line-height:38px; margin-bottom:20px;}
+	
+}
+@media only screen and (max-width: 750px) {
+	
+	
+	.performance_grade .separator,.price_first,.navigation .small_arrow,.photo3{display:none;}
+	
+	
+	.price_comparison li:before{content:'Cameras: '; display:inline-block; margin:0 10px 0 0; color:#666;}
+	.price_comparison li:nth-child(2):before{content:'Max Resolution: ';}
+	.price_comparison li:nth-child(3):before{content:'Total Flight Time: ';}
+	.price_comparison li:nth-child(4):before{content:'Control Distance: ';}
+	.price_comparison li:nth-child(5):before{content:'Max Speed: ';}
+	.price_comparison li:nth-child(6):before{content:'Mobile App: ';}
+	.price_comparison li:nth-child(7):before{content:'GPS Mode: ';}
+	
+	.home_submenu [class*="col"]{padding:0 15px; float:left;}
+	.home_submenu .col-sm-2{background:#fff;}
+	
+	.zenmuse .resp-tabs-list{padding:0;}
+	.zenmuse .resp-tab-content .col-sm-7{padding:50px 0 0 0;}
+	.attributes h1, .price_comparison h1, .performance_grade h1,.manufacturer h1,.find_pilot h1{font-size:40px; line-height:42px; margin:0 0 15px;}
+	
+	.zenmuse{padding:0;}
+	.zenmuse .resp-tab-content{padding:15px; border-bottom:1px solid #c1c1c1;}
+	.zenmuse h2{font-size:24px; line-height:26px; margin:0; width:100%; float:left;}
+	.resp-tab-active{color:#000 !important;}
+	.photo1{width:52%;}
+	.photo2{width:48%;}
+	
+	.zenmuse p,.manufacturer p{font-size:16px; line-height:24px;}
+	.manufacturer h1{white-space:normal;}
+	
+	.navigation ul{width:100%; float:left; padding:5px 0; text-align:center;}
+	
+	[class*="col"]{width:100%;}
+	
+	.mf_logo{}
+	/*.navigation li{width:100%; border:0; border-bottom:1px solid #fff; padding:5px 0; margin:0;}*/
+	.navigation li{float:none; display:inline-block; padding:1px 5px;}
+	.navigation li a.btn{margin:0;}
+	.right_btn a{margin:0 0 10px;}
+	
+	.faq{padding:35px 15px;}
+	
+	.CO_border ul{margin:0 0 20px; float:none;}
+	.white_container{padding-left:15px; padding-right:15px;}
+	.CO_border li{padding:0 10px 0 0;}
+	
+	.powerful_motors{padding:50px 0;}
+	.powerful_motors img{margin-bottom:30px;}
+	.ready_fly .col-sm-4{margin:0 !important; width:50%; float:left; padding-left:0; padding-right:0;}
+	
+	.lightbridge{background:#edebf1; padding-top:60px;}
+	.dual_operator{padding:20px 0 60px;}
+	.lightbridge img{margin-top:40px;}
+	
+	.manufacturer h1, .lightbridge h1{text-align:center;}
+	.no_mob{display:none !important;}
+	
+	.performance_grade .col-sm-5{text-align:center;}
+	
+	.PG_progress,.max_width{margin:0 auto; float:none; display:inline-block;}
+	.PG_progress{margin-top:40px;}
+	.only_mob{width:100%; display:block;}
+	.faq h1{margin:0;}
+	.dual_operator img{margin:50px 0;}
+	
+	.mobile_header{display:block;}
+	.dronejobsheader{padding:0 0 9px; z-index:101;}
+	.scrollHeaderWrapper .col-sm-9{display:none;}
+	
+	
+	.drone_3dr .photo1{width:52.69%;}
+	.drone_3dr .photo2{width:47.31%;}
+	
+	.drone_inspire .photo1{width:59%;}
+	.drone_inspire .photo2{width:41%;}
+	
+	.drone_phantom .photo1{width:62.63%;}
+	.drone_phantom .photo2{width:37.37%;}
+	
+	.drone_s900 .photo1{width:59%;}
+	.drone_s900 .photo2{width:41%;}
+	
+	.drone_typhoon .photo1{width:52%;}
+	.drone_typhoon .photo2{width:48%;}
+	
+	.drone_tornado .photo1{width:52%;}
+	.drone_tornado .photo2{width:48%;}
+
+}
+@media only screen and (max-width: 550px) {
+	.PG_progress{width:300px; background-size:auto 100%; height:36px;}
+	.PG_bar{ background-size:auto 100%; height:33px;}
+	.performance_grade .max_width{min-width:300px; max-width:300px;}
+	.camera_option .PG_text li{width:100%;}
+	.banner_options h1{font-size:42px; line-height:42px;}
+	
+	.banner_options li{max-width:44px; margin-right:2px;}
+	.CO_border h2{font-size:24px;}
+	.CO_border p{font-size:30px; line-height:32px;}
+	.CO_border p small{font-size:14px; line-height:18px;}
+	.CO_border p span{font-size:24px; line-height:26px;}
+	.lightbridge h1{font-size:32px; line-height:38px; margin:0 0 20px;}
+	
+	.ready_fly h2{font-size:15px;}
+	.home_submenu .navigation{padding:0;}
+	.navigation li{font-size:11px;}
+	.navigation li a.btn{font-size:11px; padding:3px 5px; margin:-5px 0 0;}
+	.video_options .see_more img{margin:5px 0 0; width:80%;}
+	
+	.banner_options li a{padding:5px 0;}
+	.banner_options li a img{height:28px;}
+	.video_options li span{background-size:50px;}
+	
+	.welcome_cam p{font-size:24px; line-height:30px;}
+	.welcome_cam h3{font-size:30px; line-height:36px;}
+}

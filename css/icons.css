@@ -1,0 +1,36 @@
+.DRJicon{text-align:center;}
+.DRJicon .DRJcategoryIcon{
+	width:65px;
+	height:47px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+}
+.djusercog{
+	width:22px;
+	height:22px;
+	overflow: hidden;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-khtml-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+	display: block;
+}
+.djcogicon{background:url(../images/icons/cog-icon.png) no-repeat center;}
+.drj-flimvideo{background:url(../images/icons/category-icons/flim-video.png) no-repeat center;}
+.drj-events{background:url(../images/icons/category-icons/events.png) no-repeat center;}
+.drj-weddings{background:url(../images/icons/category-icons/wedding.png) no-repeat center;}
+.drj-realestate{background:url(../images/icons/category-icons/real-estate.png) no-repeat center;}
+.drj-construction{background:url(../images/icons/category-icons/construction.png) no-repeat center;}
+.drj-mining{background:url(../images/icons/category-icons/mining.png) no-repeat center;}
+.drj-tourism{background:url(../images/icons/category-icons/tourism.png) no-repeat center;}
+.drj-promotions{background:url(../images/icons/category-icons/promotions.png) no-repeat center;}
+.drj-mapping{background:url(../images/icons/category-icons/mapping.png) no-repeat center;}
